@@ -37,7 +37,7 @@ export default function LandingPage() {
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '580880927898740');
+        fbq('init', '570908249429766');
         fbq('track', 'PageView');`}
       </Script>
       <noscript>
@@ -45,7 +45,7 @@ export default function LandingPage() {
           height='1'
           width='1'
           style={{ display: 'none' }}
-          src='https://www.facebook.com/tr?id=580880927898740&ev=PageView&noscript=1'
+          src='https://www.facebook.com/tr?id=570908249429766&ev=PageView&noscript=1'
         />
       </noscript>
       {/* End Meta Pixel Code */}
