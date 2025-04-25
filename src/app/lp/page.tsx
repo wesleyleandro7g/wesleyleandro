@@ -172,7 +172,8 @@ export default function LandingPage() {
                 <Image src='/animacoes.svg' alt='' width={40} height={40} />
                 <h6 className='text-sm font-bold text-white mt-2'>Animações</h6>
                 <p className='text-sm text-white/70'>
-                  Visual premium assim como as maiores marcas do mundo
+                  Animações que trazem mais vida e interatividade para o seu
+                  site
                 </p>
               </div>
               <div className='flex flex-col p-4 gap-0.5 text-start rounded-lg border border-white/20 hover:border-white animate-gradient-2'>
@@ -195,7 +196,7 @@ export default function LandingPage() {
                   SEO otimizado
                 </h6>
                 <p className='text-sm text-white/70'>
-                  Alcanse o topo dos resultados de busca com SEO otimizado
+                  Alcance o topo dos resultados de busca com SEO otimizado
                 </p>
               </div>
               <div className='flex flex-col p-4 gap-0.5 text-start rounded-lg border border-white/20 hover:border-white animate-gradient-2'>
