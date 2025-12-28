@@ -67,7 +67,7 @@ export default function Portfolio() {
               drive business results.
             </p>
 
-            <div className='flex gap-4'>
+            <div className='flex flex-wrap gap-4'>
               <SocialLink
                 href={data.profile.links.github}
                 icon={<Github size={20} />}
