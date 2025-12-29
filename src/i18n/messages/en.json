@@ -1,0 +1,115 @@
+{
+  "home": {
+    "language": "Language",
+    "navbar": {
+      "contact": "Contact Me"
+    },
+    "hero": {
+      "status": "Available for new projects",
+      "title": "Building scalable",
+      "titleHighlight": "web applications.",
+      "intro": "I'm <important>{name}</important>, a {role} with over 8 years of experience. I specialize in combining <highlight>Next.js</highlight> performance with <highlight>clean UI</highlight> to drive business results.",
+      "links": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "resume": "Resume"
+      }
+    },
+    "stats": {
+      "item-01": {
+        "label": "Experience",
+        "value": "+8 Years"
+      },
+      "item-02": {
+        "label": "Optimization",
+        "value": "60% Faster"
+      },
+      "item-03": {
+        "label": "Sales Boost",
+        "value": "+40%"
+      }
+    },
+    "tech": {
+      "title": "Technical Proficiency",
+      "frontend": "Frontend Core",
+      "backend": "Backend & Data",
+      "tools": "Tools & DevOps"
+    },
+    "services": {
+      "title": "How I Can Help Your Team",
+      "items": {
+        "item-01": {
+          "title": "Technical Refinement",
+          "description": "Elevating code quality through strict review processes, modern patterns, and refactoring strategies that reduce technical debt."
+        },
+        "item-02": {
+          "title": "Complex Problem Solving",
+          "description": "Translating ambiguous business requirements into robust, scalable technical architectures that withstand growth."
+        },
+        "item-03": {
+          "title": "Design Systems",
+          "description": "Bridging the gap between design and dev by building and maintaining consistent UI libraries (Storybook/Figma) for faster iteration."
+        },
+        "item-04": {
+          "title": "Continuous Improvement",
+          "description": "Proactively identifying performance bottlenecks and proposing technical enhancements before they become critical issues."
+        }
+      }
+    },
+    "philosophy": {
+      "title": "Work Philosophy",
+      "availability": "Full-Time Availability",
+      "items": {
+        "item-01": {
+          "title": "Communication & Reliability",
+          "description": "Objective communication with clear expectations on deadlines. I value transparency and keep stakeholders updated to avoid surprises."
+        },
+        "item-02": {
+          "title": "Team Synergy & Energy",
+          "description": "I bring a positive, enthusiastic attitude to daily calls and challenges. Excellent team player who thrives in collaborative environments."
+        },
+        "item-03": {
+          "title": "Smart AI Integration",
+          "description": "I leverage AI to boost productivity and handle boilerplate, ensuring I spend 100% of my focus on complex logic and architectural decisions."
+        },
+        "item-04": {
+          "title": "Proactivity & Pressure",
+          "description": "High performance under pressure. I don't wait for tasks; I actively look for project improvements and technical optimizations."
+        }
+      }
+    },
+    "experience": {
+      "title": "Work Experience",
+      "items": {
+        "item-01": {
+          "company": "Penzack",
+          "role": "Senior Frontend Developer",
+          "period": "2024 - Present",
+          "description": "Developing high-impact features for a global investment platform serving over 2M users. Focus on performance optimization and security."
+        },
+        "item-02": {
+          "company": "Elint Tech",
+          "role": "Mid-Level Frontend Developer",
+          "period": "2022 - 2024",
+          "description": "Migrated large-scale projects to Next.js and built data visualization dashboards for major clients like Lacta & Universal Music."
+        },
+        "item-03": {
+          "company": "Desencoder",
+          "role": "Full Stack Developer",
+          "period": "2018 - 2022",
+          "description": "Designed scalable web applications and fintech solutions ensuring secure transactions for thousands of daily users."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to build something",
+      "titleHighlight": "extraordinary?",
+      "description": "Whether you have a complex project in mind or need a senior developer to strengthen your team, I'm ready to help you achieve your goals.",
+      "emailBtn": "Send me an email",
+      "copyText": "Prefer to copy?"
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    }
+  }
+}

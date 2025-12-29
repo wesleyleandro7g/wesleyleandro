@@ -1,0 +1,115 @@
+{
+  "home": {
+    "language": "Idioma",
+    "navbar": {
+      "contact": "Contáctame"
+    },
+    "hero": {
+      "status": "Disponible para nuevos proyectos",
+      "title": "Desarrollando aplicaciones",
+      "titleHighlight": "web escalables.",
+      "intro": "Soy <important>{name}</important>, un {role} con más de 8 años de experiencia. Me especializo en combinar el rendimiento de <highlight>Next.js</highlight> con <highlight>interfaces limpias</highlight> para impulsar resultados comerciales.",
+      "links": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "resume": "Currículo"
+      }
+    },
+    "stats": {
+      "item-01": {
+        "label": "Experiencia",
+        "value": "+8 Años"
+      },
+      "item-02": {
+        "label": "Optimización",
+        "value": "60% Más Rápido"
+      },
+      "item-03": {
+        "label": "Ventas",
+        "value": "+40% Aumento"
+      }
+    },
+    "tech": {
+      "title": "Competencia Técnica",
+      "frontend": "Frontend Core",
+      "backend": "Backend & Data",
+      "tools": "Herramientas & DevOps"
+    },
+    "services": {
+      "title": "Cómo puedo ayudar a tu equipo",
+      "items": {
+        "item-01": {
+          "title": "Refinamiento Técnico",
+          "description": "Elevando la calidad del código mediante procesos de revisión estrictos, patrones modernos y estrategias de refactorización que reducen la deuda técnica."
+        },
+        "item-02": {
+          "title": "Resolución de Problemas Complejos",
+          "description": "Traduciendo requisitos comerciales ambiguos en arquitecturas técnicas robustas y escalables que soportan el crecimiento."
+        },
+        "item-03": {
+          "title": "Sistemas de Diseño (Design Systems)",
+          "description": "Uniendo diseño y desarrollo mediante la construcción de bibliotecas de UI consistentes (Storybook/Figma) para una iteración más rápida."
+        },
+        "item-04": {
+          "title": "Mejora Continua",
+          "description": "Identificando proactivamente cuellos de botella de rendimiento y proponiendo mejoras técnicas antes de que se vuelvan críticos."
+        }
+      }
+    },
+    "philosophy": {
+      "title": "Filosofía de Trabajo",
+      "availability": "Disponibilidad Tiempo Completo",
+      "items": {
+        "item-01": {
+          "title": "Comunicación y Fiabilidad",
+          "description": "Comunicación objetiva con expectativas claras sobre los plazos. Valoro la transparencia y mantengo a los interesados actualizados para evitar sorpresas."
+        },
+        "item-02": {
+          "title": "Sinergia y Energía de Equipo",
+          "description": "Aporto una actitud positiva y entusiasta a las llamadas diarias y desafíos. Excelente compañero de equipo que prospera en entornos colaborativos."
+        },
+        "item-03": {
+          "title": "Integración Inteligente de IA",
+          "description": "Aprovecho la IA para aumentar la productividad y manejar el código repetitivo, asegurando que dedico el 100% de mi enfoque a la lógica compleja y decisiones arquitectónicas."
+        },
+        "item-04": {
+          "title": "Proactividad y Presión",
+          "description": "Alto rendimiento bajo presión. No espero tareas; busco activamente mejoras del proyecto y optimizaciones técnicas."
+        }
+      }
+    },
+    "experience": {
+      "title": "Experiencia Laboral",
+      "items": {
+        "item-01": {
+          "company": "Penzack",
+          "role": "Desarrollador Frontend Senior",
+          "period": "2024 - Presente",
+          "description": "Desarrollando funcionalidades de alto impacto para una plataforma de inversión global con más de 2M de usuarios. Enfoque en optimización y seguridad."
+        },
+        "item-02": {
+          "company": "Elint Tech",
+          "role": "Desarrollador Frontend Mid-Level",
+          "period": "2022 - 2024",
+          "description": "Migración de proyectos a gran escala a Next.js y creación de paneles de visualización de datos para grandes clientes como Lacta y Universal Music."
+        },
+        "item-03": {
+          "company": "Desencoder",
+          "role": "Desarrollador Full Stack",
+          "period": "2018 - 2022",
+          "description": "Diseño de aplicaciones web escalables y soluciones fintech asegurando transacciones seguras para miles de usuarios diarios."
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Listo para construir algo",
+      "titleHighlight": "extraordinario?",
+      "description": "Ya sea que tengas un proyecto complejo en mente o necesites un desarrollador senior para fortalecer tu equipo, estoy listo para ayudarte a alcanzar tus objetivos.",
+      "emailBtn": "Envíame un correo",
+      "copyText": "¿Prefieres copiar?"
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados."
+    }
+  }
+}
