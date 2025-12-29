@@ -1,4 +1,5 @@
-export const data = {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export const data = (t: any) => ({
   profile: {
     name: 'Wesley Leandro',
     role: 'Senior Frontend Developer',
@@ -12,9 +13,9 @@ export const data = {
     },
   },
   stats: [
-    { label: 'Experience', value: '+8 Years' },
-    { label: 'Optimization', value: '60% Faster' }, // Baseado no "Reduced administrative task times by 60%"
-    { label: 'Sales Boost', value: '+40%' }, // Baseado no "Boosted contract closure rates"
+    { label: t('stats.item-01.label'), value: t('stats.item-01.value') },
+    { label: t('stats.item-02.label'), value: t('stats.item-02.value') },
+    { label: t('stats.item-03.label'), value: t('stats.item-03.value') },
   ],
   skills: {
     frontend: [
@@ -30,77 +31,66 @@ export const data = {
   },
   softSkills: [
     {
-      title: 'Communication & Reliability',
-      description:
-        'Objective communication with clear expectations on deadlines. I value transparency and keep stakeholders updated to avoid surprises.',
+      title: t('philosophy.items.item-01.title'),
+      description: t('philosophy.items.item-01.description'),
       icon: 'MessageSquare',
     },
     {
-      title: 'Team Synergy & Energy',
-      description:
-        'I bring a positive, enthusiastic attitude to daily calls and challenges. Excellent team player who thrives in collaborative environments.',
+      title: t('philosophy.items.item-02.title'),
+      description: t('philosophy.items.item-02.description'),
       icon: 'Users',
     },
     {
-      title: 'Smart AI Integration',
-      description:
-        'I leverage AI to boost productivity and handle boilerplate, ensuring I spend 100% of my focus on complex logic and architectural decisions.', // "Não como muleta"
+      title: t('philosophy.items.item-03.title'),
+      description: t('philosophy.items.item-03.description'),
       icon: 'BrainCircuit',
     },
     {
-      title: 'Proactivity & Pressure',
-      description:
-        "High performance under pressure. I don't wait for tasks; I actively look for project improvements and technical optimizations.",
+      title: t('philosophy.items.item-04.title'),
+      description: t('philosophy.items.item-04.description'),
       icon: 'Zap',
     },
   ],
   contributions: [
     {
-      title: 'Technical Refinement',
-      description:
-        'Elevating code quality through strict review processes, modern patterns, and refactoring strategies that reduce technical debt.',
+      title: t('services.items.item-01.title'),
+      description: t('services.items.item-01.description'),
       icon: 'Code2',
     },
     {
-      title: 'Complex Problem Solving',
-      description:
-        'Translating ambiguous business requirements into robust, scalable technical architectures that withstand growth.',
+      title: t('services.items.item-02.title'),
+      description: t('services.items.item-02.description'),
       icon: 'Puzzle',
     },
     {
-      title: 'Design Systems',
-      description:
-        'Bridging the gap between design and dev by building and maintaining consistent UI libraries (Storybook/Figma) for faster iteration.',
+      title: t('services.items.item-03.title'),
+      description: t('services.items.item-03.description'),
       icon: 'Palette',
     },
     {
-      title: 'Continuous Improvement',
-      description:
-        'Proactively identifying performance bottlenecks and proposing technical enhancements before they become critical issues.',
+      title: t('services.items.item-04.title'),
+      description: t('services.items.item-04.description'),
       icon: 'TrendingUp',
     },
   ],
   experience: [
     {
-      company: 'Penzack',
-      role: 'Senior Frontend Developer',
-      period: '2024 - Present',
-      description:
-        'Developing high-impact features for a global investment platform serving over 1M users. Focus on performance optimization and security.',
+      company: t('experience.items.item-01.company'),
+      role: t('experience.items.item-01.role'),
+      period: t('experience.items.item-01.period'),
+      description: t('experience.items.item-01.description'),
     },
     {
-      company: 'Elint Tech',
-      role: 'Mid-Level Frontend Developer',
-      period: '2022 - 2024',
-      description:
-        'Migrated large-scale projects to Next.js and built data visualization dashboards for major clients like Lacta & Universal Music.',
+      company: t('experience.items.item-02.company'),
+      role: t('experience.items.item-02.role'),
+      period: t('experience.items.item-02.period'),
+      description: t('experience.items.item-02.description'),
     },
     {
-      company: 'Desencoder',
-      role: 'Full Stack Developer',
-      period: '2020 - 2022',
-      description:
-        'Designed scalable web applications and fintech solutions ensuring secure transactions for thousands of daily users.',
+      company: t('experience.items.item-03.company'),
+      role: t('experience.items.item-03.role'),
+      period: t('experience.items.item-03.period'),
+      description: t('experience.items.item-03.description'),
     },
   ],
-}
+})

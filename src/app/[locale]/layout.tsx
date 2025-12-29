@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Prompt } from 'next/font/google'
-import './globals.css'
+import { NextIntlClientProvider } from 'next-intl'
+import '../globals.css'
 
 const prompt = Prompt({
   variable: '--font-prompt',
@@ -21,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${prompt.variable} antialiased`}>{children}</body>
+      <body className={`${prompt.variable} antialiased`}>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
     </html>
   )
 }

@@ -19,13 +19,20 @@ import {
   ShieldCheck,
   Mail,
 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+
 import { FadeIn } from '@/components/FadeIn'
 import { SpotlightCard } from '@/components/SpotlightCard'
-import { data } from '@/utils/data'
+import { data as dataImport } from '@/utils/data'
 import { SocialLink } from '@/components/SocialLink'
 import { SkillGroup } from '@/components/SkillGroup'
+import { LanguageSelector } from '@/components/language-selector'
 
 export default function Portfolio() {
+  const t = useTranslations('home')
+
+  const data = dataImport(t)
+
   return (
     <main className='min-h-screen bg-neutral-950 text-neutral-200 selection:bg-neutral-700 selection:text-white font-sans'>
       <header className='fixed top-0 z-50 w-full border-b border-white/5 bg-neutral-950/80 backdrop-blur-md'>
@@ -33,12 +40,16 @@ export default function Portfolio() {
           <span className='text-xl font-bold tracking-tight text-white'>
             WL.
           </span>
-          <a
-            href={`mailto:${data.profile.contact}`}
-            className='rounded-full bg-white px-4 py-2 text-sm font-medium text-black hover:bg-neutral-200 transition-colors'
-          >
-            Contact Me
-          </a>
+
+          <div className='flex items-center gap-4'>
+            <LanguageSelector />
+            <a
+              href={`mailto:${data.profile.contact}`}
+              className='rounded-full bg-white px-4 py-2 text-sm font-medium text-black hover:bg-neutral-200 transition-colors'
+            >
+              {t('navbar.contact')}
+            </a>
+          </div>
         </div>
       </header>
 
@@ -50,21 +61,25 @@ export default function Portfolio() {
                 <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75'></span>
                 <span className='relative inline-flex rounded-full h-2 w-2 bg-green-500'></span>
               </span>
-              Available for new projects
+              {t('hero.status')}
             </div>
             <h1 className='text-5xl font-extrabold tracking-tight text-white sm:text-7xl mb-6'>
-              Building scalable <br />
-              <span className='text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600'>
-                web applications.
+              {t('hero.title')} <br />
+              <span className='text-transparent bg-clip-text bg-linear-to-r from-neutral-200 to-neutral-600'>
+                {t('hero.titleHighlight')}
               </span>
             </h1>
             <p className='max-w-xl text-lg text-neutral-400 mb-8 leading-relaxed'>
-              I&apos;m{' '}
-              <strong className='text-white'>{data.profile.name}</strong>, a{' '}
-              {data.profile.role} with over 8 years of experience. I specialize
-              in combining <span className='text-white'>Next.js</span>{' '}
-              performance with <span className='text-white'>clean UI</span> to
-              drive business results.
+              {t.rich('hero.intro', {
+                name: data.profile.name,
+                role: data.profile.role,
+                important: (chunks) => (
+                  <strong className='text-white'>{chunks}</strong>
+                ),
+                highlight: (chunks) => (
+                  <span className='text-white'>{chunks}</span>
+                ),
+              })}
             </p>
 
             <div className='flex flex-wrap gap-4'>
@@ -104,21 +119,21 @@ export default function Portfolio() {
         <section className='mb-24'>
           <FadeIn>
             <h2 className='text-2xl font-semibold text-white mb-8 flex items-center gap-2'>
-              <Terminal size={24} /> Technical Proficiency
+              <Terminal size={24} /> {t('tech.title')}
             </h2>
             <div className='space-y-8'>
               <SkillGroup
-                title='Frontend Core'
+                title={t('tech.frontend')}
                 skills={data.skills.frontend}
                 icon={<Layout size={18} />}
               />
               <SkillGroup
-                title='Backend & Data'
+                title={t('tech.backend')}
                 skills={data.skills.backend}
                 icon={<Server size={18} />}
               />
               <SkillGroup
-                title='Tools & DevOps'
+                title={t('tech.tools')}
                 skills={data.skills.tools}
                 icon={<Terminal size={18} />}
               />
@@ -130,7 +145,7 @@ export default function Portfolio() {
           <FadeIn>
             <h2 className='text-2xl font-semibold text-white mb-8 flex items-center gap-2'>
               <Lightbulb size={24} className='text-yellow-400' />
-              How I Can Help Your Team
+              {t('services.title')}
             </h2>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -162,10 +177,10 @@ export default function Portfolio() {
             <div className='flex items-center justify-between mb-8'>
               <h2 className='text-2xl font-semibold text-white flex items-center gap-2'>
                 <ShieldCheck size={24} className='text-green-400' />
-                Work Philosophy
+                {t('philosophy.title')}
               </h2>
               <span className='hidden sm:inline-flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20'>
-                Full-Time Availability
+                {t('philosophy.availability')}
               </span>
             </div>
 
@@ -196,12 +211,12 @@ export default function Portfolio() {
         <section className='mb-24'>
           <FadeIn>
             <h2 className='text-2xl font-semibold text-white mb-8'>
-              Work Experience
+              {t('experience.title')}
             </h2>
             <div className='relative border-l border-neutral-800 ml-3 space-y-12'>
               {data.experience.map((job, i) => (
                 <div key={i} className='relative pl-8'>
-                  <span className='absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-neutral-600 ring-4 ring-neutral-950' />
+                  <span className='absolute -left-1.25 top-2 h-2.5 w-2.5 rounded-full bg-neutral-600 ring-4 ring-neutral-950' />
                   <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2'>
                     <h3 className='text-lg font-medium text-white'>
                       {job.company}
@@ -223,17 +238,17 @@ export default function Portfolio() {
         <section className='mb-32 mt-16'>
           <FadeIn>
             <div className='relative overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900/30 px-6 py-20 text-center sm:px-12 lg:px-16'>
-              <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/5 blur-[100px] rounded-full pointer-events-none' />
+              <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-white/5 blur-[100px] rounded-full pointer-events-none' />
 
               <h2 className='relative z-10 mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-                Ready to build something{' '}
-                <span className='text-neutral-400'>extraordinary?</span>
+                {t('cta.title')}{' '}
+                <span className='text-neutral-400'>
+                  {t('cta.titleHighlight')}
+                </span>
               </h2>
 
               <p className='relative z-10 mx-auto mt-6 max-w-xl text-lg text-neutral-400'>
-                Whether you have a complex project in mind or need a senior
-                developer to strengthen your team, I&apos;m ready to help you
-                achieve your goals.
+                {t('cta.description')}
               </p>
 
               <div className='relative z-10 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row'>
@@ -245,7 +260,7 @@ export default function Portfolio() {
                     size={18}
                     className='transition-transform group-hover:-translate-y-0.5'
                   />
-                  Send me an email
+                  {t('cta.emailBtn')}
                 </a>
 
                 <div className='flex gap-4'>
@@ -278,7 +293,7 @@ export default function Portfolio() {
               </div>
 
               <p className='relative z-10 mt-8 text-xs text-neutral-500'>
-                Prefer to copy?{' '}
+                {t('cta.copyText')}{' '}
                 <span className='text-neutral-300 select-all font-mono'>
                   {data.profile.contact}
                 </span>
@@ -289,8 +304,8 @@ export default function Portfolio() {
 
         <footer className='border-t border-white/5 pt-10 pb-20 text-center'>
           <p className='text-neutral-600 text-sm'>
-            &copy; {new Date().getFullYear()} Wesley Leandro. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Wesley Leandro.{' '}
+            {t('footer.rights')}
           </p>
         </footer>
       </div>
