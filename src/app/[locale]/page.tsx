@@ -21,11 +21,11 @@ import {
 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
-import { FadeIn } from '@/components/FadeIn'
-import { SpotlightCard } from '@/components/SpotlightCard'
+import { FadeIn } from '@/components/fade-in'
+import { SpotlightCard } from '@/components/spotlight-card'
 import { data as dataImport } from '@/utils/data'
-import { SocialLink } from '@/components/SocialLink'
-import { SkillGroup } from '@/components/SkillGroup'
+import { SocialLink } from '@/components/social-link'
+import { SkillGroup } from '@/components/skill-group'
 import { LanguageSelector } from '@/components/language-selector'
 
 export default function Portfolio() {
