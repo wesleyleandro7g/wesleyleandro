@@ -71,8 +71,6 @@ export default function Portfolio() {
             </h1>
             <p className='max-w-xl text-lg text-neutral-400 mb-8 leading-relaxed'>
               {t.rich('hero.intro', {
-                name: data.profile.name,
-                role: data.profile.role,
                 important: (chunks) => (
                   <strong className='text-white'>{chunks}</strong>
                 ),
