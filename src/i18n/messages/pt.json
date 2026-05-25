@@ -17,7 +17,13 @@
     "work": "Trabalhos",
     "writing": "Escritos",
     "about": "Sobre",
-    "contact": "Contato"
+    "contact": "Contato",
+    "contactOptions": {
+      "email": "E-mail",
+      "discord": "Discord",
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp"
+    }
   },
   "home": {
     "language": "Idioma",
@@ -33,6 +39,9 @@
       "links": {
         "github": "GitHub",
         "linkedin": "LinkedIn",
+        "discord": "Discord",
+        "telegram": "Telegram",
+        "whatsapp": "WhatsApp",
         "resume": "Currículo"
       }
     },
@@ -171,7 +180,15 @@
       "title": "Vamos construir sistemas que escalam.",
       "description": "Estou aberto a roles sênior em engenharia, posições staff-level IC e oportunidades de founding engineer — especialmente onde arquitetura, impacto em produto e ownership técnico importam.",
       "emailBtn": "Envie um e-mail",
-      "copyText": "Prefere copiar?"
+      "copyText": "Prefere copiar?",
+      "copyEmail": "Copiar endereço de e-mail",
+      "copyContact": "Copiar contato",
+      "contactOptions": {
+        "email": "E-mail",
+        "discord": "Discord",
+        "telegram": "Telegram",
+        "whatsapp": "WhatsApp"
+      }
     },
     "footer": {
       "rights": "Todos os direitos reservados."

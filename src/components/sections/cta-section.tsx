@@ -1,12 +1,43 @@
 'use client'
 
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { useState } from 'react'
+import { Check, Copy, Github, Linkedin, Mail } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { FadeIn } from '@/components/fade-in'
-import { siteConfig } from '@/utils/data'
+import { ContactLink } from '@/components/contact-link'
+import {
+  DiscordIcon,
+  TelegramIcon,
+  WhatsAppIcon,
+} from '@/components/icons/brand-icons'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import {
+  COPYABLE_CONTACTS,
+  type CopyableContactId,
+  siteConfig,
+} from '@/utils/data'
 
 export function CtaSection() {
   const t = useTranslations('home.cta')
+  const [selectedContact, setSelectedContact] =
+    useState<CopyableContactId>('email')
+  const [copied, setCopied] = useState(false)
+
+  const selectedValue =
+    COPYABLE_CONTACTS.find((contact) => contact.id === selectedContact)?.value ??
+    siteConfig.contact
+
+  async function copyContact() {
+    await navigator.clipboard.writeText(selectedValue)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   return (
     <section className='py-24'>
@@ -18,7 +49,7 @@ export function CtaSection() {
           <p className='mx-auto mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground'>
             {t('description')}
           </p>
-          <div className='mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row'>
+          <div className='mt-8 flex flex-wrap items-center justify-center gap-3'>
             <a
               href={`mailto:${siteConfig.contact}`}
               className='group inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background transition-colors hover:bg-foreground/90'
@@ -26,31 +57,67 @@ export function CtaSection() {
               <Mail size={16} />
               {t('emailBtn')}
             </a>
-            <a
+            <ContactLink
               href={siteConfig.links.linkedin}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-surface'
-            >
-              <Linkedin size={16} />
-              LinkedIn
-            </a>
-            <a
+              icon={<Linkedin size={16} />}
+              label='LinkedIn'
+            />
+            <ContactLink
               href={siteConfig.links.github}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-surface'
-            >
-              <Github size={16} />
-              GitHub
-            </a>
+              icon={<Github size={16} />}
+              label='GitHub'
+            />
+            <ContactLink
+              href={siteConfig.links.discord}
+              icon={<DiscordIcon className='h-4 w-4' />}
+              label='Discord'
+            />
+            <ContactLink
+              href={siteConfig.links.telegram}
+              icon={<TelegramIcon className='h-4 w-4' />}
+              label='Telegram'
+            />
+            <ContactLink
+              href={siteConfig.links.whatsapp}
+              icon={<WhatsAppIcon className='h-4 w-4' />}
+              label='WhatsApp'
+            />
           </div>
-          <p className='mt-6 text-xs text-muted-foreground'>
-            {t('copyText')}{' '}
-            <span className='select-all font-mono text-foreground'>
-              {siteConfig.contact}
-            </span>
-          </p>
+          <div className='mt-6 inline-flex items-center gap-2 text-xs text-muted-foreground'>
+            <span>{t('copyText')}</span>
+            <Select
+              value={selectedContact}
+              onValueChange={(value) =>
+                setSelectedContact(value as CopyableContactId)
+              }
+            >
+              <SelectTrigger
+                size='sm'
+                className='h-7 min-w-[220px] rounded-md border-border bg-surface/50 text-xs'
+              >
+                <SelectValue>
+                  <span className='font-mono text-foreground'>
+                    {selectedValue}
+                  </span>
+                </SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+                {COPYABLE_CONTACTS.map((contact) => (
+                  <SelectItem key={contact.id} value={contact.id}>
+                    {t(`contactOptions.${contact.id}`)} — {contact.value}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <button
+              type='button'
+              onClick={copyContact}
+              aria-label={t('copyContact')}
+              className='inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:bg-surface hover:text-foreground'
+            >
+              {copied ? <Check size={12} /> : <Copy size={12} />}
+            </button>
+          </div>
         </div>
       </FadeIn>
     </section>

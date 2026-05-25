@@ -17,7 +17,13 @@
     "work": "Work",
     "writing": "Writing",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "contactOptions": {
+      "email": "Email",
+      "discord": "Discord",
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp"
+    }
   },
   "home": {
     "language": "Language",
@@ -33,6 +39,9 @@
       "links": {
         "github": "GitHub",
         "linkedin": "LinkedIn",
+        "discord": "Discord",
+        "telegram": "Telegram",
+        "whatsapp": "WhatsApp",
         "resume": "Resume"
       }
     },
@@ -171,7 +180,15 @@
       "title": "Let's build systems that scale.",
       "description": "I'm open to senior engineering roles, staff-level IC positions, and founding engineer opportunities — especially where architecture, product impact, and technical ownership matter.",
       "emailBtn": "Send me an email",
-      "copyText": "Prefer to copy?"
+      "copyText": "Prefer to copy?",
+      "copyEmail": "Copy email address",
+      "copyContact": "Copy contact",
+      "contactOptions": {
+        "email": "Email",
+        "discord": "Discord",
+        "telegram": "Telegram",
+        "whatsapp": "WhatsApp"
+      }
     },
     "footer": {
       "rights": "All rights reserved."

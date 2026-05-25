@@ -7,14 +7,20 @@ interface SocialLinkProps {
   primary?: boolean
 }
 
+function isWebLink(href: string) {
+  return href.startsWith('http://') || href.startsWith('https://')
+}
+
 export function SocialLink(props: SocialLinkProps) {
   const { href, icon, label, primary = false } = props
+  const external = isWebLink(href)
 
   return (
     <a
       href={href}
-      target='_blank'
-      rel='noopener noreferrer'
+      {...(external
+        ? { target: '_blank', rel: 'noopener noreferrer' }
+        : {})}
       className={cn(
         'flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors',
         primary

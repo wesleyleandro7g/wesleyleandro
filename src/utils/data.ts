@@ -6,12 +6,52 @@ export const siteConfig = {
   name: 'Wesley Leandro',
   role: 'Senior Software Engineer',
   url: 'https://wesleyleandro.com',
-  contact: 'support@wesleyleandro.com',
+  contact: 'hi@wesleyleandro.com',
   links: {
     github: 'https://github.com/wesleyleandro7g',
     linkedin: 'https://linkedin.com/in/wesleyleandro',
+    discord: 'discord://discord.com/channels/@me',
+    telegram: 'https://t.me/owesleyleandro',
+    whatsapp: 'https://wa.me/5538999932655',
+  },
+  contactChannels: {
+    discord: { handle: 'wesleyleandro' },
+    telegram: { handle: 'owesleyleandro' },
+    whatsapp: { handle: '+5538999932655' },
   },
 }
+
+export const COPYABLE_CONTACTS = [
+  { id: 'email', value: siteConfig.contact },
+  { id: 'discord', value: siteConfig.contactChannels.discord.handle },
+  { id: 'telegram', value: siteConfig.contactChannels.telegram.handle },
+  { id: 'whatsapp', value: siteConfig.contactChannels.whatsapp.handle },
+] as const
+
+export type CopyableContactId = (typeof COPYABLE_CONTACTS)[number]['id']
+
+export const CONTACT_LINKS = [
+  {
+    id: 'email',
+    href: `mailto:${siteConfig.contact}`,
+    value: siteConfig.contact,
+  },
+  {
+    id: 'discord',
+    href: siteConfig.links.discord,
+    value: siteConfig.contactChannels.discord.handle,
+  },
+  {
+    id: 'telegram',
+    href: siteConfig.links.telegram,
+    value: siteConfig.contactChannels.telegram.handle,
+  },
+  {
+    id: 'whatsapp',
+    href: siteConfig.links.whatsapp,
+    value: siteConfig.contactChannels.whatsapp.handle,
+  },
+] as const
 
 export const caseStudyStacks: Record<CaseStudySlug, string[]> = {
   penzack: [

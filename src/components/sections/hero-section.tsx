@@ -5,6 +5,11 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { FadeIn } from '@/components/fade-in'
 import { SocialLink } from '@/components/social-link'
+import {
+  DiscordIcon,
+  TelegramIcon,
+  WhatsAppIcon,
+} from '@/components/icons/brand-icons'
 import { siteConfig } from '@/utils/data'
 
 export function HeroSection() {
@@ -70,6 +75,21 @@ export function HeroSection() {
             href={siteConfig.links.linkedin}
             icon={<Linkedin size={18} />}
             label={t('links.linkedin')}
+          />
+          <SocialLink
+            href={siteConfig.links.discord}
+            icon={<DiscordIcon className='h-[18px] w-[18px]' />}
+            label={t('links.discord')}
+          />
+          <SocialLink
+            href={siteConfig.links.telegram}
+            icon={<TelegramIcon className='h-[18px] w-[18px]' />}
+            label={t('links.telegram')}
+          />
+          <SocialLink
+            href={siteConfig.links.whatsapp}
+            icon={<WhatsAppIcon className='h-[18px] w-[18px]' />}
+            label={t('links.whatsapp')}
           />
           <SocialLink
             href='/resume.pdf'

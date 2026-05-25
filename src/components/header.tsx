@@ -2,8 +2,8 @@
 
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
+import { ContactMenu } from '@/components/contact-menu'
 import { LanguageSelector } from '@/components/language-selector'
-import { siteConfig } from '@/utils/data'
 import { cn } from '@/lib/utils'
 
 export function Header() {
@@ -43,12 +43,7 @@ export function Header() {
 
         <div className='flex items-center gap-3'>
           <LanguageSelector />
-          <a
-            href={`mailto:${siteConfig.contact}`}
-            className='rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90'
-          >
-            {t('contact')}
-          </a>
+          <ContactMenu />
         </div>
       </div>
     </header>
