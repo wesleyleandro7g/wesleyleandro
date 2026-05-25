@@ -1,115 +1,293 @@
 {
+  "metadata": {
+    "home": {
+      "title": "Wesley Leandro — Senior Software Engineer | Systems, SaaS & AI",
+      "description": "Senior Software Engineer building scalable platforms, fintech systems, and AI-powered products. 7+ years shipping high-performance SaaS at global scale."
+    },
+    "work": {
+      "title": "Work — Wesley Leandro | Engineering Case Studies",
+      "description": "Engineering case studies: fintech platforms at 2M+ scale, enterprise migrations, and full-stack product delivery."
+    },
+    "writing": {
+      "title": "Writing — Wesley Leandro | System Design & Product Engineering",
+      "description": "Insights on system design, scalable SaaS architecture, AI engineering, and product-focused software development."
+    }
+  },
+  "nav": {
+    "work": "Work",
+    "writing": "Writing",
+    "about": "About",
+    "contact": "Contact"
+  },
   "home": {
     "language": "Language",
-    "navbar": {
-      "contact": "Contact Me"
-    },
     "hero": {
-      "status": "Available for new projects",
-      "title": "Building scalable",
-      "titleHighlight": "web applications.",
-      "intro": "I'm <important>Wesley Leandro</important>, a Senior Frontend Developer with over 8 years of experience. I specialize in combining <highlight>Next.js</highlight> performance with <highlight>clean UI</highlight> to drive business results.",
+      "status": "Open to senior engineering opportunities",
+      "title": "Building scalable systems,",
+      "titleHighlight": "AI-powered products.",
+      "intro": "I'm <important>Wesley Leandro</important>, a Senior Software Engineer with 7+ years building high-performance platforms in fintech and SaaS. I focus on system design, product engineering, and shipping software that scales — from architecture decisions to production.",
+      "tags": "Fintech · SaaS · Platform Engineering",
+      "ctaWork": "View Work",
+      "ctaWriting": "Read Insights",
+      "ctaContact": "Contact",
       "links": {
         "github": "GitHub",
         "linkedin": "LinkedIn",
         "resume": "Resume"
       }
     },
-    "stats": {
-      "item-01": {
-        "label": "Experience",
-        "value": "+8 Years"
-      },
-      "item-02": {
-        "label": "Optimization",
-        "value": "60% Faster"
-      },
-      "item-03": {
-        "label": "Sales Boost",
-        "value": "+40%"
-      }
-    },
-    "tech": {
-      "title": "Technical Proficiency",
-      "frontend": "Frontend Core",
-      "backend": "Backend & Data",
-      "tools": "Tools & DevOps"
-    },
-    "services": {
-      "title": "How I Can Help Your Team",
+    "impact": {
+      "label": "Engineering Impact",
+      "title": "Impact at scale",
       "items": {
         "item-01": {
-          "title": "Technical Refinement",
-          "description": "Elevating code quality through strict review processes, modern patterns, and refactoring strategies that reduce technical debt."
+          "value": "2M+",
+          "label": "Users served",
+          "context": "Production platforms at global scale"
         },
         "item-02": {
-          "title": "Complex Problem Solving",
-          "description": "Translating ambiguous business requirements into robust, scalable technical architectures that withstand growth."
+          "value": "7+ yrs",
+          "label": "Production experience",
+          "context": "Fintech, SaaS, and high-traffic products"
         },
         "item-03": {
-          "title": "Design Systems",
-          "description": "Bridging the gap between design and dev by building and maintaining consistent UI libraries (Storybook/Figma) for faster iteration."
+          "value": "60%",
+          "label": "Performance gains",
+          "context": "Measured improvements in load time and UX"
         },
         "item-04": {
-          "title": "Continuous Improvement",
-          "description": "Proactively identifying performance bottlenecks and proposing technical enhancements before they become critical issues."
+          "value": "3",
+          "label": "Platform migrations",
+          "context": "Next.js and architecture modernizations led"
         }
       }
     },
-    "philosophy": {
-      "title": "Work Philosophy",
-      "availability": "Full-Time Availability",
+    "work": {
+      "label": "Selected Work",
+      "title": "Engineering case studies",
+      "viewAll": "View all work",
+      "readCaseStudy": "Read case study"
+    },
+    "focus": {
+      "label": "Current Focus",
+      "title": "What I'm exploring",
+      "intro": "Areas I'm actively exploring and applying in production work.",
       "items": {
         "item-01": {
-          "title": "Communication & Reliability",
-          "description": "Objective communication with clear expectations on deadlines. I value transparency and keep stakeholders updated to avoid surprises."
+          "title": "AI Engineering",
+          "description": "Integrating LLMs and AI workflows into product experiences with reliability and cost awareness."
         },
         "item-02": {
-          "title": "Team Synergy & Energy",
-          "description": "I bring a positive, enthusiastic attitude to daily calls and challenges. Excellent team player who thrives in collaborative environments."
+          "title": "Distributed Systems",
+          "description": "Designing services and data flows that scale horizontally and fail gracefully."
         },
         "item-03": {
-          "title": "Smart AI Integration",
-          "description": "I leverage AI to boost productivity and handle boilerplate, ensuring I spend 100% of my focus on complex logic and architectural decisions."
+          "title": "Product Engineering",
+          "description": "Translating ambiguous requirements into shippable, measurable product outcomes."
         },
         "item-04": {
-          "title": "Proactivity & Pressure",
-          "description": "High performance under pressure. I don't wait for tasks; I actively look for project improvements and technical optimizations."
+          "title": "Scalable SaaS",
+          "description": "Multi-tenant patterns, performance at scale, and infrastructure that grows with the business."
+        },
+        "item-05": {
+          "title": "System Design",
+          "description": "Architecture trade-offs, boundaries, and long-term maintainability."
+        },
+        "item-06": {
+          "title": "Developer Experience",
+          "description": "Tooling, CI/CD, and patterns that multiply team velocity."
         }
       }
+    },
+    "about": {
+      "label": "About",
+      "title": "Engineering with ownership",
+      "paragraphs": {
+        "p1": "I'm a Senior Software Engineer based in Brazil, working remotely with global teams on products where reliability, performance, and scale are non-negotiable.",
+        "p2": "Over 7+ years, I've built platforms in fintech and SaaS — from secure transaction systems to investment platforms serving millions of users. My work sits at the intersection of system design, product engineering, and modern web architecture.",
+        "p3": "I care deeply about the decisions that compound: how teams structure code, how systems handle growth, how products ship without sacrificing quality. I'm as comfortable discussing API boundaries and deployment strategy as I am optimizing critical user flows.",
+        "p4": "Currently, I'm focused on AI-native product development, scalable SaaS architecture, and engineering practices that help teams move fast without breaking things."
+      },
+      "closing": "Open to senior, staff, and founding engineer roles where technical ownership and product impact matter."
+    },
+    "capabilities": {
+      "label": "Engineering Capabilities",
+      "title": "Technical breadth",
+      "groups": {
+        "frontend": {
+          "title": "Frontend Engineering",
+          "description": "High-performance UIs, SSR/SSG, design systems"
+        },
+        "backend": {
+          "title": "Backend & APIs",
+          "description": "Service design, data modeling, API contracts"
+        },
+        "cloud": {
+          "title": "Cloud & Infrastructure",
+          "description": "Deploy pipelines, containerization, cloud-native patterns"
+        },
+        "ai": {
+          "title": "AI & Automation",
+          "description": "Production AI features, engineering productivity"
+        },
+        "tooling": {
+          "title": "Developer Tooling",
+          "description": "Testing, collaboration, design-dev alignment"
+        }
+      }
+    },
+    "insights": {
+      "label": "Engineering Insights",
+      "title": "Writing & ideas",
+      "intro": "Thoughts on architecture, scalability, and building modern products.",
+      "viewAll": "View all writing",
+      "comingSoon": "Coming soon"
     },
     "experience": {
-      "title": "Work Experience",
+      "label": "Experience",
+      "title": "Work history",
       "items": {
         "item-01": {
           "company": "Penzack",
-          "role": "Senior Frontend Developer",
+          "role": "Senior Software Engineer",
           "period": "2024 - Present",
-          "description": "Developing high-impact features for a global investment platform serving over 2M users. Focus on performance optimization and security."
+          "description": "Own high-impact features for a global investment platform serving 2M+ users. Drive performance optimization, architectural patterns, and secure delivery in a regulated fintech environment."
         },
         "item-02": {
           "company": "Elint Tech",
-          "role": "Mid-Level Frontend Developer",
+          "role": "Software Engineer",
           "period": "2022 - 2024",
-          "description": "Migrated large-scale projects to Next.js and built data visualization dashboards for major clients like Lacta & Universal Music."
+          "description": "Led Next.js migrations for large-scale enterprise platforms. Built data visualization systems for major clients including Lacta and Universal Music."
         },
         "item-03": {
           "company": "Desencoder",
-          "role": "Full Stack Developer",
+          "role": "Full Stack Engineer",
           "period": "2018 - 2022",
-          "description": "Designed scalable web applications and fintech solutions ensuring secure transactions for thousands of daily users."
+          "description": "Designed and shipped scalable fintech applications with secure transaction flows, serving thousands of daily users. Full ownership from API design to production deployment."
         }
       }
     },
     "cta": {
-      "title": "Ready to build something",
-      "titleHighlight": "extraordinary?",
-      "description": "Whether you have a complex project in mind or need a senior developer to strengthen your team, I'm ready to help you achieve your goals.",
+      "title": "Let's build systems that scale.",
+      "description": "I'm open to senior engineering roles, staff-level IC positions, and founding engineer opportunities — especially where architecture, product impact, and technical ownership matter.",
       "emailBtn": "Send me an email",
       "copyText": "Prefer to copy?"
     },
     "footer": {
       "rights": "All rights reserved."
+    }
+  },
+  "workPage": {
+    "label": "Work",
+    "title": "Engineering case studies",
+    "description": "Real engineering work solving real business problems — from fintech at scale to enterprise platform migrations.",
+    "sections": {
+      "context": "Context",
+      "challenge": "Challenge",
+      "approach": "Approach",
+      "architecture": "Architecture decisions",
+      "scalability": "Scalability",
+      "impact": "Impact",
+      "stack": "Technologies",
+      "lesson": "Key lesson"
+    },
+    "prev": "Previous",
+    "next": "Next",
+    "backToWork": "Back to work",
+    "studies": {
+      "penzack": {
+        "company": "Penzack",
+        "role": "Senior Software Engineer",
+        "period": "2024 - Present",
+        "domain": "Fintech",
+        "thesis": "Scaling a fintech platform to 2M+ users while maintaining performance and security.",
+        "context": "Global investment platform serving 2M+ users across regulated markets. High-stakes UX where latency and reliability directly affect trust and conversion.",
+        "challenge": "Deliver high-impact features under strict performance and security constraints. Balance rapid product iteration with maintainable frontend architecture at scale.",
+        "approach": "Established clear component boundaries for feature teams, defined performance budgets for critical flows, and built CI-driven release confidence into every deployment.",
+        "architecture": "Component boundary design for feature teams; performance budgets for critical flows; secure data handling patterns; CI-driven release confidence.",
+        "scalability": "Code splitting, caching strategies, observability-friendly error boundaries, patterns that reduce regression risk as team and codebase grow.",
+        "impact": "Features shipped to millions of users; measurable performance optimization; improved release reliability.",
+        "lesson": "At fintech scale, frontend architecture is system design — boundaries, contracts, and observability matter as much as UI.",
+        "bullets": {
+          "b1": "2M+ users on production platform",
+          "b2": "Performance and security at fintech scale"
+        }
+      },
+      "elint": {
+        "company": "Elint Tech",
+        "role": "Software Engineer",
+        "period": "2022 - 2024",
+        "domain": "Enterprise SaaS",
+        "thesis": "Leading large-scale Next.js migrations and data-heavy dashboards for enterprise clients.",
+        "context": "Enterprise clients (Lacta, Universal Music) requiring reliable data visualization and modern web stacks.",
+        "challenge": "Migrate legacy codebases to Next.js without disrupting production. Build performant dashboards over complex datasets.",
+        "approach": "Executed incremental migration with rollback plans, shared data-fetching layers, and reusable dashboard architecture across client projects.",
+        "architecture": "Incremental migration strategy; shared data-fetching layer; dashboard component architecture for reuse across clients.",
+        "scalability": "Server-side rendering for SEO and initial load; modular dashboard widgets; testing strategy for migration safety.",
+        "impact": "Successful platform migrations; reusable dashboard patterns; faster iteration for client delivery.",
+        "lesson": "Migration success depends on sequencing, rollback plans, and treating DX as a first-class requirement.",
+        "bullets": {
+          "b1": "Enterprise Next.js migrations",
+          "b2": "Data dashboards for major brands"
+        }
+      },
+      "desencoder": {
+        "company": "Desencoder",
+        "role": "Full Stack Engineer",
+        "period": "2018 - 2022",
+        "domain": "Fintech",
+        "thesis": "Building secure, scalable fintech applications from full-stack ownership.",
+        "context": "Fintech startup building web applications handling thousands of daily transactions.",
+        "challenge": "Secure transaction flows, scalable backend integration, and maintainable full-stack architecture with a small team.",
+        "approach": "Designed API contracts for financial workflows, built validation layers, and established deployment pipelines for safe releases.",
+        "architecture": "API design for financial workflows; validation and error-handling contracts; deployment pipeline for safe releases.",
+        "scalability": "Database modeling for transaction integrity; horizontal-ready service boundaries; monitoring for production incidents.",
+        "impact": "Production fintech products serving thousands of daily users; secure transaction handling; foundation for team scaling.",
+        "lesson": "Early architectural choices compound — optimize for clarity and change, not premature complexity.",
+        "bullets": {
+          "b1": "Secure fintech transaction flows",
+          "b2": "Full-stack ownership from API to production"
+        }
+      }
+    }
+  },
+  "writingPage": {
+    "label": "Writing",
+    "title": "Engineering insights",
+    "description": "Writing on system design, SaaS architecture, and product engineering.",
+    "published": {
+      "label": "Published",
+      "title": "Articles & posts",
+      "empty": "Articles coming soon. Follow on LinkedIn for updates."
+    },
+    "topics": {
+      "label": "Topics",
+      "title": "Exploring next",
+      "items": {
+        "item-01": "System Design for Frontend Engineers",
+        "item-02": "Scaling SaaS Frontends Without Sacrificing DX",
+        "item-03": "AI Integration Patterns in Production",
+        "item-04": "Architecture Decisions That Compound",
+        "item-05": "Performance as a Product Feature",
+        "item-06": "Engineering Leadership for ICs"
+      }
+    },
+    "articles": {
+      "item-01": {
+        "title": "How I Think About Frontend Architecture at 2M+ User Scale",
+        "platform": "LinkedIn",
+        "excerpt": "Architecture patterns that hold up when millions depend on your UI."
+      },
+      "item-02": {
+        "title": "Migrating to Next.js Without Breaking Production",
+        "platform": "LinkedIn",
+        "excerpt": "A practical playbook for incremental platform migrations."
+      },
+      "item-03": {
+        "title": "AI in the Engineering Workflow: What Actually Helps",
+        "platform": "LinkedIn",
+        "excerpt": "Separating productivity gains from hype in daily engineering work."
+      }
     }
   }
 }

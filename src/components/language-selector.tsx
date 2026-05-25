@@ -35,9 +35,9 @@ export function LanguageSelector() {
         <SelectValue placeholder={t('language')} />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value='en'>EN 🇺🇸</SelectItem>
-        <SelectItem value='es'>ES 🇪🇸</SelectItem>
-        <SelectItem value='pt'>PT 🇧🇷</SelectItem>
+        <SelectItem value='en'>EN</SelectItem>
+        <SelectItem value='es'>ES</SelectItem>
+        <SelectItem value='pt'>PT</SelectItem>
       </SelectContent>
     </Select>
   )

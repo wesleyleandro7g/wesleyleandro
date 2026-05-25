@@ -1,115 +1,293 @@
 {
+  "metadata": {
+    "home": {
+      "title": "Wesley Leandro — Ingeniero de Software Senior | Sistemas, SaaS e IA",
+      "description": "Ingeniero de Software Senior construyendo plataformas escalables, sistemas fintech y productos con IA. 7+ años entregando SaaS de alto rendimiento a escala global."
+    },
+    "work": {
+      "title": "Trabajo — Wesley Leandro | Casos de Estudio en Ingeniería",
+      "description": "Casos de estudio en ingeniería: plataformas fintech con 2M+ usuarios, migraciones enterprise y entrega full-stack de productos."
+    },
+    "writing": {
+      "title": "Escritos — Wesley Leandro | System Design e Ingeniería de Producto",
+      "description": "Insights sobre system design, arquitectura SaaS escalable, ingeniería de IA y desarrollo de software orientado a producto."
+    }
+  },
+  "nav": {
+    "work": "Trabajo",
+    "writing": "Escritos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
   "home": {
     "language": "Idioma",
-    "navbar": {
-      "contact": "Contáctame"
-    },
     "hero": {
-      "status": "Disponible para nuevos proyectos",
-      "title": "Desarrollando aplicaciones",
-      "titleHighlight": "web escalables.",
-      "intro": "Soy <important>Wesley Leandro</important>, un Desarrollador Frontend Senior con más de 8 años de experiencia. Me especializo en combinar el rendimiento de <highlight>Next.js</highlight> con <highlight>interfaces limpias</highlight> para impulsar resultados comerciales.",
+      "status": "Abierto a oportunidades senior en ingeniería",
+      "title": "Construyendo sistemas escalables,",
+      "titleHighlight": "productos con IA.",
+      "intro": "Soy <important>Wesley Leandro</important>, Ingeniero de Software Senior con 7+ años construyendo plataformas de alto rendimiento en fintech y SaaS. Me enfoco en system design, ingeniería de producto y entregar software que escala — desde decisiones de arquitectura hasta producción.",
+      "tags": "Fintech · SaaS · Ingeniería de Plataforma",
+      "ctaWork": "Ver Trabajo",
+      "ctaWriting": "Leer Insights",
+      "ctaContact": "Contacto",
       "links": {
         "github": "GitHub",
         "linkedin": "LinkedIn",
-        "resume": "Currículo"
+        "resume": "Currículum"
       }
     },
-    "stats": {
-      "item-01": {
-        "label": "Experiencia",
-        "value": "+8 Años"
-      },
-      "item-02": {
-        "label": "Optimización",
-        "value": "60% Más Rápido"
-      },
-      "item-03": {
-        "label": "Ventas",
-        "value": "+40% Aumento"
-      }
-    },
-    "tech": {
-      "title": "Competencia Técnica",
-      "frontend": "Frontend Core",
-      "backend": "Backend & Data",
-      "tools": "Herramientas & DevOps"
-    },
-    "services": {
-      "title": "Cómo puedo ayudar a tu equipo",
+    "impact": {
+      "label": "Impacto en Ingeniería",
+      "title": "Impacto a escala",
       "items": {
         "item-01": {
-          "title": "Refinamiento Técnico",
-          "description": "Elevando la calidad del código mediante procesos de revisión estrictos, patrones modernos y estrategias de refactorización que reducen la deuda técnica."
+          "value": "2M+",
+          "label": "Usuarios atendidos",
+          "context": "Plataformas en producción a escala global"
         },
         "item-02": {
-          "title": "Resolución de Problemas Complejos",
-          "description": "Traduciendo requisitos comerciales ambiguos en arquitecturas técnicas robustas y escalables que soportan el crecimiento."
+          "value": "7+ años",
+          "label": "Experiencia en producción",
+          "context": "Fintech, SaaS y productos de alto tráfico"
         },
         "item-03": {
-          "title": "Sistemas de Diseño (Design Systems)",
-          "description": "Uniendo diseño y desarrollo mediante la construcción de bibliotecas de UI consistentes (Storybook/Figma) para una iteración más rápida."
+          "value": "60%",
+          "label": "Ganancias de rendimiento",
+          "context": "Mejoras medibles en tiempo de carga y UX"
         },
         "item-04": {
-          "title": "Mejora Continua",
-          "description": "Identificando proactivamente cuellos de botella de rendimiento y proponiendo mejoras técnicas antes de que se vuelvan críticos."
+          "value": "3",
+          "label": "Migraciones de plataforma",
+          "context": "Modernizaciones Next.js y arquitectura lideradas"
         }
       }
     },
-    "philosophy": {
-      "title": "Filosofía de Trabajo",
-      "availability": "Disponibilidad Tiempo Completo",
+    "work": {
+      "label": "Trabajo Seleccionado",
+      "title": "Casos de estudio en ingeniería",
+      "viewAll": "Ver todo el trabajo",
+      "readCaseStudy": "Leer caso de estudio"
+    },
+    "focus": {
+      "label": "Enfoque Actual",
+      "title": "Lo que estoy explorando",
+      "intro": "Áreas que estoy explorando y aplicando activamente en trabajo de producción.",
       "items": {
         "item-01": {
-          "title": "Comunicación y Fiabilidad",
-          "description": "Comunicación objetiva con expectativas claras sobre los plazos. Valoro la transparencia y mantengo a los interesados actualizados para evitar sorpresas."
+          "title": "Ingeniería de IA",
+          "description": "Integración de LLMs y flujos de IA en experiencias de producto con confiabilidad y conciencia de costo."
         },
         "item-02": {
-          "title": "Sinergia y Energía de Equipo",
-          "description": "Aporto una actitud positiva y entusiasta a las llamadas diarias y desafíos. Excelente compañero de equipo que prospera en entornos colaborativos."
+          "title": "Sistemas Distribuidos",
+          "description": "Diseño de servicios y flujos de datos que escalan horizontalmente y fallan con gracia."
         },
         "item-03": {
-          "title": "Integración Inteligente de IA",
-          "description": "Aprovecho la IA para aumentar la productividad y manejar el código repetitivo, asegurando que dedico el 100% de mi enfoque a la lógica compleja y decisiones arquitectónicas."
+          "title": "Ingeniería de Producto",
+          "description": "Traducir requisitos ambiguos en resultados de producto medibles y entregables."
         },
         "item-04": {
-          "title": "Proactividad y Presión",
-          "description": "Alto rendimiento bajo presión. No espero tareas; busco activamente mejoras del proyecto y optimizaciones técnicas."
+          "title": "SaaS Escalable",
+          "description": "Patrones multi-tenant, rendimiento a escala e infraestructura que crece con el negocio."
+        },
+        "item-05": {
+          "title": "System Design",
+          "description": "Trade-offs de arquitectura, boundaries y mantenibilidad a largo plazo."
+        },
+        "item-06": {
+          "title": "Developer Experience",
+          "description": "Tooling, CI/CD y patrones que multiplican la velocidad del equipo."
         }
       }
+    },
+    "about": {
+      "label": "Sobre mí",
+      "title": "Ingeniería con ownership",
+      "paragraphs": {
+        "p1": "Soy Ingeniero de Software Senior basado en Brasil, trabajando remotamente con equipos globales en productos donde confiabilidad, rendimiento y escala son innegociables.",
+        "p2": "En 7+ años, he construido plataformas en fintech y SaaS — desde sistemas de transacciones seguras hasta plataformas de inversión sirviendo millones de usuarios. Mi trabajo está en la intersección de system design, ingeniería de producto y arquitectura web moderna.",
+        "p3": "Me importan profundamente las decisiones que se componen: cómo los equipos estructuran código, cómo los sistemas manejan el crecimiento, cómo los productos se entregan sin sacrificar calidad. Estoy tan cómodo discutiendo boundaries de API y estrategia de deploy como optimizando flujos críticos de usuario.",
+        "p4": "Actualmente, me enfoco en desarrollo de productos AI-native, arquitectura SaaS escalable y prácticas de ingeniería que ayudan a los equipos a moverse rápido sin romper cosas."
+      },
+      "closing": "Abierto a roles senior, staff y founding engineer donde el ownership técnico y el impacto en producto importan."
+    },
+    "capabilities": {
+      "label": "Capacidades de Ingeniería",
+      "title": "Amplitud técnica",
+      "groups": {
+        "frontend": {
+          "title": "Ingeniería Frontend",
+          "description": "UIs de alto rendimiento, SSR/SSG, design systems"
+        },
+        "backend": {
+          "title": "Backend & APIs",
+          "description": "Diseño de servicios, modelado de datos, contratos de API"
+        },
+        "cloud": {
+          "title": "Cloud & Infraestructura",
+          "description": "Pipelines de deploy, containerización, patrones cloud-native"
+        },
+        "ai": {
+          "title": "IA & Automatización",
+          "description": "Features de IA en producción, productividad en ingeniería"
+        },
+        "tooling": {
+          "title": "Developer Tooling",
+          "description": "Testing, colaboración, alineación design-dev"
+        }
+      }
+    },
+    "insights": {
+      "label": "Insights de Ingeniería",
+      "title": "Escritos e ideas",
+      "intro": "Reflexiones sobre arquitectura, escalabilidad y construcción de productos modernos.",
+      "viewAll": "Ver todos los escritos",
+      "comingSoon": "Próximamente"
     },
     "experience": {
-      "title": "Experiencia Laboral",
+      "label": "Experiencia",
+      "title": "Historial profesional",
       "items": {
         "item-01": {
           "company": "Penzack",
-          "role": "Desarrollador Frontend Senior",
+          "role": "Ingeniero de Software Senior",
           "period": "2024 - Presente",
-          "description": "Desarrollando funcionalidades de alto impacto para una plataforma de inversión global con más de 2M de usuarios. Enfoque en optimización y seguridad."
+          "description": "Ownership de features de alto impacto para plataforma global de inversiones con 2M+ usuarios. Rendimiento, patrones arquitectónicos y entrega segura en entorno fintech regulado."
         },
         "item-02": {
           "company": "Elint Tech",
-          "role": "Desarrollador Frontend Mid-Level",
+          "role": "Ingeniero de Software",
           "period": "2022 - 2024",
-          "description": "Migración de proyectos a gran escala a Next.js y creación de paneles de visualización de datos para grandes clientes como Lacta y Universal Music."
+          "description": "Lideró migraciones Next.js para plataformas enterprise a gran escala. Construyó sistemas de visualización de datos para clientes como Lacta y Universal Music."
         },
         "item-03": {
           "company": "Desencoder",
-          "role": "Desarrollador Full Stack",
+          "role": "Ingeniero Full Stack",
           "period": "2018 - 2022",
-          "description": "Diseño de aplicaciones web escalables y soluciones fintech asegurando transacciones seguras para miles de usuarios diarios."
+          "description": "Diseñó y entregó aplicaciones fintech escalables con flujos de transacción seguros, sirviendo miles de usuarios diarios. Ownership completo del diseño de API al deploy en producción."
         }
       }
     },
     "cta": {
-      "title": "¿Listo para construir algo",
-      "titleHighlight": "extraordinario?",
-      "description": "Ya sea que tengas un proyecto complejo en mente o necesites un desarrollador senior para fortalecer tu equipo, estoy listo para ayudarte a alcanzar tus objetivos.",
+      "title": "Construyamos sistemas que escalen.",
+      "description": "Estoy abierto a roles senior en ingeniería, posiciones staff-level IC y oportunidades de founding engineer — especialmente donde arquitectura, impacto en producto y ownership técnico importan.",
       "emailBtn": "Envíame un correo",
       "copyText": "¿Prefieres copiar?"
     },
     "footer": {
       "rights": "Todos los derechos reservados."
+    }
+  },
+  "workPage": {
+    "label": "Trabajo",
+    "title": "Casos de estudio en ingeniería",
+    "description": "Ingeniería real resolviendo problemas reales de negocio — de fintech a escala a migraciones enterprise.",
+    "sections": {
+      "context": "Contexto",
+      "challenge": "Desafío",
+      "approach": "Enfoque",
+      "architecture": "Decisiones de arquitectura",
+      "scalability": "Escalabilidad",
+      "impact": "Impacto",
+      "stack": "Tecnologías",
+      "lesson": "Lección clave"
+    },
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "backToWork": "Volver al trabajo",
+    "studies": {
+      "penzack": {
+        "company": "Penzack",
+        "role": "Ingeniero de Software Senior",
+        "period": "2024 - Presente",
+        "domain": "Fintech",
+        "thesis": "Escalando una plataforma fintech a 2M+ usuarios manteniendo rendimiento y seguridad.",
+        "context": "Plataforma global de inversiones sirviendo 2M+ usuarios en mercados regulados. UX de alto riesgo donde latencia y confiabilidad afectan directamente confianza y conversión.",
+        "challenge": "Entregar features de alto impacto bajo restricciones estrictas de rendimiento y seguridad. Balancear iteración rápida de producto con arquitectura frontend mantenible a escala.",
+        "approach": "Estableció boundaries claros de componentes para equipos de feature, definió budgets de rendimiento para flujos críticos y construyó confianza de release orientada a CI en cada deploy.",
+        "architecture": "Diseño de boundaries de componentes para equipos de feature; budgets de rendimiento para flujos críticos; patrones seguros de manejo de datos; confianza de release orientada a CI.",
+        "scalability": "Code splitting, estrategias de cache, error boundaries observables, patrones que reducen riesgo de regresión conforme equipo y codebase crecen.",
+        "impact": "Features entregadas a millones de usuarios; optimización de rendimiento medible; confiabilidad de release mejorada.",
+        "lesson": "A escala fintech, arquitectura frontend es system design — boundaries, contratos y observabilidad importan tanto como UI.",
+        "bullets": {
+          "b1": "2M+ usuarios en plataforma de producción",
+          "b2": "Rendimiento y seguridad a escala fintech"
+        }
+      },
+      "elint": {
+        "company": "Elint Tech",
+        "role": "Ingeniero de Software",
+        "period": "2022 - 2024",
+        "domain": "Enterprise SaaS",
+        "thesis": "Liderando migraciones Next.js a gran escala y dashboards data-heavy para clientes enterprise.",
+        "context": "Clientes enterprise (Lacta, Universal Music) requiriendo visualización de datos confiable y stacks web modernos.",
+        "challenge": "Migrar codebases legacy a Next.js sin interrumpir producción. Construir dashboards performantes sobre datasets complejos.",
+        "approach": "Ejecutó migración incremental con planes de rollback, capas compartidas de data-fetching y arquitectura de dashboard reutilizable entre proyectos de clientes.",
+        "architecture": "Estrategia de migración incremental; capa compartida de data-fetching; arquitectura de componentes de dashboard para reuso entre clientes.",
+        "scalability": "Server-side rendering para SEO y carga inicial; widgets modulares de dashboard; estrategia de testing para seguridad de migración.",
+        "impact": "Migraciones de plataforma exitosas; patrones reutilizables de dashboard; iteración más rápida para entrega a clientes.",
+        "lesson": "El éxito en migración depende de secuenciación, planes de rollback y tratar DX como requisito de primera clase.",
+        "bullets": {
+          "b1": "Migraciones enterprise a Next.js",
+          "b2": "Dashboards de datos para grandes marcas"
+        }
+      },
+      "desencoder": {
+        "company": "Desencoder",
+        "role": "Ingeniero Full Stack",
+        "period": "2018 - 2022",
+        "domain": "Fintech",
+        "thesis": "Construyendo aplicaciones fintech seguras y escalables con ownership full-stack.",
+        "context": "Startup fintech construyendo aplicaciones web procesando miles de transacciones diarias.",
+        "challenge": "Flujos de transacción seguros, integración backend escalable y arquitectura full-stack mantenible con equipo pequeño.",
+        "approach": "Diseñó contratos de API para workflows financieros, construyó capas de validación y estableció pipelines de deploy para releases seguros.",
+        "architecture": "Diseño de API para workflows financieros; contratos de validación y error-handling; pipeline de deploy para releases seguros.",
+        "scalability": "Modelado de base de datos para integridad de transacciones; boundaries de servicio listos para escala horizontal; monitoreo para incidentes en producción.",
+        "impact": "Productos fintech en producción sirviendo miles de usuarios diarios; manejo seguro de transacciones; fundación para escalar el equipo.",
+        "lesson": "Las elecciones arquitectónicas iniciales se componen — optimiza para claridad y cambio, no complejidad prematura.",
+        "bullets": {
+          "b1": "Flujos de transacción fintech seguros",
+          "b2": "Ownership full-stack de API a producción"
+        }
+      }
+    }
+  },
+  "writingPage": {
+    "label": "Escritos",
+    "title": "Insights de ingeniería",
+    "description": "Escritos sobre system design, arquitectura SaaS e ingeniería de producto.",
+    "published": {
+      "label": "Publicados",
+      "title": "Artículos y posts",
+      "empty": "Artículos próximamente. Sigue en LinkedIn para actualizaciones."
+    },
+    "topics": {
+      "label": "Temas",
+      "title": "Explorando a continuación",
+      "items": {
+        "item-01": "System Design para Ingenieros Frontend",
+        "item-02": "Escalando Frontends SaaS Sin Sacrificar DX",
+        "item-03": "Patrones de Integración de IA en Producción",
+        "item-04": "Decisiones de Arquitectura Que Se Componen",
+        "item-05": "Rendimiento Como Feature de Producto",
+        "item-06": "Liderazgo en Ingeniería para ICs"
+      }
+    },
+    "articles": {
+      "item-01": {
+        "title": "Cómo Pienso en Arquitectura Frontend a Escala de 2M+ Usuarios",
+        "platform": "LinkedIn",
+        "excerpt": "Patrones de arquitectura que se sostienen cuando millones dependen de tu UI."
+      },
+      "item-02": {
+        "title": "Migrando a Next.js Sin Romper Producción",
+        "platform": "LinkedIn",
+        "excerpt": "Un playbook práctico para migraciones incrementales de plataforma."
+      },
+      "item-03": {
+        "title": "IA en el Workflow de Ingeniería: Lo Que Realmente Ayuda",
+        "platform": "LinkedIn",
+        "excerpt": "Separando ganancias de productividad del hype en el trabajo diario de ingeniería."
+      }
     }
   }
 }

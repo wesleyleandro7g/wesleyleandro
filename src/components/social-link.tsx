@@ -16,10 +16,10 @@ export function SocialLink(props: SocialLinkProps) {
       target='_blank'
       rel='noopener noreferrer'
       className={cn(
-        'flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all',
+        'flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors',
         primary
-          ? 'bg-white text-black hover:bg-neutral-200'
-          : 'bg-neutral-900 text-neutral-300 hover:bg-neutral-800 hover:text-white'
+          ? 'border-border bg-foreground text-background hover:bg-foreground/90'
+          : 'border-border bg-surface/50 text-muted-foreground hover:bg-surface hover:text-foreground'
       )}
     >
       {icon}
