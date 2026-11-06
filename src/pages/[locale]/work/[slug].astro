@@ -2,7 +2,6 @@
 import { ArrowLeft, ArrowRight } from '@lucide/astro'
 import Header from '@/components/header.astro'
 import Footer from '@/components/footer.astro'
-import SectionLabel from '@/components/section-label.astro'
 import FadeIn from '@/components/fade-in.astro'
 import {
   CASE_STUDY_SLUGS,
@@ -31,15 +30,12 @@ const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
   const sections = [
     { key: 'context', content: study.context },
     { key: 'challenge', content: study.challenge },
-    { key: 'approach', content: study.approach },
-    { key: 'architecture', content: study.architecture },
-    { key: 'scalability', content: study.scalability },
-    { key: 'impact', content: study.impact },
-    { key: 'lesson', content: study.lesson },
+    { key: 'responsibility', content: study.responsibility },
+    { key: 'solution', content: study.solution },
   ] as const
 
 ---
-<Layout locale={locale} page='work' path={`/work/${slug}`} title={`${study.company} — Wesley Leandro`} description={study.thesis}>
+<Layout locale={locale} page='work' path={`/work/${slug}`} title={`${study.company} — ${t('title')} | Wesley Leandro`} description={study.thesis}>
 <Header locale={locale} />
       <main class='grid-bg min-h-screen bg-background text-foreground'>
         <div class='mx-auto max-w-6xl px-6 pt-24 pb-12'>
@@ -74,9 +70,9 @@ const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
             {sections.map((section, i) => (
               <FadeIn delay={0.05 + i * 0.03}>
                 <section>
-                  <SectionLabel>
+                  <h2 class='mb-3 text-base font-medium text-foreground'>
                     {t(`sections.${section.key}`)}
-                  </SectionLabel>
+                  </h2>
                   <p class='text-sm leading-relaxed text-muted-foreground'>
                     {section.content}
                   </p>
@@ -84,9 +80,9 @@ const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
               </FadeIn>
             ))}
 
-            <FadeIn delay={0.3}>
+            {study.stack.length > 0 && <FadeIn delay={0.3}>
               <section>
-                <SectionLabel>{t('sections.stack')}</SectionLabel>
+                <h2 class='mb-3 text-base font-medium text-foreground'>{t('sections.stack')}</h2>
                 <div class='flex flex-wrap gap-2'>
                   {study.stack.map((tech) => (
                     <span
@@ -96,6 +92,12 @@ const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
                     </span>
                   ))}
                 </div>
+              </section>
+            </FadeIn>}
+            <FadeIn>
+              <section>
+                <h2 class='mb-3 text-base font-medium text-foreground'>{t('sections.impact')}</h2>
+                <p class='text-sm leading-relaxed text-muted-foreground'>{study.impact}</p>
               </section>
             </FadeIn>
           </div>

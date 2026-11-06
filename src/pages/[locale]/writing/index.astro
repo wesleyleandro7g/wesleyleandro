@@ -6,6 +6,7 @@ import SectionLabel from '@/components/section-label.astro'
 import FadeIn from '@/components/fade-in.astro'
 import Card from '@/components/card.astro'
 import { data as getData } from '@/utils/data'
+import { siteConfig } from '@/utils/data'
 import Layout from '@/layouts/site-layout.astro'
 import { locales, translate, type Locale } from '@/i18n'
 export function getStaticPaths() { return locales.map(locale => ({params: {locale}})) }
@@ -63,7 +64,7 @@ const { locale } = Astro.params as { locale: Locale }
                         {article.excerpt}
                       </p>
                       <span class='mt-4 inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors group-hover:text-foreground'>
-                        Read on {article.platform}
+                        {t('readArticle')} · {article.platform}
                         <ArrowRight
                           size={12}
                           class='transition-transform group-hover:translate-x-0.5'
@@ -78,6 +79,9 @@ const { locale } = Astro.params as { locale: Locale }
             <p class='mt-6 text-sm text-muted-foreground'>
               {t('published.empty')}
             </p>
+            <a href={siteConfig.links.linkedin} target='_blank' rel='noopener noreferrer' class='link-underline mt-4 inline-flex items-center gap-2 text-sm text-foreground'>
+              {t('connectLinkedin')} <ExternalLink size={14} />
+            </a>
           </section>
 
           <section>

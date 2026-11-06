@@ -1,16 +1,16 @@
 {
   "metadata": {
     "home": {
-      "title": "Wesley Leandro — Ingeniero de Software Senior | Sistemas, SaaS e IA",
-      "description": "Ingeniero de Software Senior construyendo plataformas escalables, sistemas fintech y productos con IA. 7+ años entregando SaaS de alto rendimiento a escala global."
+      "title": "Wesley Leandro — Senior Software Engineer | React y Next.js",
+      "description": "Ingeniero de Software Senior especializado en Frontend Engineering con React, Next.js y TypeScript. 8+ años de experiencia. Abierto a puestos internacionales."
     },
     "work": {
-      "title": "Trabajo — Wesley Leandro | Casos de Estudio en Ingeniería",
-      "description": "Casos de estudio en ingeniería: plataformas fintech con 2M+ usuarios, migraciones enterprise y entrega full-stack de productos."
+      "title": "Proyectos — Wesley Leandro | Ingeniería Frontend",
+      "description": "Arquitectura frontend y desarrollo full stack: Penzack en AZX con 1M+ usuarios, James Moto Shop y migración de React a Next.js en aplicaciones empresariales."
     },
     "writing": {
-      "title": "Escritos — Wesley Leandro | System Design e Ingeniería de Producto",
-      "description": "Insights sobre system design, arquitectura SaaS escalable, ingeniería de IA y desarrollo de software orientado a producto."
+      "title": "Artículos — Wesley Leandro | Arquitectura Frontend e IA",
+      "description": "Próximos artículos sobre arquitectura frontend, rendimiento web, ingeniería de software y flujos con IA. Conecta con Wesley Leandro en LinkedIn."
     }
   },
   "nav": {
@@ -28,13 +28,12 @@
   "home": {
     "language": "Idioma",
     "hero": {
-      "status": "Abierto a oportunidades senior en ingeniería",
-      "title": "Construyendo sistemas escalables,",
-      "titleHighlight": "productos con IA.",
-      "intro": "Soy <important>Wesley Leandro</important>, Ingeniero de Software Senior con 7+ años construyendo plataformas de alto rendimiento en fintech y SaaS. Me enfoco en system design, ingeniería de producto y entregar software que escala — desde decisiones de arquitectura hasta producción.",
-      "tags": "Fintech · SaaS · Ingeniería de Plataforma",
+      "status": "Abierto a oportunidades senior internacionales",
+      "title": "Wesley Leandro.",
+      "titleHighlight": "Senior Software Engineer.",
+      "intro": "Me especializo en <important>Ingeniería Frontend</important> con React, Next.js y TypeScript. Durante 8+ años, he desarrollado flujos financieros y comerciales complejos, incluidas funcionalidades de Penzack en AZX, una plataforma con 1M+ usuarios. Conecto arquitectura frontend, integración con APIs y requisitos de producto para entregar aplicaciones web fiables.",
+      "tags": "React · Next.js · TypeScript · Desarrollo Full Stack",
       "ctaWork": "Ver Trabajo",
-      "ctaWriting": "Leer Insights",
       "ctaContact": "Contacto",
       "links": {
         "github": "GitHub",
@@ -43,31 +42,32 @@
         "telegram": "Telegram",
         "whatsapp": "WhatsApp",
         "resume": "Currículum"
-      }
+      },
+      "ctaExperience": "Ver experiencia"
     },
     "impact": {
       "label": "Impacto en Ingeniería",
       "title": "Impacto a escala",
       "items": {
         "item-01": {
-          "value": "2M+",
-          "label": "Usuarios atendidos",
-          "context": "Plataformas en producción a escala global"
+          "value": "1M+",
+          "label": "Usuarios en la plataforma",
+          "context": "Penzack, producto de inversión y trading de AZX"
         },
         "item-02": {
-          "value": "7+ años",
-          "label": "Experiencia en producción",
-          "context": "Fintech, SaaS y productos de alto tráfico"
+          "value": "8+ años",
+          "label": "Experiencia profesional",
+          "context": "Ingeniería Frontend con desarrollo full stack"
         },
         "item-03": {
-          "value": "60%",
-          "label": "Ganancias de rendimiento",
-          "context": "Mejoras medibles en tiempo de carga y UX"
+          "value": "1.000+",
+          "label": "Leads al mes",
+          "context": "Plataforma de ventas de consorcios de James Moto Shop"
         },
         "item-04": {
-          "value": "3",
-          "label": "Migraciones de plataforma",
-          "context": "Modernizaciones Next.js y arquitectura lideradas"
+          "value": "40%",
+          "label": "Aumento en la tasa de cierre",
+          "context": "Sistema de gestión de ventas desarrollado como freelance"
         }
       }
     },
@@ -80,11 +80,11 @@
     "focus": {
       "label": "Enfoque Actual",
       "title": "Lo que estoy explorando",
-      "intro": "Áreas que estoy explorando y aplicando activamente en trabajo de producción.",
+      "intro": "Áreas que estudio para profundizar mi práctica en frontend y ampliar mis competencias de ingeniería.",
       "items": {
         "item-01": {
           "title": "Ingeniería de IA",
-          "description": "Integración de LLMs y flujos de IA en experiencias de producto con confiabilidad y conciencia de costo."
+          "description": "Exploro integraciones con LLMs y flujos de IA, con atención a fiabilidad, evaluación y coste."
         },
         "item-02": {
           "title": "Sistemas Distribuidos",
@@ -99,8 +99,8 @@
           "description": "Patrones multi-tenant, rendimiento a escala e infraestructura que crece con el negocio."
         },
         "item-05": {
-          "title": "System Design",
-          "description": "Trade-offs de arquitectura, boundaries y mantenibilidad a largo plazo."
+          "title": "Arquitectura Frontend",
+          "description": "Estudio estrategias de renderizado, límites de componentes y decisiones de gestión de estado para aplicaciones React sostenibles."
         },
         "item-06": {
           "title": "Developer Experience",
@@ -110,14 +110,19 @@
     },
     "about": {
       "label": "Sobre mí",
-      "title": "Ingeniería con ownership",
+      "title": "Profundidad en frontend. Visión full stack.",
       "paragraphs": {
-        "p1": "Soy Ingeniero de Software Senior basado en Brasil, trabajando remotamente con equipos globales en productos donde confiabilidad, rendimiento y escala son innegociables.",
-        "p2": "En 7+ años, he construido plataformas en fintech y SaaS — desde sistemas de transacciones seguras hasta plataformas de inversión sirviendo millones de usuarios. Mi trabajo está en la intersección de system design, ingeniería de producto y arquitectura web moderna.",
-        "p3": "Me importan profundamente las decisiones que se componen: cómo los equipos estructuran código, cómo los sistemas manejan el crecimiento, cómo los productos se entregan sin sacrificar calidad. Estoy tan cómodo discutiendo boundaries de API y estrategia de deploy como optimizando flujos críticos de usuario.",
-        "p4": "Actualmente, me enfoco en desarrollo de productos AI-native, arquitectura SaaS escalable y prácticas de ingeniería que ayudan a los equipos a moverse rápido sin romper cosas."
+        "p1": "Soy Ingeniero de Software Senior, ubicado en Brasil y especializado en Ingeniería Frontend con React, Next.js y TypeScript. Trabajo en inglés con equipos internacionales en aplicaciones de inversión, trading y gestión empresarial.",
+        "p2": "Mis 8+ años de experiencia abarcan modernización frontend, autenticación, onboarding, KYC, transacciones financieras y dashboards analíticos. En AZX desarrollo Penzack, una plataforma de inversión y trading con más de un millón de usuarios.",
+        "p3": "También aporto experiencia full stack con Node.js, integración con APIs, modelado de datos y AWS. En James Moto Shop lideré el desarrollo completo de una plataforma comercial, conectando el portal público con un ERP administrativo y coordinando un equipo multidisciplinario.",
+        "p4": "Mi práctica incluye pruebas automatizadas con Jest, React Testing Library, Vitest y Cypress, monitorización en producción y atención a accesibilidad y rendimiento. También exploro AI Engineering, integraciones con LLMs y automatización para productos y flujos de desarrollo."
       },
-      "closing": "Abierto a roles senior, staff y founding engineer donde el ownership técnico y el impacto en producto importan."
+      "closing": "Abierto a oportunidades internacionales como Senior Software Engineer y Senior Frontend Engineer.",
+      "educationLabel": "Formación",
+      "education": "IFNMG — Instituto Federal do Norte de Minas Gerais",
+      "educationPeriod": "2018–2022",
+      "languagesLabel": "Idiomas",
+      "languages": "Portugués: nativo · Inglés: competencia profesional, utilizado a diario con equipos internacionales"
     },
     "capabilities": {
       "label": "Capacidades de Ingeniería",
@@ -137,7 +142,7 @@
         },
         "ai": {
           "title": "IA & Automatización",
-          "description": "Features de IA en producción, productividad en ingeniería"
+          "description": "Estudio de integraciones con LLMs y automatización de flujos"
         },
         "tooling": {
           "title": "Developer Tooling",
@@ -147,8 +152,8 @@
     },
     "insights": {
       "label": "Insights de Ingeniería",
-      "title": "Escritos e ideas",
-      "intro": "Reflexiones sobre arquitectura, escalabilidad y construcción de productos modernos.",
+      "title": "Artículos e ideas",
+      "intro": "Temas que planeo abordar: arquitectura frontend, rendimiento web e IA en ingeniería.",
       "viewAll": "Ver todos los escritos",
       "comingSoon": "Próximamente"
     },
@@ -157,28 +162,40 @@
       "title": "Historial profesional",
       "items": {
         "item-01": {
-          "company": "Penzack",
-          "role": "Ingeniero de Software Senior",
-          "period": "2024 - Presente",
-          "description": "Ownership de features de alto impacto para plataforma global de inversiones con 2M+ usuarios. Rendimiento, patrones arquitectónicos y entrega segura en entorno fintech regulado."
+          "company": "AZX",
+          "role": "Desarrollador Frontend Senior",
+          "period": "Mar 2024–Presente",
+          "description": "Desarrollo funcionalidades con React, Next.js y TypeScript para Penzack, plataforma internacional de inversión y trading con 1M+ usuarios. Trabajo en autenticación, onboarding, KYC, depósitos, retiros e interfaces de trading en tiempo real. Uso Zustand y TanStack Query, contribuyo a la modernización con App Router, internacionalización, rendimiento y fiabilidad, e integro monitorización con Sentry. Colaboro a diario en inglés con equipos internacionales."
         },
         "item-02": {
-          "company": "Elint Tech",
-          "role": "Ingeniero de Software",
-          "period": "2022 - 2024",
-          "description": "Lideró migraciones Next.js para plataformas enterprise a gran escala. Construyó sistemas de visualización de datos para clientes como Lacta y Universal Music."
+          "company": "James Moto Shop",
+          "role": "Desarrollador Full Stack",
+          "period": "Sep 2023–Mar 2024",
+          "description": "Lideré el desarrollo completo de una plataforma de ventas de consorcios con 1.000+ leads mensuales. Integré el portal público con un ERP administrativo usando Next.js App Router, React, TypeScript, Node.js, Prisma y AWS (EC2, S3, RDS). Refiné el recorrido del lead al contrato y el checkout, coordiné un equipo multidisciplinario y establecí prácticas de calidad de código."
         },
         "item-03": {
+          "company": "Elint Tech",
+          "role": "Desarrollador Frontend",
+          "period": "Ago 2022–Mar 2024",
+          "description": "Desarrollé funcionalidades frontend para productos empresariales de clientes como Lacta y Universal Music. Migré una aplicación React de gran tamaño de Create React App a Next.js y construí dashboards analíticos interactivos con Recharts y exportación de informes."
+        },
+        "item-04": {
           "company": "Desencoder",
-          "role": "Ingeniero Full Stack",
-          "period": "2018 - 2022",
-          "description": "Diseñó y entregó aplicaciones fintech escalables con flujos de transacción seguros, sirviendo miles de usuarios diarios. Ownership completo del diseño de API al deploy en producción."
+          "role": "Desarrollador Full Stack",
+          "period": "Mar 2019–Ago 2022",
+          "description": "Diseñé y entregué aplicaciones web a medida para empresas, incluida una solución fintech con transacciones financieras seguras para miles de usuarios diarios. Integré flujos frontend con servicios backend y colaboré con equipos multidisciplinarios."
+        },
+        "item-05": {
+          "company": "Independiente",
+          "role": "Desarrollador Full Stack Freelance",
+          "period": "May 2017–Abr 2020",
+          "description": "Desarrollé productos web y móviles, desde el diseño UX hasta la implementación. Un sistema de gestión de ventas aumentó la tasa de cierre en un 40%; un dashboard de monitorización de llamadas redujo el tiempo de tareas administrativas en un 60%; las funciones de promoción de una aplicación agregadora de negocios locales contribuyeron a un aumento del 6% en las ventas de las empresas participantes."
         }
       }
     },
     "cta": {
-      "title": "Construyamos sistemas que escalen.",
-      "description": "Estoy abierto a roles senior en ingeniería, posiciones staff-level IC y oportunidades de founding engineer — especialmente donde arquitectura, impacto en producto y ownership técnico importan.",
+      "title": "Hablemos de tu equipo de ingeniería.",
+      "description": "Estoy abierto a puestos internacionales de Senior Software Engineer y Senior Frontend Engineer, con especialización en frontend, experiencia full stack y colaboración diaria en inglés.",
       "emailBtn": "Envíame un correo",
       "copyText": "¿Prefieres copiar?",
       "copyEmail": "Copiar dirección de correo",
@@ -199,16 +216,14 @@
   "workPage": {
     "label": "Trabajo",
     "title": "Casos de estudio en ingeniería",
-    "description": "Ingeniería real resolviendo problemas reales de negocio — de fintech a escala a migraciones enterprise.",
+    "description": "Ingeniería Frontend y desarrollo full stack en plataformas financieras, sistemas comerciales y aplicaciones empresariales.",
     "sections": {
       "context": "Contexto",
-      "challenge": "Desafío",
-      "approach": "Enfoque",
-      "architecture": "Decisiones de arquitectura",
-      "scalability": "Escalabilidad",
-      "impact": "Impacto",
+      "challenge": "Problema",
+      "responsibility": "Mi responsabilidad",
+      "solution": "Solución técnica",
       "stack": "Tecnologías",
-      "lesson": "Lección clave"
+      "impact": "Resultado"
     },
     "prev": "Anterior",
     "next": "Siguiente",
@@ -216,68 +231,78 @@
     "studies": {
       "penzack": {
         "company": "Penzack",
-        "role": "Ingeniero de Software Senior",
-        "period": "2024 - Presente",
+        "role": "Desarrollador Frontend Senior · AZX",
+        "period": "Mar 2024–Presente",
         "domain": "Fintech",
-        "thesis": "Escalando una plataforma fintech a 2M+ usuarios manteniendo rendimiento y seguridad.",
-        "context": "Plataforma global de inversiones sirviendo 2M+ usuarios en mercados regulados. UX de alto riesgo donde latencia y confiabilidad afectan directamente confianza y conversión.",
-        "challenge": "Entregar features de alto impacto bajo restricciones estrictas de rendimiento y seguridad. Balancear iteración rápida de producto con arquitectura frontend mantenible a escala.",
-        "approach": "Estableció boundaries claros de componentes para equipos de feature, definió budgets de rendimiento para flujos críticos y construyó confianza de release orientada a CI en cada deploy.",
-        "architecture": "Diseño de boundaries de componentes para equipos de feature; budgets de rendimiento para flujos críticos; patrones seguros de manejo de datos; confianza de release orientada a CI.",
-        "scalability": "Code splitting, estrategias de cache, error boundaries observables, patrones que reducen riesgo de regresión conforme equipo y codebase crecen.",
-        "impact": "Features entregadas a millones de usuarios; optimización de rendimiento medible; confiabilidad de release mejorada.",
-        "lesson": "A escala fintech, arquitectura frontend es system design — boundaries, contratos y observabilidad importan tanto como UI.",
+        "thesis": "Ingeniería Frontend para Penzack en AZX, una plataforma de inversión y trading con 1M+ usuarios.",
+        "context": "Penzack es el producto internacional de inversión y trading desarrollado en AZX, mi empleador. La plataforma atiende a más de un millón de usuarios.",
+        "challenge": "Ofrecer onboarding, verificación de identidad y transacciones financieras en distintos mercados e idiomas, junto con experiencias de trading en tiempo real.",
+        "responsibility": "Desarrollo y mantengo funcionalidades frontend con React, Next.js y TypeScript. Colaboro en inglés con equipos internacionales en autenticación, onboarding, KYC, interfaces de trading y flujos de transacciones.",
+        "solution": "Implementé inicio de sesión automático, verificación de correo y gestión de estados de KYC, además de interfaces de depósitos y retiros con Pix y OXXO. Uso Zustand y TanStack Query para el estado de la aplicación y los datos de APIs. Contribuí a la modernización con Next.js App Router y Server Actions, correcciones de compatibilidad entre navegadores, interfaces responsivas multilingües y monitorización de errores en producción con Sentry.",
+        "impact": "Entregué funcionalidades financieras y de onboarding en una plataforma con 1M+ usuarios, con recorridos de pago regionales y experiencias multilingües.",
         "bullets": {
-          "b1": "2M+ usuarios en plataforma de producción",
-          "b2": "Rendimiento y seguridad a escala fintech"
+          "b1": "1M+ usuarios en la plataforma Penzack",
+          "b2": "Autenticación, KYC y flujos financieros"
+        }
+      },
+      "james-moto-shop": {
+        "company": "James Moto Shop",
+        "role": "Desarrollador Full Stack",
+        "period": "Sep 2023–Mar 2024",
+        "domain": "Plataforma de ventas",
+        "thesis": "Desarrollo completo de una plataforma comercial que integra portal público y ERP, con 1.000+ leads mensuales.",
+        "context": "Una operación de ventas de consorcios que necesitaba conectar su sitio público con el ERP administrativo.",
+        "challenge": "Conectar la captación de leads y el recorrido hasta el contrato con las operaciones administrativas, manteniendo el producto sostenible y visible en buscadores.",
+        "responsibility": "Lideré el desarrollo completo, definí la arquitectura de la solución y coordiné un equipo multidisciplinario. Establecí prácticas de calidad de código para apoyar entregas predecibles.",
+        "solution": "Construí el portal y la integración con el ERP usando Next.js App Router, React, TypeScript, Node.js y Prisma. Utilicé AWS EC2, S3 y RDS en el despliegue y refiné el checkout y los flujos de conversión con mejoras de UX.",
+        "impact": "Entregué una plataforma comercial que procesa más de 1.000 leads al mes y conecta el sitio público con las operaciones administrativas.",
+        "bullets": {
+          "b1": "1.000+ leads procesados al mes",
+          "b2": "Liderazgo técnico en portal y ERP"
         }
       },
       "elint": {
         "company": "Elint Tech",
-        "role": "Ingeniero de Software",
-        "period": "2022 - 2024",
-        "domain": "Enterprise SaaS",
-        "thesis": "Liderando migraciones Next.js a gran escala y dashboards data-heavy para clientes enterprise.",
-        "context": "Clientes enterprise (Lacta, Universal Music) requiriendo visualización de datos confiable y stacks web modernos.",
-        "challenge": "Migrar codebases legacy a Next.js sin interrumpir producción. Construir dashboards performantes sobre datasets complejos.",
-        "approach": "Ejecutó migración incremental con planes de rollback, capas compartidas de data-fetching y arquitectura de dashboard reutilizable entre proyectos de clientes.",
-        "architecture": "Estrategia de migración incremental; capa compartida de data-fetching; arquitectura de componentes de dashboard para reuso entre clientes.",
-        "scalability": "Server-side rendering para SEO y carga inicial; widgets modulares de dashboard; estrategia de testing para seguridad de migración.",
-        "impact": "Migraciones de plataforma exitosas; patrones reutilizables de dashboard; iteración más rápida para entrega a clientes.",
-        "lesson": "El éxito en migración depende de secuenciación, planes de rollback y tratar DX como requisito de primera clase.",
+        "role": "Desarrollador Frontend",
+        "period": "Ago 2022–Mar 2024",
+        "domain": "Empresarial",
+        "thesis": "Modernización de React a Next.js y dashboards analíticos para clientes empresariales.",
+        "context": "Aplicaciones empresariales para clientes como Lacta y Universal Music, con necesidades de informes y visualización de datos.",
+        "challenge": "Modernizar una aplicación React de gran tamaño y facilitar el análisis y la exportación de datos operativos.",
+        "responsibility": "Desarrollé y mantuve funcionalidades frontend, migré una aplicación de Create React App a Next.js e implementé interfaces analíticas.",
+        "solution": "Migré la aplicación React existente a Next.js. Construí gráficos interactivos con Recharts y añadí exportación de informes para análisis operativo.",
+        "impact": "Entregué una migración a Next.js y dashboards analíticos interactivos con exportación de informes para productos empresariales.",
         "bullets": {
-          "b1": "Migraciones enterprise a Next.js",
-          "b2": "Dashboards de datos para grandes marcas"
+          "b1": "Migración de Create React App a Next.js",
+          "b2": "Dashboards con Recharts e informes"
         }
       },
       "desencoder": {
         "company": "Desencoder",
-        "role": "Ingeniero Full Stack",
-        "period": "2018 - 2022",
+        "role": "Desarrollador Full Stack",
+        "period": "Mar 2019–Ago 2022",
         "domain": "Fintech",
-        "thesis": "Construyendo aplicaciones fintech seguras y escalables con ownership full-stack.",
-        "context": "Startup fintech construyendo aplicaciones web procesando miles de transacciones diarias.",
-        "challenge": "Flujos de transacción seguros, integración backend escalable y arquitectura full-stack mantenible con equipo pequeño.",
-        "approach": "Diseñó contratos de API para workflows financieros, construyó capas de validación y estableció pipelines de deploy para releases seguros.",
-        "architecture": "Diseño de API para workflows financieros; contratos de validación y error-handling; pipeline de deploy para releases seguros.",
-        "scalability": "Modelado de base de datos para integridad de transacciones; boundaries de servicio listos para escala horizontal; monitoreo para incidentes en producción.",
-        "impact": "Productos fintech en producción sirviendo miles de usuarios diarios; manejo seguro de transacciones; fundación para escalar el equipo.",
-        "lesson": "Las elecciones arquitectónicas iniciales se componen — optimiza para claridad y cambio, no complejidad prematura.",
+        "thesis": "Desarrollo full stack de aplicaciones web a medida y flujos de transacciones financieras.",
+        "context": "Desarrollo de software a medida para empresas, incluida una solución fintech utilizada a diario por miles de personas.",
+        "challenge": "Convertir requisitos operativos en aplicaciones web y conectar recorridos financieros con los servicios backend.",
+        "responsibility": "Diseñé y entregué aplicaciones web a medida, desarrollé una solución fintech y colaboré con equipos multidisciplinarios bajo plazos exigentes.",
+        "solution": "Integré flujos frontend con servicios backend para ofrecer transacciones financieras seguras y operaciones de negocio.",
+        "impact": "Entregué aplicaciones empresariales y una solución fintech con transacciones financieras seguras para miles de usuarios diarios.",
         "bullets": {
-          "b1": "Flujos de transacción fintech seguros",
-          "b2": "Ownership full-stack de API a producción"
+          "b1": "Flujos de transacciones financieras",
+          "b2": "Integración entre frontend y backend"
         }
       }
     }
   },
   "writingPage": {
     "label": "Escritos",
-    "title": "Insights de ingeniería",
-    "description": "Escritos sobre system design, arquitectura SaaS e ingeniería de producto.",
+    "title": "Artículos de ingeniería",
+    "description": "Temas previstos sobre arquitectura frontend, rendimiento web y AI Engineering.",
     "published": {
       "label": "Publicados",
       "title": "Artículos y posts",
-      "empty": "Artículos próximamente. Sigue en LinkedIn para actualizaciones."
+      "empty": "Artículos próximamente. Conecta en LinkedIn."
     },
     "topics": {
       "label": "Temas",
@@ -291,22 +316,8 @@
         "item-06": "Liderazgo en Ingeniería para ICs"
       }
     },
-    "articles": {
-      "item-01": {
-        "title": "Cómo Pienso en Arquitectura Frontend a Escala de 2M+ Usuarios",
-        "platform": "LinkedIn",
-        "excerpt": "Patrones de arquitectura que se sostienen cuando millones dependen de tu UI."
-      },
-      "item-02": {
-        "title": "Migrando a Next.js Sin Romper Producción",
-        "platform": "LinkedIn",
-        "excerpt": "Un playbook práctico para migraciones incrementales de plataforma."
-      },
-      "item-03": {
-        "title": "IA en el Workflow de Ingeniería: Lo Que Realmente Ayuda",
-        "platform": "LinkedIn",
-        "excerpt": "Separando ganancias de productividad del hype en el trabajo diario de ingeniería."
-      }
-    }
+    "articles": {},
+    "connectLinkedin": "Conectar en LinkedIn",
+    "readArticle": "Leer artículo"
   }
 }

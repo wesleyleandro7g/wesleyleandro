@@ -16,6 +16,7 @@ Astro serves the site at http://localhost:4321. `/` redirects to `/en`.
 ```sh
 pnpm check
 pnpm lint
+pnpm test
 pnpm build
 pnpm preview
 ```
@@ -29,6 +30,10 @@ pnpm preview
 - Pages: `/{locale}`, `/{locale}/work`, `/{locale}/writing`, and `/{locale}/work/{slug}`.
 - Shared layout and SEO: `src/layouts/site-layout.astro`.
 - Global styles: `src/styles/globals.css`; Inter and JetBrains Mono are self-hosted via Fontsource.
+
+Content sources, confirmed metrics, outstanding questions, and verification results are recorded in [the portfolio content review](docs/portfolio-content-review.md). `pnpm test` checks translation parity and the employment and metric contracts. Published articles require direct URLs in `articleLinks` and matching translations; planned topics must not be presented as published work.
+
+`public/resume.pdf` is based on the supplied ATS resume, with the owner's confirmed phone number corrected locally. Keep it synchronized with the source when updating the profile.
 
 The language selector preserves the current path, query string, and fragment. Language detection by cookie or browser is intentionally disabled. Interactive controls use small TypeScript scripts; page navigation uses ordinary links. Content remains readable without JavaScript.
 

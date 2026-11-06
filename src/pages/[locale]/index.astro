@@ -7,7 +7,6 @@ import SelectedWorkSection from '@/components/sections/selected-work-section.ast
 import CurrentFocusSection from '@/components/sections/current-focus-section.astro'
 import AboutSection from '@/components/sections/about-section.astro'
 import CapabilitiesSection from '@/components/sections/capabilities-section.astro'
-import InsightsSection from '@/components/sections/insights-section.astro'
 import ExperienceSection from '@/components/sections/experience-section.astro'
 import CtaSection from '@/components/sections/cta-section.astro'
 import Layout from '@/layouts/site-layout.astro'
@@ -23,11 +22,10 @@ const { locale } = Astro.params as { locale: Locale }
           <HeroSection locale={locale} />
           <ImpactSection locale={locale} />
           <SelectedWorkSection locale={locale} />
-          <CurrentFocusSection locale={locale} />
           <AboutSection locale={locale} />
-          <CapabilitiesSection locale={locale} />
-          <InsightsSection locale={locale} />
           <ExperienceSection locale={locale} />
+          <CapabilitiesSection locale={locale} />
+          <CurrentFocusSection locale={locale} />
           <CtaSection locale={locale} />
           <Footer locale={locale} />
         </div>

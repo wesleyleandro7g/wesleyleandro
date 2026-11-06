@@ -1,4 +1,4 @@
-export const CASE_STUDY_SLUGS = ['penzack', 'elint', 'desencoder'] as const
+export const CASE_STUDY_SLUGS = ['penzack', 'james-moto-shop', 'elint', 'desencoder'] as const
 
 export type CaseStudySlug = (typeof CASE_STUDY_SLUGS)[number]
 
@@ -7,6 +7,8 @@ export const siteConfig = {
   role: 'Senior Software Engineer',
   url: 'https://wesleyleandro.com',
   contact: 'hi@wesleyleandro.com',
+  resume: '/resume.pdf',
+  resumeSource: 'https://docs.google.com/document/d/1zdt6jtrkUrjs5vh_o8vRK1d1URrBanTuaQYUp6oFEWo/edit',
   links: {
     github: 'https://github.com/wesleyleandro7g',
     linkedin: 'https://linkedin.com/in/wesleyleandro',
@@ -58,28 +60,22 @@ export const caseStudyStacks: Record<CaseStudySlug, string[]> = {
     'TypeScript',
     'React',
     'Next.js',
-    'GraphQL',
-    'PostgreSQL',
-    'AWS',
-    'Docker',
-    'CI/CD',
+    'Zustand',
+    'TanStack Query',
+    'Sentry',
   ],
+  'james-moto-shop': ['Next.js App Router', 'React', 'TypeScript', 'Node.js', 'Prisma', 'AWS EC2', 'AWS S3', 'AWS RDS'],
   elint: [
     'Next.js',
-    'TypeScript',
     'React',
-    'Node.js',
-    'GraphQL',
-    'PostgreSQL',
+    'Recharts',
   ],
-  desencoder: ['Node.js', 'React', 'PostgreSQL', 'Docker', 'AWS'],
+  // Project-specific technologies are not documented in the supplied resume.
+  desencoder: [],
 }
 
-export const articleLinks = [
-  { id: 'item-01', href: 'https://linkedin.com/in/wesleyleandro' },
-  { id: 'item-02', href: 'https://linkedin.com/in/wesleyleandro' },
-  { id: 'item-03', href: 'https://linkedin.com/in/wesleyleandro' },
-] as const
+// Add only published articles with their direct URLs and matching translations.
+export const articleLinks: { id: string; href: string }[] = []
 
 type Translator = {
   (key: string): string
@@ -104,11 +100,9 @@ export const data = (t: Translator) => ({
       thesis: t(`${base}.thesis`),
       context: t(`${base}.context`),
       challenge: t(`${base}.challenge`),
-      approach: t(`${base}.approach`),
-      architecture: t(`${base}.architecture`),
-      scalability: t(`${base}.scalability`),
+      responsibility: t(`${base}.responsibility`),
+      solution: t(`${base}.solution`),
       impact: t(`${base}.impact`),
-      lesson: t(`${base}.lesson`),
       bullets: {
         b1: t(`${base}.bullets.b1`),
         b2: t(`${base}.bullets.b2`),
@@ -116,7 +110,7 @@ export const data = (t: Translator) => ({
       stack: caseStudyStacks[slug],
     }
   }),
-  focusAreas: ['item-01', 'item-02', 'item-03', 'item-04', 'item-05', 'item-06'].map(
+  focusAreas: ['item-05', 'item-01', 'item-06'].map(
     (id) => ({
       title: t(`home.focus.items.${id}.title`),
       description: t(`home.focus.items.${id}.description`),
@@ -127,7 +121,7 @@ export const data = (t: Translator) => ({
       key: 'frontend',
       title: t('home.capabilities.groups.frontend.title'),
       description: t('home.capabilities.groups.frontend.description'),
-      skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+      skills: ['React', 'Next.js', 'TypeScript', 'Zustand', 'TanStack Query', 'Tailwind CSS'],
     },
     {
       key: 'backend',
@@ -151,7 +145,7 @@ export const data = (t: Translator) => ({
       key: 'tooling',
       title: t('home.capabilities.groups.tooling.title'),
       description: t('home.capabilities.groups.tooling.description'),
-      skills: ['Git', 'Jest', 'Figma'],
+      skills: ['Jest', 'React Testing Library', 'Vitest', 'Cypress', 'Sentry', 'Git'],
     },
   ],
   articles: articleLinks.map((article) => ({
@@ -168,7 +162,7 @@ export const data = (t: Translator) => ({
     'item-05',
     'item-06',
   ].map((id) => t(`writingPage.topics.items.${id}`)),
-  experience: ['item-01', 'item-02', 'item-03'].map((id) => ({
+  experience: ['item-01', 'item-02', 'item-03', 'item-04', 'item-05'].map((id) => ({
     company: t(`home.experience.items.${id}.company`),
     role: t(`home.experience.items.${id}.role`),
     period: t(`home.experience.items.${id}.period`),
