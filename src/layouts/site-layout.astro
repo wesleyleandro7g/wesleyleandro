@@ -1,0 +1,54 @@
+---
+import '@fontsource/inter/latin-400.css'
+import '@fontsource/inter/latin-500.css'
+import '@fontsource/inter/latin-600.css'
+import '@fontsource/inter/latin-700.css'
+import '@fontsource/jetbrains-mono/latin-400.css'
+import '@fontsource/jetbrains-mono/latin-500.css'
+import '@/styles/globals.css'
+import { locales, localePath, translate, type Locale } from '@/i18n'
+import { siteConfig } from '@/utils/data'
+import { personJsonLd } from '@/lib/metadata'
+interface Props { locale: Locale; page: 'home' | 'work' | 'writing'; path?: string; title?: string; description?: string; noindex?: boolean }
+const { locale, page, path = page === 'home' ? '' : `/${page}`, noindex = false } = Astro.props
+const t = translate(locale, 'metadata')
+const title = Astro.props.title ?? t(`${page}.title`)
+const description = Astro.props.description ?? t(`${page}.description`)
+const canonical = new URL(localePath(locale, path), siteConfig.url).href
+const image = new URL('/opengraph-image.png', siteConfig.url).href
+---
+<!doctype html>
+<html lang={locale} class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : <>
+      <link rel="canonical" href={canonical} />
+      {locales.map(language => <link rel="alternate" hreflang={language} href={new URL(localePath(language, path), siteConfig.url).href} />)}
+      <link rel="alternate" hreflang="x-default" href={new URL(localePath('en', path), siteConfig.url).href} />
+    </>}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={siteConfig.name} />
+    <meta property="og:locale" content={{ en: 'en_US', es: 'es_ES', pt: 'pt_BR' }[locale]} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Wesley Leandro — Senior Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+  </head>
+  <body class="antialiased">
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd()).replaceAll('<', '\u003c')} />
+    <slot />
+  </body>
+</html>

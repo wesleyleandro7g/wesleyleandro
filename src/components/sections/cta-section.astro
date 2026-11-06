@@ -1,0 +1,99 @@
+---
+import Github from '@/components/icons/Github.astro'
+import Linkedin from '@/components/icons/Linkedin.astro'
+
+import { Check, Copy, Mail } from '@lucide/astro'
+import FadeIn from '@/components/fade-in.astro'
+import ContactLink from '@/components/contact-link.astro'
+import DiscordIcon from '@/components/icons/DiscordIcon.astro'
+import TelegramIcon from '@/components/icons/TelegramIcon.astro'
+import WhatsAppIcon from '@/components/icons/WhatsAppIcon.astro'
+
+import {
+  COPYABLE_CONTACTS,
+  siteConfig,
+} from '@/utils/data'
+import { translate, type Locale } from '@/i18n'
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const t = translate(locale, 'home.cta')
+---
+    <section data-copy-section data-copied={t('copied')} data-copy-error={t('copyError')} class='py-24'>
+      <FadeIn>
+        <div class='relative overflow-hidden rounded-2xl border border-border bg-surface/30 px-6 py-16 text-center sm:px-12'>
+          <h2 class='mx-auto max-w-xl text-2xl font-medium tracking-tight text-foreground sm:text-3xl'>
+            {t('title')}
+          </h2>
+          <p class='mx-auto mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground'>
+            {t('description')}
+          </p>
+          <div class='mt-8 flex flex-wrap items-center justify-center gap-3'>
+            <a
+              href={`mailto:${siteConfig.contact}`}
+              class='group inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background transition-colors hover:bg-foreground/90'
+            >
+              <Mail size={16} />
+              {t('emailBtn')}
+            </a>
+            <ContactLink
+              href={siteConfig.links.linkedin}
+              label='LinkedIn'
+            ><Linkedin size={16} slot="icon" /></ContactLink>
+            <ContactLink
+              href={siteConfig.links.github}
+              label='GitHub'
+            ><Github size={16} slot="icon" /></ContactLink>
+            <ContactLink
+              href={siteConfig.links.discord}
+              label='Discord'
+            ><DiscordIcon class='h-4 w-4' slot="icon" /></ContactLink>
+            <ContactLink
+              href={siteConfig.links.telegram}
+              label='Telegram'
+            ><TelegramIcon class='h-4 w-4' slot="icon" /></ContactLink>
+            <ContactLink
+              href={siteConfig.links.whatsapp}
+              label='WhatsApp'
+            ><WhatsAppIcon class='h-4 w-4' slot="icon" /></ContactLink>
+          </div>
+          <div class='mt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground'>
+            <span>{t('copyText')}</span>
+            <select data-contact-select aria-label={t('copyContact')} class='h-7 min-w-0 max-w-full rounded-md border border-border bg-surface/50 px-2 font-mono text-xs text-foreground'>
+              {COPYABLE_CONTACTS.map(contact => <option value={contact.value}>{t(`contactOptions.${contact.id}`)} — {contact.value}</option>)}
+            </select>
+            <button
+              type='button'
+              data-copy-contact
+              aria-label={t('copyContact')}
+              class='inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:bg-surface hover:text-foreground'
+            >
+              <span data-copy-icon><Copy size={12} /></span><span data-copied-icon hidden><Check size={12} /></span>
+            </button>
+          </div>
+        </div>
+      </FadeIn>
+    <p data-copy-status role="status" aria-live="polite" class="mt-3 min-h-5 text-center text-xs text-muted-foreground"></p></section>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-copy-section]').forEach(section => {
+    const select = section.querySelector<HTMLSelectElement>('[data-contact-select]')!
+    const button = section.querySelector<HTMLButtonElement>('[data-copy-contact]')!
+    const status = section.querySelector<HTMLElement>('[data-copy-status]')!
+    const copyIcon = section.querySelector<HTMLElement>('[data-copy-icon]')!
+    const copiedIcon = section.querySelector<HTMLElement>('[data-copied-icon]')!
+    let timer: ReturnType<typeof setTimeout> | undefined
+    const reset = () => { clearTimeout(timer); status.textContent = ''; copyIcon.hidden = false; copiedIcon.hidden = true }
+    select.addEventListener('change', reset)
+    button.addEventListener('click', async () => {
+      reset()
+      try {
+        await navigator.clipboard.writeText(select.value)
+        status.textContent = section.dataset.copied ?? ''
+        copyIcon.hidden = true
+        copiedIcon.hidden = false
+        timer = setTimeout(reset, 2000)
+      } catch {
+        status.textContent = section.dataset.copyError ?? ''
+      }
+    })
+  })
+</script>

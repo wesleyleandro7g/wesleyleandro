@@ -1,0 +1,131 @@
+---
+import { ArrowLeft, ArrowRight } from '@lucide/astro'
+import Header from '@/components/header.astro'
+import Footer from '@/components/footer.astro'
+import SectionLabel from '@/components/section-label.astro'
+import FadeIn from '@/components/fade-in.astro'
+import {
+  CASE_STUDY_SLUGS,
+  type CaseStudySlug,
+  data as getData,
+} from '@/utils/data'
+import Layout from '@/layouts/site-layout.astro'
+import { locales, translate, localePath, type Locale } from '@/i18n'
+export function getStaticPaths() { return locales.flatMap(locale => CASE_STUDY_SLUGS.map(slug => ({params: {locale, slug}}))) }
+const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
+  const t = translate(locale, 'workPage')
+  const tRoot = translate(locale)
+  const { caseStudies } = getData(tRoot)
+  const study = caseStudies.find((s) => s.slug === slug)
+
+  if (!study) throw new Error(`Unknown study: ${slug}`)
+
+  const currentIndex = CASE_STUDY_SLUGS.indexOf(slug as CaseStudySlug)
+  const prevSlug =
+    currentIndex > 0 ? CASE_STUDY_SLUGS[currentIndex - 1] : null
+  const nextSlug =
+    currentIndex < CASE_STUDY_SLUGS.length - 1
+      ? CASE_STUDY_SLUGS[currentIndex + 1]
+      : null
+
+  const sections = [
+    { key: 'context', content: study.context },
+    { key: 'challenge', content: study.challenge },
+    { key: 'approach', content: study.approach },
+    { key: 'architecture', content: study.architecture },
+    { key: 'scalability', content: study.scalability },
+    { key: 'impact', content: study.impact },
+    { key: 'lesson', content: study.lesson },
+  ] as const
+
+---
+<Layout locale={locale} page='work' path={`/work/${slug}`} title={`${study.company} — Wesley Leandro`} description={study.thesis}>
+<Header locale={locale} />
+      <main class='grid-bg min-h-screen bg-background text-foreground'>
+        <div class='mx-auto max-w-6xl px-6 pt-24 pb-12'>
+          <FadeIn>
+            <a
+              href={localePath(locale, '/work')}
+              class='link-underline mb-8 inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground'
+            >
+              <ArrowLeft size={14} />
+              {t('backToWork')}
+            </a>
+
+            <div class='mb-4 flex flex-wrap items-center gap-3'>
+              <span class='rounded-full border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground'>
+                {study.domain}
+              </span>
+              <span class='font-mono text-xs text-muted-foreground'>
+                {study.period}
+              </span>
+            </div>
+
+            <h1 class='mb-2 text-3xl font-medium tracking-tight text-foreground sm:text-4xl'>
+              {study.company}
+            </h1>
+            <p class='mb-2 text-sm text-muted-foreground'>{study.role}</p>
+            <p class='mb-12 max-w-2xl text-base leading-relaxed text-muted-foreground'>
+              {study.thesis}
+            </p>
+          </FadeIn>
+
+          <div class='max-w-3xl space-y-10'>
+            {sections.map((section, i) => (
+              <FadeIn delay={0.05 + i * 0.03}>
+                <section>
+                  <SectionLabel>
+                    {t(`sections.${section.key}`)}
+                  </SectionLabel>
+                  <p class='text-sm leading-relaxed text-muted-foreground'>
+                    {section.content}
+                  </p>
+                </section>
+              </FadeIn>
+            ))}
+
+            <FadeIn delay={0.3}>
+              <section>
+                <SectionLabel>{t('sections.stack')}</SectionLabel>
+                <div class='flex flex-wrap gap-2'>
+                  {study.stack.map((tech) => (
+                    <span
+                      class='rounded-md border border-border bg-surface/50 px-2.5 py-1 font-mono text-xs text-muted-foreground'
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </section>
+            </FadeIn>
+          </div>
+
+          <div class='mt-16 flex items-center justify-between border-t border-border pt-8'>
+            {prevSlug ? (
+              <a
+                href={localePath(locale, `/work/${prevSlug}`)}
+                class='link-underline inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground'
+              >
+                <ArrowLeft size={14} />
+                {t('prev')}
+              </a>
+            ) : (
+              <span />
+            )}
+            {nextSlug ? (
+              <a
+                href={localePath(locale, `/work/${nextSlug}`)}
+                class='link-underline inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground'
+              >
+                {t('next')}
+                <ArrowRight size={14} />
+              </a>
+            ) : (
+              <span />
+            )}
+          </div>
+
+          <Footer locale={locale} />
+        </div>
+      </main>
+</Layout>

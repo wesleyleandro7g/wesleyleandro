@@ -1,0 +1,108 @@
+---
+import { ArrowRight, ExternalLink } from '@lucide/astro'
+import Header from '@/components/header.astro'
+import Footer from '@/components/footer.astro'
+import SectionLabel from '@/components/section-label.astro'
+import FadeIn from '@/components/fade-in.astro'
+import Card from '@/components/card.astro'
+import { data as getData } from '@/utils/data'
+import Layout from '@/layouts/site-layout.astro'
+import { locales, translate, type Locale } from '@/i18n'
+export function getStaticPaths() { return locales.map(locale => ({params: {locale}})) }
+const { locale } = Astro.params as { locale: Locale }
+  const t = translate(locale, 'writingPage')
+  const tRoot = translate(locale)
+  const { articles, writingTopics } = getData(tRoot)
+
+---
+<Layout locale={locale} page='writing'>
+<Header locale={locale} />
+      <main class='grid-bg min-h-screen bg-background text-foreground'>
+        <div class='mx-auto max-w-6xl px-6 pt-24 pb-12'>
+          <FadeIn>
+            <SectionLabel>{t('label')}</SectionLabel>
+            <h1 class='mb-4 text-3xl font-medium tracking-tight text-foreground sm:text-4xl'>
+              {t('title')}
+            </h1>
+            <p class='mb-16 max-w-2xl text-base leading-relaxed text-muted-foreground'>
+              {t('description')}
+            </p>
+          </FadeIn>
+
+          <section class='mb-20'>
+            <FadeIn>
+              <SectionLabel>{t('published.label')}</SectionLabel>
+              <h2 class='mb-8 text-xl font-medium tracking-tight text-foreground'>
+                {t('published.title')}
+              </h2>
+            </FadeIn>
+
+            <div class='grid grid-cols-1 gap-4 md:grid-cols-3'>
+              {articles.map((article, i) => (
+                <FadeIn delay={0.05 + i * 0.05}>
+                  <a
+                    href={article.href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    class='group block h-full'
+                  >
+                    <Card class='flex h-full flex-col'>
+                      <div class='mb-3 flex items-center justify-between'>
+                        <span class='rounded-full border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground'>
+                          {article.platform}
+                        </span>
+                        <ExternalLink
+                          size={14}
+                          class='text-muted-foreground transition-colors group-hover:text-foreground'
+                        />
+                      </div>
+                      <h3 class='mb-2 text-sm font-medium leading-snug text-foreground'>
+                        {article.title}
+                      </h3>
+                      <p class='flex-1 text-xs leading-relaxed text-muted-foreground'>
+                        {article.excerpt}
+                      </p>
+                      <span class='mt-4 inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors group-hover:text-foreground'>
+                        Read on {article.platform}
+                        <ArrowRight
+                          size={12}
+                          class='transition-transform group-hover:translate-x-0.5'
+                        />
+                      </span>
+                    </Card>
+                  </a>
+                </FadeIn>
+              ))}
+            </div>
+
+            <p class='mt-6 text-sm text-muted-foreground'>
+              {t('published.empty')}
+            </p>
+          </section>
+
+          <section>
+            <FadeIn>
+              <SectionLabel>{t('topics.label')}</SectionLabel>
+              <h2 class='mb-8 text-xl font-medium tracking-tight text-foreground'>
+                {t('topics.title')}
+              </h2>
+            </FadeIn>
+
+            <div class='grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'>
+              {writingTopics.map((topic, i) => (
+                <FadeIn delay={0.03 + i * 0.02}>
+                  <Card hover={false} class='py-4'>
+                    <div class='flex items-start gap-2'>
+                      <span class='mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent' />
+                      <p class='text-sm text-muted-foreground'>{topic}</p>
+                    </div>
+                  </Card>
+                </FadeIn>
+              ))}
+            </div>
+          </section>
+
+          <Footer locale={locale} />
+        </div>
+      </main>
+</Layout>

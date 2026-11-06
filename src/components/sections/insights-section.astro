@@ -1,0 +1,68 @@
+---
+import { ArrowRight, ExternalLink } from '@lucide/astro'
+import FadeIn from '@/components/fade-in.astro'
+import SectionLabel from '@/components/section-label.astro'
+import Card from '@/components/card.astro'
+import { data as getData } from '@/utils/data'
+import { translate, localePath, type Locale } from '@/i18n'
+interface Props { locale: Locale }
+const { locale } = Astro.props
+
+  const t = translate(locale, 'home.insights')
+  const tRoot = translate(locale)
+  const { articles } = getData(tRoot)
+
+---
+<section class='py-24'>
+      <FadeIn>
+        <div class='mb-10 flex items-end justify-between'>
+          <div>
+            <SectionLabel>{t('label')}</SectionLabel>
+            <h2 class='mb-2 text-xl font-medium tracking-tight text-foreground'>
+              {t('title')}
+            </h2>
+            <p class='max-w-xl text-sm text-muted-foreground'>
+              {t('intro')}
+            </p>
+          </div>
+          <a
+            href={localePath(locale, '/writing')}
+            class='hidden items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex link-underline'
+          >
+            {t('viewAll')}
+            <ArrowRight size={14} />
+          </a>
+        </div>
+
+        <div class='grid grid-cols-1 gap-4 md:grid-cols-3'>
+          {articles.map((article, i) => (
+            <FadeIn delay={0.05 + i * 0.05}>
+              <a
+                href={article.href}
+                target='_blank'
+                rel='noopener noreferrer'
+                class='group block h-full'
+              >
+                <Card class='flex h-full flex-col'>
+                  <div class='mb-3 flex items-center justify-between'>
+                    <span class='rounded-full border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground'>
+                      {article.platform}
+                    </span>
+                    <ExternalLink
+                      size={14}
+                      class='text-muted-foreground transition-colors group-hover:text-foreground'
+                    />
+                  </div>
+                  <h3 class='mb-2 text-sm font-medium leading-snug text-foreground'>
+                    {article.title}
+                  </h3>
+                  <p class='flex-1 text-xs leading-relaxed text-muted-foreground'>
+                    {article.excerpt}
+                  </p>
+                </Card>
+              </a>
+            </FadeIn>
+          ))}
+        </div>
+      </FadeIn>
+    </section>

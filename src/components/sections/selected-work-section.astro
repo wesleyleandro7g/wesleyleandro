@@ -1,0 +1,79 @@
+---
+import { ArrowRight } from '@lucide/astro'
+import FadeIn from '@/components/fade-in.astro'
+import SectionLabel from '@/components/section-label.astro'
+import Card from '@/components/card.astro'
+import { data as getData } from '@/utils/data'
+import { translate, localePath, type Locale } from '@/i18n'
+interface Props { locale: Locale }
+const { locale } = Astro.props
+
+  const t = translate(locale, 'home.work')
+  const tRoot = translate(locale)
+  const { caseStudies } = getData(tRoot)
+
+---
+<section id='work' class='py-24'>
+      <FadeIn>
+        <div class='mb-10 flex items-end justify-between'>
+          <div>
+            <SectionLabel>{t('label')}</SectionLabel>
+            <h2 class='text-xl font-medium tracking-tight text-foreground'>
+              {t('title')}
+            </h2>
+          </div>
+          <a
+            href={localePath(locale, '/work')}
+            class='hidden items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex link-underline'
+          >
+            {t('viewAll')}
+            <ArrowRight size={14} />
+          </a>
+        </div>
+
+        <div class='grid grid-cols-1 gap-4 md:grid-cols-3'>
+          {caseStudies.map((study, i) => (
+            <FadeIn delay={0.1 + i * 0.05}>
+              <a href={localePath(locale, `/work/${study.slug}`)} class='group block h-full'>
+                <Card class='flex h-full flex-col'>
+                  <div class='mb-4 flex items-center justify-between'>
+                    <span class='text-sm font-medium text-foreground'>
+                      {study.company}
+                    </span>
+                    <span class='rounded-full border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground'>
+                      {study.domain}
+                    </span>
+                  </div>
+                  <p class='mb-4 flex-1 text-sm leading-relaxed text-muted-foreground'>
+                    {study.thesis}
+                  </p>
+                  <ul class='mb-4 space-y-1'>
+                    <li class='text-xs text-muted-foreground'>
+                      · {study.bullets.b1}
+                    </li>
+                    <li class='text-xs text-muted-foreground'>
+                      · {study.bullets.b2}
+                    </li>
+                  </ul>
+                  <span class='inline-flex items-center gap-1 text-xs font-medium text-foreground transition-colors group-hover:text-accent'>
+                    {t('readCaseStudy')}
+                    <ArrowRight
+                      size={12}
+                      class='transition-transform group-hover:translate-x-0.5'
+                    />
+                  </span>
+                </Card>
+              </a>
+            </FadeIn>
+          ))}
+        </div>
+
+        <a
+          href={localePath(locale, '/work')}
+          class='mt-6 inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground sm:hidden link-underline'
+        >
+          {t('viewAll')}
+          <ArrowRight size={14} />
+        </a>
+      </FadeIn>
+    </section>

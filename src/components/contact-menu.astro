@@ -1,0 +1,55 @@
+---
+import { ChevronDown, Mail } from '@lucide/astro'
+import DiscordIcon from './icons/DiscordIcon.astro'
+import TelegramIcon from './icons/TelegramIcon.astro'
+import WhatsAppIcon from './icons/WhatsAppIcon.astro'
+import { CONTACT_LINKS } from '@/utils/data'
+import { translate, type Locale } from '@/i18n'
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const t = translate(locale, 'nav')
+const icons = { email: Mail, discord: DiscordIcon, telegram: TelegramIcon, whatsapp: WhatsAppIcon }
+---
+<details data-contact-menu class="group relative">
+  <summary class="inline-flex cursor-pointer list-none items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90 [&::-webkit-details-marker]:hidden">
+    {t('contact')}<ChevronDown size={14} class="transition-transform group-open:rotate-180" />
+  </summary>
+  <div class="absolute right-0 z-50 mt-2 min-w-[240px] overflow-hidden rounded-xl border border-border bg-popover p-1 shadow-lg">
+    {CONTACT_LINKS.map(contact => {
+      const Icon = icons[contact.id]
+      return <a href={contact.href} {...(/^https?:/.test(contact.href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})} class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-surface focus-visible:bg-surface">
+        <Icon class="h-4 w-4 shrink-0 text-muted-foreground" />
+        <div class="min-w-0 text-left"><p class="font-medium text-foreground">{t(`contactOptions.${contact.id}`)}</p><p class="truncate font-mono text-xs text-muted-foreground">{contact.value}</p></div>
+      </a>
+    })}
+  </div>
+</details>
+<script>
+  document.querySelectorAll<HTMLDetailsElement>('[data-contact-menu]').forEach(menu => {
+    const trigger = menu.querySelector('summary')!
+    const links = Array.from(menu.querySelectorAll<HTMLAnchorElement>('a'))
+    let timer: ReturnType<typeof setTimeout> | undefined
+    let longPressed = false
+    const clearTimer = () => window.clearTimeout(timer)
+    trigger.addEventListener('pointerdown', () => {
+      longPressed = false
+      clearTimer()
+      timer = setTimeout(() => { menu.open = true; longPressed = true }, 400)
+    })
+    for (const event of ['pointerup', 'pointerleave', 'pointercancel']) trigger.addEventListener(event, clearTimer)
+    trigger.addEventListener('click', event => { if (longPressed) { event.preventDefault(); longPressed = false } })
+    document.addEventListener('pointerdown', event => { if (!menu.contains(event.target as Node)) menu.open = false })
+    document.addEventListener('keydown', event => {
+      if (!menu.open) return
+      if (event.key === 'Escape') { menu.open = false; trigger.focus() }
+      if (menu.contains(document.activeElement) && ['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) {
+        event.preventDefault()
+        const index = links.indexOf(document.activeElement as HTMLAnchorElement)
+        const next = event.key === 'Home' ? 0 : event.key === 'End' ? links.length - 1 : (index + (event.key === 'ArrowDown' ? 1 : -1) + links.length) % links.length
+        links[next]?.focus()
+      }
+    })
+    links.forEach(link => link.addEventListener('click', () => { menu.open = false }))
+    menu.addEventListener('focusout', event => { if (!menu.contains(event.relatedTarget as Node)) menu.open = false })
+  })
+</script>

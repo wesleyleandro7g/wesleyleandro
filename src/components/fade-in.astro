@@ -1,0 +1,32 @@
+---
+interface Props { delay?: number; class?: string }
+const { delay = 0, class: className } = Astro.props
+---
+<div data-fade-in class={className} style={`--fade-delay: ${delay}s`}><slot /></div>
+<script>
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)')
+  const elements = document.querySelectorAll<HTMLElement>('[data-fade-in]')
+  if (!motion.matches && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-reveal')
+          observer.unobserve(entry.target)
+        }
+      })
+    }, { threshold: 0 })
+    elements.forEach(element => observer.observe(element))
+    motion.addEventListener('change', () => {
+      if (motion.matches) {
+        observer.disconnect()
+        elements.forEach(element => element.classList.remove('fade-reveal'))
+      }
+    })
+  }
+</script>
+<style is:global>
+  @keyframes fade-reveal { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-reveal { animation: fade-reveal .5s ease-out var(--fade-delay, 0s) both; }
+  }
+</style>

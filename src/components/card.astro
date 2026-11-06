@@ -1,0 +1,14 @@
+---
+import { cn } from '@/lib/utils'
+interface Props { class?: string; hover?: boolean }
+const { class: className, hover = true } = Astro.props
+---
+<div
+      class={cn(
+        'rounded-xl border border-border bg-surface/50 p-6',
+        hover && 'transition-colors hover:border-border/80 hover:bg-surface',
+        className
+      )}
+    >
+      <slot />
+    </div>

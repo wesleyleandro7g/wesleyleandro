@@ -1,0 +1,21 @@
+---
+import { cn } from '@/lib/utils'
+interface Props { href: string; label: string; primary?: boolean; class?: string }
+const { href, label, primary = false } = Astro.props
+const external = /^https?:/.test(href)
+---
+<a
+      href={href}
+      {...(external
+        ? { target: '_blank', rel: 'noopener noreferrer' }
+        : {})}
+      class={cn(
+        'flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors',
+        primary
+          ? 'border-border bg-foreground text-background hover:bg-foreground/90'
+          : 'border-border bg-surface/50 text-muted-foreground hover:bg-surface hover:text-foreground'
+      )}
+    >
+      <slot name="icon" />
+      {label}
+    </a>

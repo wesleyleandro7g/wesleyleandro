@@ -1,0 +1,71 @@
+---
+import { ArrowRight } from '@lucide/astro'
+import Header from '@/components/header.astro'
+import Footer from '@/components/footer.astro'
+import SectionLabel from '@/components/section-label.astro'
+import FadeIn from '@/components/fade-in.astro'
+import Card from '@/components/card.astro'
+import { data as getData } from '@/utils/data'
+import Layout from '@/layouts/site-layout.astro'
+import { locales, translate, localePath, type Locale } from '@/i18n'
+export function getStaticPaths() { return locales.map(locale => ({params: {locale}})) }
+const { locale } = Astro.params as { locale: Locale }
+  const t = translate(locale, 'workPage')
+  const tRoot = translate(locale)
+  const { caseStudies } = getData(tRoot)
+
+---
+<Layout locale={locale} page='work'>
+<Header locale={locale} />
+      <main class='grid-bg min-h-screen bg-background text-foreground'>
+        <div class='mx-auto max-w-6xl px-6 pt-24 pb-12'>
+          <FadeIn>
+            <SectionLabel>{t('label')}</SectionLabel>
+            <h1 class='mb-4 text-3xl font-medium tracking-tight text-foreground sm:text-4xl'>
+              {t('title')}
+            </h1>
+            <p class='mb-12 max-w-2xl text-base leading-relaxed text-muted-foreground'>
+              {t('description')}
+            </p>
+          </FadeIn>
+
+          <div class='space-y-4'>
+            {caseStudies.map((study, i) => (
+              <FadeIn delay={0.05 + i * 0.05}>
+                <a href={localePath(locale, `/work/${study.slug}`)} class='group block'>
+                  <Card class='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
+                    <div class='flex-1'>
+                      <div class='mb-2 flex flex-wrap items-center gap-3'>
+                        <h2 class='text-lg font-medium text-foreground'>
+                          {study.company}
+                        </h2>
+                        <span class='rounded-full border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground'>
+                          {study.domain}
+                        </span>
+                        <span class='font-mono text-xs text-muted-foreground'>
+                          {study.period}
+                        </span>
+                      </div>
+                      <p class='text-sm text-muted-foreground'>
+                        {study.role}
+                      </p>
+                      <p class='mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground'>
+                        {study.thesis}
+                      </p>
+                    </div>
+                    <span class='inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors group-hover:text-foreground'>
+                      <ArrowRight
+                        size={16}
+                        class='transition-transform group-hover:translate-x-0.5'
+                      />
+                    </span>
+                  </Card>
+                </a>
+              </FadeIn>
+            ))}
+          </div>
+
+          <Footer locale={locale} />
+        </div>
+      </main>
+</Layout>

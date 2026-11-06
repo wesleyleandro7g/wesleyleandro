@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wesley Leandro
 
-## Getting Started
+Multilingual portfolio built with Astro, TypeScript, and Tailwind CSS 4. All pages are prerendered; React and a production server are not required.
 
-First, run the development server:
+## Development
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+Requires Node.js 22.23.4+, 24.16.0+, or 26.3.0+ (supported release lines) and pnpm 11.11.0.
+
+```sh
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Astro serves the site at http://localhost:4321. `/` redirects to `/en`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+pnpm check
+pnpm lint
+pnpm build
+pnpm preview
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`pnpm start` is an alias for local preview, not a production server.
 
-## Learn More
+## Content and routes
 
-To learn more about Next.js, take a look at the following resources:
+- Translations: `src/i18n/messages/{en,es,pt}.json`.
+- Profile, contact links, and case study slugs: `src/utils/data.ts`.
+- Pages: `/{locale}`, `/{locale}/work`, `/{locale}/writing`, and `/{locale}/work/{slug}`.
+- Shared layout and SEO: `src/layouts/site-layout.astro`.
+- Global styles: `src/styles/globals.css`; Inter and JetBrains Mono are self-hosted via Fontsource.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The language selector preserves the current path, query string, and fragment. Language detection by cookie or browser is intentionally disabled. Interactive controls use small TypeScript scripts; page navigation uses ordinary links. Content remains readable without JavaScript.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Static deployment
 
-## Deploy on Vercel
+Run `pnpm build` and publish `dist/` to a static host. Configure the host to serve directory index files and `404.html` for unknown URLs. The root redirect includes an HTML meta refresh for static hosts. `sitemap.xml`, `robots.txt`, fonts, icons, and the Open Graph PNG are included in the output.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Regenerate the committed social PNGs with `node scripts/generate-social-assets.mjs` after changing their design. The pnpm workspace preserves the existing build permissions and pins the verifier’s WASM runtime to a compatible version.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Production URL: `https://wesleyleandro.com`. Update `site` in `astro.config.mjs` and `siteConfig.url` when changing domains. No adapter, environment variables, or database is required.

@@ -1,0 +1,12 @@
+allowBuilds:
+  '@parcel/watcher': true
+  '@swc/core': true
+  sharp: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@astrojs/internal-helpers@0.13.1'
+  - '@astrojs/markdown-satteri@0.4.7'
+  - '@lucide/astro@1.70.0'
+  - astro@7.4.7
+overrides:
+  "@emnapi/runtime": 1.11.3

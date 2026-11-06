@@ -1,0 +1,18 @@
+---
+import { locales, translate, type Locale } from '@/i18n'
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const t = translate(locale, 'home')
+---
+<select data-language aria-label={t('language')} class="h-9 rounded-3xl border border-border bg-background px-3 text-sm text-foreground focus-visible:outline-2 focus-visible:outline-accent">
+  {locales.map(language => <option value={language} selected={locale === language}>{language.toUpperCase()}</option>)}
+</select>
+<script>
+  document.querySelectorAll<HTMLSelectElement>('[data-language]').forEach(select => {
+    select.addEventListener('change', () => {
+      const url = new URL(window.location.href)
+      url.pathname = url.pathname.replace(/^\/(en|es|pt)(?=\/|$)/, `/${select.value}`)
+      window.location.assign(url.href)
+    })
+  })
+</script>

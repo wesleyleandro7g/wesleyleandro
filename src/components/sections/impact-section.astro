@@ -1,0 +1,39 @@
+---
+import FadeIn from '@/components/fade-in.astro'
+import SectionLabel from '@/components/section-label.astro'
+import Card from '@/components/card.astro'
+import { data as getData } from '@/utils/data'
+import { translate, type Locale } from '@/i18n'
+interface Props { locale: Locale }
+const { locale } = Astro.props
+
+  const t = translate(locale, 'home.impact')
+  const tRoot = translate(locale)
+  const { impact } = getData(tRoot)
+
+---
+<section id='impact' class='py-24'>
+      <FadeIn>
+        <SectionLabel>{t('label')}</SectionLabel>
+        <h2 class='mb-10 text-xl font-medium tracking-tight text-foreground'>
+          {t('title')}
+        </h2>
+        <div class='grid grid-cols-1 gap-4 sm:grid-cols-2'>
+          {impact.map((item, i) => (
+            <FadeIn delay={0.1 + i * 0.05}>
+              <Card class='flex flex-col gap-1'>
+                <span class='font-mono text-4xl font-medium text-foreground'>
+                  {item.value}
+                </span>
+                <span class='text-sm font-medium text-foreground'>
+                  {item.label}
+                </span>
+                <span class='text-xs text-muted-foreground'>
+                  {item.context}
+                </span>
+              </Card>
+            </FadeIn>
+          ))}
+        </div>
+      </FadeIn>
+    </section>
