@@ -18,17 +18,17 @@ interface Props { locale: Locale }
 const { locale } = Astro.props
 const t = translate(locale, 'home.cta')
 ---
-    <section data-copy-section data-copied={t('copied')} data-copy-error={t('copyError')} class='section-block cta-section'>
+    <section data-copy-section data-copied={t('copied')} data-copy-error={t('copyError')} class='py-24'>
       <FadeIn>
-        <div class='contact-panel'>
-          <h2 class='contact-title'>
+        <div class='relative overflow-hidden rounded-2xl border border-border bg-surface/30 px-6 py-16 text-center sm:px-12'>
+          <h2 class='mx-auto max-w-xl text-2xl font-medium tracking-tight text-foreground sm:text-3xl'>
             {t('title')}
           </h2>
-          <p class='contact-description'>
+          <p class='mx-auto mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground'>
             {t('description')}
           </p>
-          <a class='contact-email' href={'mailto:' + siteConfig.contact}>{siteConfig.contact}<Mail size={24} /></a>
-          <div class='contact-links mt-8 flex flex-wrap items-center justify-center gap-3'>
+          <a class='mt-6 inline-flex items-center gap-2 text-sm text-foreground link-underline' href={'mailto:' + siteConfig.contact}>{siteConfig.contact}<Mail size={16} /></a>
+          <div class='mt-8 flex flex-wrap items-center justify-center gap-3'>
             <a
               href={`mailto:${siteConfig.contact}`}
               class='group inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background transition-colors hover:bg-foreground/90'
@@ -57,7 +57,7 @@ const t = translate(locale, 'home.cta')
               label='WhatsApp'
             ><WhatsAppIcon class='h-4 w-4' slot="icon" /></ContactLink>
           </div>
-          <div class='contact-copy mt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground'>
+          <div class='mt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground'>
             <span>{t('copyText')}</span>
             <select data-contact-select aria-label={t('copyContact')} class='h-7 min-w-0 max-w-full rounded-md border border-border bg-surface/50 px-2 font-mono text-xs text-foreground'>
               {COPYABLE_CONTACTS.map(contact => <option value={contact.value}>{t(`contactOptions.${contact.id}`)} — {contact.value}</option>)}

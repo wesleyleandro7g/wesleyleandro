@@ -9,12 +9,12 @@ const t = translate(locale, 'nav')
 const pathname = Astro.url.pathname.replace(/\/$/, '')
 const links = [ { href: '/work', label: t('work') }, { href: '/writing', label: t('writing') }, { href: '/#about', label: t('about') } ]
 ---
-<header class="site-header fixed top-0 z-50 w-full border-b border-border bg-background">
-  <div class="header-inner">
-    <a href={localePath(locale)} class="wordmark" aria-label={locale === 'pt' ? 'Wesley Leandro — início' : locale === 'es' ? 'Wesley Leandro — inicio' : 'Wesley Leandro — home'}>wl<span>.</span><span class="wordmark-name">Wesley Leandro</span></a>
-    <nav class="header-nav" aria-label={locale === 'pt' ? 'Navegação principal' : locale === 'es' ? 'Navegación principal' : 'Main navigation'}>
+<header class="fixed top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
+  <div class="header-inner mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+    <a href={localePath(locale)} aria-label="Wesley Leandro" class="text-lg font-semibold tracking-tight text-foreground">WL.</a>
+    <nav aria-label={locale === 'pt' ? 'Navegação principal' : locale === 'es' ? 'Navegación principal' : 'Main navigation'} class="header-nav items-center gap-6 sm:flex">
       {links.map(link => <a href={localePath(locale, link.href)} aria-current={pathname === localePath(locale, link.href) ? 'page' : undefined} class={cn('text-sm text-muted-foreground transition-colors hover:text-foreground link-underline', pathname === localePath(locale, link.href) && 'text-foreground')}>{link.label}</a>)}
     </nav>
-    <div class="header-actions flex items-center gap-3"><LanguageSelector locale={locale} /><ContactMenu locale={locale} /></div>
+    <div class="flex items-center gap-3"><LanguageSelector locale={locale} /><ContactMenu locale={locale} /></div>
   </div>
 </header>

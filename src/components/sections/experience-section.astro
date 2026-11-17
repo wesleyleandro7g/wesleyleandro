@@ -10,21 +10,30 @@ const { locale } = Astro.props
   const { experience } = getData(tRoot)
 
 ---
-<section id='experience' class='section-block experience-section'>
+<section id='experience' class='py-24'>
       <FadeIn>
         <h2 class='mb-10 text-xl font-medium tracking-tight text-foreground'>
           {t('title')}
         </h2>
-        <div class="experience-list">
+        <div class='relative ml-3 space-y-12 border-l border-border'>
           {experience.map((job, i) => (
-            <article class:list={['experience-entry', { 'experience-current': i === 0 }]}>
-              <div class="experience-meta">
-                <span class="experience-period">{job.period}</span>
-                <h3>{job.company}</h3>
-                <p>{job.role}</p>
+            <FadeIn delay={0.05 + i * 0.05}>
+              <div class='relative pl-8'>
+                <span class='absolute -left-1.25 top-2 h-2.5 w-2.5 rounded-full bg-muted-foreground ring-4 ring-background' />
+                <div class='mb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between'>
+                  <h3 class='text-base font-medium text-foreground'>
+                    {job.company}
+                  </h3>
+                  <span class='font-mono text-xs text-muted-foreground'>
+                    {job.period}
+                  </span>
+                </div>
+                <p class='mb-2 text-sm font-medium text-foreground'>{job.role}</p>
+                <p class='max-w-2xl text-sm leading-relaxed text-muted-foreground'>
+                  {job.description}
+                </p>
               </div>
-              <p class="experience-description">{job.description}</p>
-            </article>
+            </FadeIn>
           ))}
         </div>
       </FadeIn>

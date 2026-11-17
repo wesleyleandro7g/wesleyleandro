@@ -5,8 +5,8 @@ interface Props { locale: Locale }
 const { locale } = Astro.props
 const t = translate(locale, 'home.footer')
 ---
-<footer class='site-footer'>
-      <a href={'/' + locale} class='footer-signature'>Wesley Leandro<span>Senior Software Engineer</span></a>
+<footer class='border-t border-border/60 py-10 text-center'>
+      <a href={'/' + locale} class='mb-4 inline-flex flex-col gap-1 text-sm font-medium'>Wesley Leandro<span class="text-xs text-muted-foreground">Senior Software Engineer</span></a>
       <p class='text-xs text-muted-foreground'>
         &copy; {new Date().getFullYear()} Wesley Leandro. {t('rights')}
       </p>

@@ -7,12 +7,12 @@ const { locale } = Astro.props
   const t = translate(locale, 'home.about')
 
 ---
-<section id='about' class='section-block about-section'>
-      <FadeIn class="about-grid">
-        <h2 class='about-title'>
+<section id='about' class='py-24'>
+      <FadeIn>
+        <h2 class='mb-8 text-xl font-medium tracking-tight text-foreground'>
           {t('title')}
         </h2>
-        <div class='about-copy space-y-5 text-base text-muted-foreground'>
+        <div class='max-w-2xl space-y-4 text-base leading-relaxed text-muted-foreground'>
           <p>{t('paragraphs.p1')}</p>
           <p>{t('paragraphs.p2')}</p>
           <p>{t('paragraphs.p3')}</p>

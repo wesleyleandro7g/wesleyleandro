@@ -16,8 +16,8 @@ const { locale } = Astro.params as { locale: Locale }
 ---
 <Layout locale={locale} page='work'>
 <Header locale={locale} />
-      <main id="main-content" class='inner-page min-h-screen bg-background text-foreground'>
-        <div class='page-shell'>
+      <main id="main-content" class='grid-bg min-h-screen bg-background text-foreground'>
+        <div class='mx-auto max-w-6xl px-6 pt-24 pb-12'>
           <FadeIn>
             <h1 class='mb-4 text-3xl font-medium tracking-tight text-foreground sm:text-4xl'>
               {t('title')}
