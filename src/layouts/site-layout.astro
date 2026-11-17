@@ -51,6 +51,7 @@ const image = new URL('/opengraph-image.png', siteConfig.url).href
     <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
   </head>
   <body class="antialiased">
+    <a href="#main-content" class="skip-link">{{ pt: 'Pular para o conteúdo', es: 'Saltar al contenido', en: 'Skip to content' }[locale]}</a>
     {!noindex && <script type="application/ld+json" set:html={JSON.stringify([
       personJsonLd(locale),
       {

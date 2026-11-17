@@ -1,6 +1,5 @@
 ---
 import FadeIn from '@/components/fade-in.astro'
-import SectionLabel from '@/components/section-label.astro'
 import { translate, type Locale } from '@/i18n'
 interface Props { locale: Locale }
 const { locale } = Astro.props
@@ -8,13 +7,12 @@ const { locale } = Astro.props
   const t = translate(locale, 'home.about')
 
 ---
-<section id='about' class='py-24'>
-      <FadeIn>
-        <SectionLabel>{t('label')}</SectionLabel>
-        <h2 class='mb-8 text-xl font-medium tracking-tight text-foreground'>
+<section id='about' class='section-block about-section'>
+      <FadeIn class="about-grid">
+        <h2 class='about-title'>
           {t('title')}
         </h2>
-        <div class='max-w-2xl space-y-4 text-base leading-relaxed text-muted-foreground'>
+        <div class='about-copy space-y-5 text-base text-muted-foreground'>
           <p>{t('paragraphs.p1')}</p>
           <p>{t('paragraphs.p2')}</p>
           <p>{t('paragraphs.p3')}</p>

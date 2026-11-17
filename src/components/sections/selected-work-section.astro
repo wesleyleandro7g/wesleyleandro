@@ -1,8 +1,5 @@
 ---
-import { ArrowRight } from '@lucide/astro'
-import FadeIn from '@/components/fade-in.astro'
-import SectionLabel from '@/components/section-label.astro'
-import Card from '@/components/card.astro'
+import { ArrowRight, ArrowUpRight } from '@lucide/astro'
 import { data as getData } from '@/utils/data'
 import { translate, localePath, type Locale } from '@/i18n'
 interface Props { locale: Locale }
@@ -13,67 +10,32 @@ const { locale } = Astro.props
   const { caseStudies } = getData(tRoot)
 
 ---
-<section id='work' class='py-24'>
-      <FadeIn>
-        <div class='mb-10 flex items-end justify-between'>
-          <div>
-            <SectionLabel>{t('label')}</SectionLabel>
-            <h2 class='text-xl font-medium tracking-tight text-foreground'>
-              {t('title')}
-            </h2>
+<section id="work" class="section-block selected-work">
+  <div class="section-heading">
+    <h2>{t('title')}</h2>
+    <a href={localePath(locale, '/work')} class="button-text">{t('viewAll')}<ArrowRight size={16} /></a>
+  </div>
+  <div class="project-list">
+    {caseStudies.slice(0, 3).map((study, i) => (
+      <a href={localePath(locale, '/work/' + study.slug)} class:list={['project-entry group', { 'project-featured': i === 0 }]}>
+        <div class="project-identity">
+          <span class="project-domain">{study.domain}</span>
+          <h3>{study.company}<ArrowUpRight size={24} /></h3>
+          <p class="project-role">{study.role}</p>
+          <span class="project-period">{study.period}</span>
+        </div>
+        <div class="project-detail">
+          <p class="project-thesis">{study.thesis}</p>
+          <ul class="project-outcomes">
+            <li>{study.bullets.b1}</li>
+            <li>{study.bullets.b2}</li>
+          </ul>
+          <div class="project-bottom">
+            <div class="project-stack">{study.stack.slice(0, 3).map(tech => <span>{tech}</span>)}</div>
+            <span class="project-link">{t('readCaseStudy')}<ArrowRight size={16} /></span>
           </div>
-          <a
-            href={localePath(locale, '/work')}
-            class='hidden items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex link-underline'
-          >
-            {t('viewAll')}
-            <ArrowRight size={14} />
-          </a>
         </div>
-
-        <div class='grid grid-cols-1 gap-4 md:grid-cols-3'>
-          {caseStudies.slice(0, 3).map((study, i) => (
-            <FadeIn delay={0.1 + i * 0.05}>
-              <a href={localePath(locale, `/work/${study.slug}`)} class='group block h-full'>
-                <Card class='flex h-full flex-col'>
-                  <div class='mb-4 flex flex-wrap items-center justify-between gap-2'>
-                    <h3 class='text-sm font-medium text-foreground'>
-                      {study.company}
-                    </h3>
-                    <span class='rounded-full border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground'>
-                      {study.domain}
-                    </span>
-                  </div>
-                  <p class='mb-4 flex-1 text-sm leading-relaxed text-muted-foreground'>
-                    {study.thesis}
-                  </p>
-                  <ul class='mb-4 space-y-1'>
-                    <li class='text-xs text-muted-foreground'>
-                      · {study.bullets.b1}
-                    </li>
-                    <li class='text-xs text-muted-foreground'>
-                      · {study.bullets.b2}
-                    </li>
-                  </ul>
-                  <span class='inline-flex items-center gap-1 text-xs font-medium text-foreground transition-colors group-hover:text-accent'>
-                    {t('readCaseStudy')}
-                    <ArrowRight
-                      size={12}
-                      class='transition-transform group-hover:translate-x-0.5'
-                    />
-                  </span>
-                </Card>
-              </a>
-            </FadeIn>
-          ))}
-        </div>
-
-        <a
-          href={localePath(locale, '/work')}
-          class='mt-6 inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground sm:hidden link-underline'
-        >
-          {t('viewAll')}
-          <ArrowRight size={14} />
-        </a>
-      </FadeIn>
-    </section>
+      </a>
+    ))}
+  </div>
+</section>

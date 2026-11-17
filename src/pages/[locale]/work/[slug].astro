@@ -37,8 +37,8 @@ const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
 ---
 <Layout locale={locale} page='work' path={`/work/${slug}`} title={`${study.company} — ${t('title')} | Wesley Leandro`} description={study.thesis}>
 <Header locale={locale} />
-      <main class='grid-bg min-h-screen bg-background text-foreground'>
-        <div class='mx-auto max-w-6xl px-6 pt-24 pb-12'>
+      <main id="main-content" class='inner-page min-h-screen bg-background text-foreground'>
+        <div class='page-shell'>
           <FadeIn>
             <a
               href={localePath(locale, '/work')}

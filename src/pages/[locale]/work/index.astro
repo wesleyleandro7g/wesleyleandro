@@ -2,7 +2,6 @@
 import { ArrowRight } from '@lucide/astro'
 import Header from '@/components/header.astro'
 import Footer from '@/components/footer.astro'
-import SectionLabel from '@/components/section-label.astro'
 import FadeIn from '@/components/fade-in.astro'
 import Card from '@/components/card.astro'
 import { data as getData } from '@/utils/data'
@@ -17,10 +16,9 @@ const { locale } = Astro.params as { locale: Locale }
 ---
 <Layout locale={locale} page='work'>
 <Header locale={locale} />
-      <main class='grid-bg min-h-screen bg-background text-foreground'>
-        <div class='mx-auto max-w-6xl px-6 pt-24 pb-12'>
+      <main id="main-content" class='inner-page min-h-screen bg-background text-foreground'>
+        <div class='page-shell'>
           <FadeIn>
-            <SectionLabel>{t('label')}</SectionLabel>
             <h1 class='mb-4 text-3xl font-medium tracking-tight text-foreground sm:text-4xl'>
               {t('title')}
             </h1>

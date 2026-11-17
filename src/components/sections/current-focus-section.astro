@@ -1,7 +1,5 @@
 ---
 import FadeIn from '@/components/fade-in.astro'
-import SectionLabel from '@/components/section-label.astro'
-import Card from '@/components/card.astro'
 import { data as getData } from '@/utils/data'
 import { translate, type Locale } from '@/i18n'
 interface Props { locale: Locale }
@@ -12,9 +10,8 @@ const { locale } = Astro.props
   const { focusAreas } = getData(tRoot)
 
 ---
-<section id='focus' class='py-24'>
+<section id='focus' class='section-block focus-section'>
       <FadeIn>
-        <SectionLabel>{t('label')}</SectionLabel>
         <h2 class='mb-2 text-xl font-medium tracking-tight text-foreground'>
           {t('title')}
         </h2>
@@ -22,20 +19,20 @@ const { locale } = Astro.props
           {t('intro')}
         </p>
 
-        <div class='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+        <div class='focus-grid'>
           {focusAreas.map((area, i) => (
             <FadeIn delay={0.05 + i * 0.03}>
-              <Card class='h-full'>
+              <article class='focus-item'>
                 <div class='mb-3 flex items-center gap-2'>
-                  <span class='h-1.5 w-1.5 rounded-full bg-accent' />
+
                   <h3 class='text-sm font-medium text-foreground'>
                     {area.title}
                   </h3>
                 </div>
-                <p class='text-xs leading-relaxed text-muted-foreground'>
+                <p class='text-sm leading-relaxed text-muted-foreground'>
                   {area.description}
                 </p>
-              </Card>
+              </article>
             </FadeIn>
           ))}
         </div>
