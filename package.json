@@ -16,6 +16,7 @@
     "@lucide/astro": "^1.70.0",
     "@fontsource/inter": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.2.8",
+    "@fontsource/libre-caslon-display": "^5.3.0",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.4.0"
   },

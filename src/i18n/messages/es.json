@@ -193,7 +193,9 @@
         "email": "Correo",
         "discord": "Discord",
         "telegram": "Telegram",
-        "whatsapp": "WhatsApp"
+        "whatsapp": "WhatsApp",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
       },
       "copied": "¡Copiado!",
       "copyError": "No se pudo copiar. Selecciona y copia el contacto manualmente."

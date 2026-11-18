@@ -39,6 +39,8 @@ The language selector preserves the current path, query string, and fragment. La
 
 ## Static deployment
 
+For Vercel, the committed `vercel.json` explicitly selects the Astro framework preset, runs `pnpm build`, and publishes `dist/`. This overrides any legacy Next.js framework preset. Set the project's Root Directory to the repository root containing `package.json` and `vercel.json`, then deploy the commit containing this configuration.
+
 Run `pnpm build` and publish `dist/` to a static host. Configure the host to serve directory index files and `404.html` for unknown URLs. The root redirect includes an HTML meta refresh for static hosts. `sitemap.xml`, `robots.txt`, fonts, icons, and the Open Graph PNG are included in the output.
 
 Regenerate the committed social PNGs with `node scripts/generate-social-assets.mjs` after changing their design. The pnpm workspace preserves the existing build permissions and pins the verifier’s WASM runtime to a compatible version.

@@ -1,0 +1,413 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T01:38:59.878057+00:00",
+  "title": "Design System: Wesley Leandro",
+  "extensions": {
+    "colorMeta": {
+      "foreground": {
+        "role": "primary",
+        "displayName": "Optical White",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Soft Silver",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "white": {
+        "role": "primary",
+        "displayName": "Pure White",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Deep Black",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Charcoal Surface",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "landing-surface": {
+        "role": "neutral",
+        "displayName": "Landing Smoke",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "secondary": {
+        "role": "neutral",
+        "displayName": "Soft Charcoal",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "Reading Gray",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Quiet Border",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "landing-border": {
+        "role": "neutral",
+        "displayName": "Translucent Divider",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "ring": {
+        "role": "neutral",
+        "displayName": "Focus Silver",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "glass-edge": {
+        "role": "neutral",
+        "displayName": "Glass Edge",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "glass-edge-lit": {
+        "role": "neutral",
+        "displayName": "Lit Glass Edge",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "hero-secondary": {
+        "role": "neutral",
+        "displayName": "Headline Gray",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.26 0 0)",
+          "oklch(.38 0 0)",
+          "oklch(.49 0 0)",
+          "oklch(.61 0 0)",
+          "oklch(.72 0 0)",
+          "oklch(.84 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Landing Hero",
+        "purpose": "Wide-screen landing hero; responsive replacements are documented in Layout."
+      },
+      "headline": {
+        "displayName": "Landing Section Heading",
+        "purpose": "Editorial landing h2 headings, with the compact impact exception."
+      },
+      "title": {
+        "displayName": "Selected-work Title",
+        "purpose": "Serif project titles in selected-work cards."
+      },
+      "body": {
+        "displayName": "Reading Text",
+        "purpose": "Hero introduction; other body contexts adjust size and line height."
+      },
+      "control": {
+        "displayName": "Action Label",
+        "purpose": "Primary and secondary action labels."
+      },
+      "label": {
+        "displayName": "Technical Label",
+        "purpose": "Mono dates and stack metadata."
+      },
+      "project-metadata": {
+        "displayName": "Pane Stack",
+        "purpose": "Small mono stack in hero project panes."
+      }
+    },
+    "shadows": [
+      {
+        "name": "glass-inset",
+        "value": "inset 0 1px 0 #ffffff14",
+        "purpose": "Upper edge on glass surfaces."
+      },
+      {
+        "name": "action-bevel",
+        "value": "inset 0 1px 0 #ffffff26, 0 4px 12px #0005",
+        "purpose": "Primary glass actions."
+      },
+      {
+        "name": "menu-separation",
+        "value": "0 20px 40px #0008",
+        "purpose": "Mobile navigation separation."
+      },
+      {
+        "name": "status-light",
+        "value": "0 0 9px #ffffff55",
+        "purpose": "Availability status dot."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Hero arrival and project-pane movement."
+      },
+      {
+        "name": "pane-movement",
+        "value": "450ms",
+        "purpose": "Project pane advance; disabled under reduced motion."
+      },
+      {
+        "name": "pane-edge",
+        "value": "300ms ease",
+        "purpose": "Project pane border and background transitions."
+      },
+      {
+        "name": "navigation-color",
+        "value": "180ms ease",
+        "purpose": "Shared desktop navigation color changes."
+      },
+      {
+        "name": "hero-arrival",
+        "value": ".7s cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Single entrance from opacity .7 and translateY(10px) to opacity 1 and translateY(0); only with no motion preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-phone",
+        "value": "480px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "hero-wide",
+        "value": "1200px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Glass Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary work and email action on the landing.",
+      "html": "<a class=\"ds-primary\" href=\"#work\">Explore work <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:46px;padding:.625rem 1.25rem;border-radius:10px;font:500 .875rem/1.4286 var(--font-inter,\"Inter\",sans-serif);text-decoration:none;transition:background-color .15s,color .15s,border-color .15s;color:#fff;border:1px solid #ffffff26;background:linear-gradient(#ffffff16,#ffffff0a);box-shadow:inset 0 1px 0 #ffffff26,0 4px 12px #0005}.ds-primary:hover{background:linear-gradient(#ffffff24,#ffffff12);border-color:#ffffff40}.ds-primary:focus-visible{outline:2px solid var(--ring,#d6d6d6);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-primary{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Quiet outlined resume action.",
+      "html": "<a class=\"ds-secondary\" href=\"#resume\">Resume</a>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:46px;padding:.625rem 1.25rem;border-radius:10px;font:500 .875rem/1.4286 var(--font-inter,\"Inter\",sans-serif);text-decoration:none;transition:background-color .15s,color .15s,border-color .15s;color:var(--foreground,oklch(.95 0 0));background:transparent;border:1px solid #ffffff12}.ds-secondary:hover{border-color:#ffffff30;background:#ffffff06}.ds-secondary:focus-visible{outline:2px solid var(--ring,#d6d6d6);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-secondary{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Muted contact action beside the hero buttons.",
+      "html": "<a class=\"ds-text\" href=\"mailto:hello@example.com\">Contact</a>",
+      "css": ".ds-text{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:46px;padding:.625rem 1.25rem;border-radius:10px;font:500 .875rem/1.4286 var(--font-inter,\"Inter\",sans-serif);text-decoration:none;transition:background-color .15s,color .15s,border-color .15s;padding-inline:.75rem;border:1px solid transparent;color:var(--muted-foreground,#a1a1a1);background:transparent}.ds-text:hover{color:var(--foreground,oklch(.95 0 0))}.ds-text:focus-visible{outline:2px solid var(--ring,#d6d6d6);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-text{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Shared Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Compact desktop links with a glass contact endpoint.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Preview navigation\"><a href=\"#work\" aria-current=\"page\">Work</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:1.5rem;min-height:76px;padding:0 1.5rem;background:#050505c9;backdrop-filter:blur(20px);border-bottom:1px solid #ffffff0d;font-family:var(--font-inter,\"Inter\",sans-serif)}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:.8125rem;text-decoration:none;color:var(--muted-foreground,#a1a1a1);transition:color 180ms ease}.ds-nav a:hover,.ds-nav a[aria-current=\"page\"]{color:#fff}.ds-nav a:last-child{min-height:38px;padding-inline:1rem;color:#ededed;background:var(--glass-fill,linear-gradient(145deg,#ffffff0d,#ffffff03 55%,#ffffff06));border-radius:10px;box-shadow:var(--glass-inset,inset 0 1px 0 #ffffff14)}.ds-nav a:focus-visible{outline:2px solid var(--ring,#d6d6d6);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-nav a{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Language Select",
+      "kind": "input",
+      "refersTo": "language-select",
+      "description": "Native locale control used in the shared header.",
+      "html": "<select class=\"ds-language\" aria-label=\"Language\"><option>EN</option><option>PT</option><option>ES</option></select>",
+      "css": ".ds-language{min-height:40px;padding:0 .75rem;border:1px solid var(--glass-edge,#ffffff1a);border-radius:10px;background:#ffffff04;color:var(--foreground,oklch(.95 0 0));font:.75rem var(--font-inter,\"Inter\",sans-serif);color-scheme:dark}.ds-language:focus-visible{outline:2px solid var(--ring,#d6d6d6);outline-offset:4px}"
+    },
+    {
+      "name": "Capability Chip",
+      "kind": "chip",
+      "refersTo": "capability-chip",
+      "description": "Informational technical skill tag; no action state.",
+      "html": "<span class=\"ds-chip\">TypeScript</span>",
+      "css": ".ds-chip{display:inline-block;padding:.375rem .625rem;border:1px solid #ffffff17;border-radius:6px;background:#ffffff04;color:#bcbcbc;font:.6875rem/1.4545 var(--font-jetbrains,\"JetBrains Mono\",monospace);box-shadow:inset 0 1px 0 #ffffff05}"
+    },
+    {
+      "name": "Content Card",
+      "kind": "card",
+      "refersTo": "content-card",
+      "description": "Landing glass treatment for the shared content container.",
+      "html": "<div class=\"ds-card\"><h3>Engineering insights</h3><p>Technical writing and project evidence.</p></div>",
+      "css": ".ds-card{padding:1.5rem;border:1px solid var(--glass-edge,#ffffff1a);border-radius:14px;background:var(--glass-fill,linear-gradient(145deg,#ffffff0d,#ffffff03 55%,#ffffff06));box-shadow:var(--glass-inset,inset 0 1px 0 #ffffff14);font-family:var(--font-inter,\"Inter\",sans-serif);color:var(--foreground,oklch(.95 0 0));transition:background-color .15s,border-color .15s}.ds-card h3{margin:0 0 .5rem;font-size:.875rem;font-weight:500;line-height:1.4}.ds-card p{margin:0;color:var(--muted-foreground,#a1a1a1);font-size:.75rem;line-height:1.625}@media(prefers-reduced-motion:reduce){.ds-card{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Illuminated Project Pane",
+      "kind": "custom",
+      "refersTo": "glass-project",
+      "description": "Linked project evidence, with a specular edge and keyboard parity.",
+      "html": "<a class=\"ds-pane\" href=\"#case-study\"><span class=\"ds-domain\">Project domain <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></span><span class=\"ds-project-name\">Project name</span><span class=\"ds-proof\">Verified project evidence</span><span class=\"ds-stack\">Stack / Metadata</span></a>",
+      "css": ".ds-pane{position:relative;display:flex;flex-direction:column;gap:.625rem;padding:1.5rem 1.75rem;border:1px solid #ffffff20;border-radius:16px;background:linear-gradient(120deg,#ffffff0d,#ffffff03 55%,#ffffff07);backdrop-filter:blur(16px);box-shadow:var(--glass-inset,inset 0 1px 0 #ffffff14);color:var(--foreground,oklch(.95 0 0));font-family:var(--font-inter,\"Inter\",sans-serif);text-decoration:none;transition:transform 450ms var(--ease-out,cubic-bezier(.16,1,.3,1)),border-color 300ms ease,background-color 300ms ease}.ds-pane:before{content:\"\";position:absolute;top:-1px;left:18%;width:64%;height:1px;background:linear-gradient(90deg,transparent,#ffffff8c,transparent);pointer-events:none}.ds-pane:hover,.ds-pane:focus-visible{transform:translateY(-5px);border-color:#ffffff5c;background-color:#ffffff08}.ds-pane:focus-visible{outline:2px solid var(--ring,#d6d6d6);outline-offset:4px}.ds-domain{display:flex;justify-content:space-between;align-items:center;gap:1rem;color:#aaa;font-size:.6875rem}.ds-project-name{font-size:1.375rem;font-weight:500;letter-spacing:-.025em}.ds-proof{color:#b0b0b0;font-size:.75rem;line-height:1.6}.ds-stack{padding-top:.5rem;color:#929292;font:.625rem var(--font-jetbrains,\"JetBrains Mono\",monospace)}@media(prefers-reduced-motion:reduce){.ds-pane{transition:none}.ds-pane:hover,.ds-pane:focus-visible{transform:none}}@supports not(backdrop-filter:blur(1px)){.ds-pane{background-color:#111}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Black, glass and white light",
+    "overview": "Black, glass and white light presents Wesley Leandro's engineering portfolio with deep dark surfaces, editorial headlines and precise technical detail. The user explicitly requested Resend's glass, white glows and typographic character. The implementation expresses that reference through original CSS and real project links, without copied branding or new raster artwork.\n\nThe shared foundation is neutral black, self-hosted Inter, monochrome controls and translucent navigation. The localized landing pages add self-hosted Libre Caslon Display as an open alternative to the reference's Domaine, illuminated project panes and spacious editorial sections. This serif hierarchy is scoped to the landing; it is not a claim about secondary-page headings. Recruiters and technical leaders encounter readable professional evidence through restrained contrast and deliberate depth.",
+    "keyCharacteristics": [
+      "Deep black and neutral white, with smoke-glass surfaces.",
+      "Editorial landing headlines paired with clear sans-serif reading text.",
+      "White light identifies project links and contact surfaces.",
+      "Technical metadata uses restrained monospace typography.",
+      "Responsive layouts and visible keyboard focus preserve access to the same content."
+    ],
+    "rules": [
+      {
+        "name": "The Neutral Light Rule",
+        "body": "Use white illumination and neutral smoke for the landing identity; keep chromatic utility tokens out of its decorative palette.",
+        "section": "colors"
+      },
+      {
+        "name": "The Scoped Editorial Rule",
+        "body": "Keep the serif hierarchy within the implemented landing roles; shared body text and controls remain Inter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Useful Glass Rule",
+        "body": "Glass and glow are intentional parts of the user-requested identity: anchor them to project evidence, navigation and contact surfaces.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the shared neutral tokens and landing-specific scope when extending this identity.",
+      "Do reserve Libre Caslon Display for the implemented landing headline and project-title roles.",
+      "Do use glass edges and broad white light to clarify useful interactive surfaces.",
+      "Do keep technical metadata compact, readable and distinct from editorial headings.",
+      "Do preserve keyboard focus, reduced-motion behavior and localized content when adapting components."
+    ],
+    "donts": [
+      "Don't turn the requested glass and white light into colored decorative gradients.",
+      "Don't apply the landing serif selectors indiscriminately to secondary pages.",
+      "Don't copy Resend branding or replace real project evidence with decorative fake software.",
+      "Don't use movement as the only signal that a project pane is interactive."
+    ]
+  }
+}

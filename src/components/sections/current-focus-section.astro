@@ -1,6 +1,5 @@
 ---
 import FadeIn from '@/components/fade-in.astro'
-import Card from '@/components/card.astro'
 import { data as getData } from '@/utils/data'
 import { translate, localePath, type Locale } from '@/i18n'
 interface Props { locale: Locale }
@@ -11,7 +10,7 @@ const { locale } = Astro.props
   const { focusAreas } = getData(tRoot)
 
 ---
-<section id='focus' class='py-24'>
+<section id='focus' class='focus-section py-24'>
       <FadeIn>
         <h2 class='mb-2 text-xl font-medium tracking-tight text-foreground'>
           {t('title')}
@@ -20,12 +19,11 @@ const { locale } = Astro.props
           {t('intro')}
         </p>
 
-        <div class='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+        <div class='focus-list'>
           {focusAreas.map((area, i) => (
             <FadeIn delay={0.05 + i * 0.03}>
-              <Card class='h-full'>
+              <div class='focus-row'>
                 <div class='mb-3 flex items-center gap-2'>
-                  <span class='h-1.5 w-1.5 rounded-full bg-accent' />
                   <h3 class='text-sm font-medium text-foreground'>
                     {area.title}
                   </h3>
@@ -34,7 +32,7 @@ const { locale } = Astro.props
                   {area.description}
                 </p>
                 <div class='mt-5 flex flex-wrap gap-3'>{area.projects.map(slug => <a class='text-xs underline text-muted-foreground hover:text-foreground' href={localePath(locale, `/work/${slug}`)}>{tRoot(`workPage.studies.${slug}.company`)}</a>)}</div>
-              </Card>
+              </div>
             </FadeIn>
           ))}
         </div>

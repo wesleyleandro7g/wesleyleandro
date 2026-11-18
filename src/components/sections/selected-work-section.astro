@@ -12,7 +12,7 @@ const { locale } = Astro.props
   const { caseStudies } = getData(tRoot)
 
 ---
-<section id='work' class='py-24'>
+<section id='work' class='selected-work-section py-24'>
       <FadeIn>
         <div class='mb-10 flex items-end justify-between'>
           <div>
@@ -34,9 +34,9 @@ const { locale } = Astro.props
           {caseStudies.filter(study => study.featured).map((study, i) => (
             <FadeIn delay={0.1 + i * 0.05}>
               <a href={localePath(locale, `/work/${study.slug}`)} class='group block h-full'>
-                <Card class='flex h-full flex-col'>
+                <Card class='project-card flex h-full flex-col'>
                   <div class='mb-4 flex flex-wrap items-center justify-between gap-2'>
-                    <h3 class='text-sm font-medium text-foreground'>
+                    <h3 class='project-title text-sm font-medium text-foreground'>
                       {study.company}
                     </h3>
                     <span class='rounded-full border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground'>
@@ -45,8 +45,8 @@ const { locale } = Astro.props
                   </div>
                   <p class='mb-3 text-xs text-accent'>{study.statusLabel}</p>
                   <p class='mb-1 text-xs text-muted-foreground'>{study.role}</p>
-                  <p class='mb-4 font-mono text-xs text-muted-foreground'>{study.period}</p>
-                  <p class='mb-4 flex-1 text-sm leading-relaxed text-muted-foreground'>
+                  <p class='project-period mb-4 font-mono text-xs text-muted-foreground'>{study.period}</p>
+                  <p class='project-thesis mb-4 flex-1 text-sm leading-relaxed text-muted-foreground'>
                     {study.thesis}
                   </p>
                   <ul class='mb-4 space-y-1'>
@@ -57,8 +57,8 @@ const { locale } = Astro.props
                       · {study.bullets.b2}
                     </li>
                   </ul>
-                  <div class='mb-4 flex flex-wrap gap-2 font-mono text-xs text-muted-foreground'>{study.stack.slice(0, 3).map(tech => <span>{tech}</span>)}</div>
-                  <span class='inline-flex items-center gap-1 text-xs font-medium text-foreground transition-colors group-hover:text-accent'>
+                  <div class='project-stack mb-4 flex flex-wrap gap-2 font-mono text-xs text-muted-foreground'>{study.stack.slice(0, 3).map(tech => <span>{tech}</span>)}</div>
+                  <span class='project-link inline-flex items-center gap-1 text-xs font-medium text-foreground transition-colors group-hover:text-accent'>
                     {t('readCaseStudy')}
                     <ArrowRight
                       size={12}

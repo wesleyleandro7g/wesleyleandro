@@ -18,7 +18,7 @@ const navLabel = { pt: 'Navegação principal', es: 'Navegación principal', en:
 ---
 <header class="site-header fixed top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur-md">
   <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-6">
-    <a href={localePath(locale)} aria-label="WL. — Wesley Leandro" class="text-lg font-semibold tracking-tight">WL.</a>
+    <a href={localePath(locale)} aria-label="Wesley Leandro — Home" class="brand-mark text-lg font-semibold tracking-tight"><span class="brand-initials" aria-hidden="true">WL</span><span class="brand-name">Wesley Leandro</span></a>
     <nav aria-label={navLabel} class="desktop-navigation items-center gap-5">
       {links.map(link => <a href={link.href} aria-current={pathname === link.href ? 'page' : undefined} class="text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
     </nav>

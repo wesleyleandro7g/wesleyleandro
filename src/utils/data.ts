@@ -26,6 +26,8 @@ export const siteConfig = {
 
 export const COPYABLE_CONTACTS = [
   { id: 'email', value: siteConfig.contact },
+  { id: 'linkedin', value: siteConfig.links.linkedin },
+  { id: 'github', value: siteConfig.links.github },
   { id: 'discord', value: siteConfig.contactChannels.discord.handle },
   { id: 'telegram', value: siteConfig.contactChannels.telegram.handle },
   { id: 'whatsapp', value: siteConfig.contactChannels.whatsapp.handle },

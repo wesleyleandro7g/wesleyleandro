@@ -16,9 +16,9 @@ interface Props { locale: Locale }
 const { locale } = Astro.props
 const t = translate(locale, 'home.cta')
 ---
-    <section data-copy-section data-copied={t('copied')} data-copy-error={t('copyError')} class='py-24'>
+    <section data-copy-section data-copied={t('copied')} data-copy-error={t('copyError')} class='contact-section py-24'>
       <FadeIn>
-        <div class='relative overflow-hidden rounded-2xl border border-border bg-surface/30 px-6 py-16 text-center sm:px-12'>
+        <div class='contact-panel relative overflow-hidden rounded-2xl border border-border bg-surface/30 px-6 py-16 text-center sm:px-12'>
           <h2 class='mx-auto max-w-xl text-2xl font-medium tracking-tight text-foreground sm:text-3xl'>
             {t('title')}
           </h2>
@@ -47,7 +47,7 @@ const t = translate(locale, 'home.cta')
           <div class='mt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground'>
             <span>{t('copyText')}</span>
             <select data-contact-select aria-label={t('copyContact')} class='h-7 min-w-0 max-w-full rounded-md border border-border bg-surface/50 px-2 font-mono text-xs text-foreground'>
-              {COPYABLE_CONTACTS.filter(contact => contact.id === 'email').map(contact => <option value={contact.value}>{t(`contactOptions.${contact.id}`)} — {contact.value}</option>)}
+              {COPYABLE_CONTACTS.map(contact => <option value={contact.value}>{t(`contactOptions.${contact.id}`)} — {contact.value}</option>)}
             </select>
             <button
               type='button'

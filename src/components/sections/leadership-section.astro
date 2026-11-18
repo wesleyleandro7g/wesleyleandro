@@ -4,7 +4,7 @@ interface Props { locale: Locale }
 const { locale } = Astro.props
 const t = translate(locale, 'home.leadership')
 ---
-<section class="py-24 border-y border-border">
+<section class="leadership-section py-24 border-y border-border">
   <h2 class="mb-4 text-xl font-medium">{t('title')}</h2>
   <p class="max-w-2xl text-base leading-relaxed text-muted-foreground">{t('intro')}</p>
   <div class="mt-8 grid gap-8 md:grid-cols-3">

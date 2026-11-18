@@ -1,0 +1,11 @@
+{
+  "build": "pass",
+  "typecheck": "pass, 47 files, no errors, warnings or hints",
+  "lint": "pass",
+  "contentAndRouteTests": "5 passed",
+  "responsive": {"locales": ["pt", "en", "es"], "widths": [320, 390, 768, 1024, 1280, 1440, 1600], "pageOrControlOverflow": false},
+  "interactions": ["mobile menu", "Escape", "locale switch", "copy contact", "hero project links", "work navigation", "keyboard focus", "hover", "reduced motion"],
+  "javascriptErrors": [],
+  "detector": [],
+  "finishReviewDisposition": "ship"
+}

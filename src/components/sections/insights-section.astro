@@ -1,7 +1,6 @@
 ---
 import { ArrowRight, ExternalLink } from '@lucide/astro'
 import FadeIn from '@/components/fade-in.astro'
-import SectionLabel from '@/components/section-label.astro'
 import Card from '@/components/card.astro'
 import { data as getData } from '@/utils/data'
 import { translate, localePath, type Locale } from '@/i18n'
@@ -13,11 +12,10 @@ const { locale } = Astro.props
   const { articles } = getData(tRoot)
 
 ---
-<section class='py-24'>
+<section class='insights-section py-24'>
       <FadeIn>
         <div class='mb-10 flex items-end justify-between'>
           <div>
-            <SectionLabel>{t('label')}</SectionLabel>
             <h2 class='mb-2 text-xl font-medium tracking-tight text-foreground'>
               {t('title')}
             </h2>
