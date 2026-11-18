@@ -9,13 +9,13 @@ import '@/styles/globals.css'
 import { locales, localePath, translate, type Locale } from '@/i18n'
 import { siteConfig } from '@/utils/data'
 import { personJsonLd } from '@/lib/metadata'
-interface Props { locale: Locale; page: 'home' | 'work' | 'writing'; path?: string; title?: string; description?: string; noindex?: boolean }
+interface Props { locale: Locale; page: 'home' | 'work' | 'writing' | 'resume'; path?: string; title?: string; description?: string; imagePath?: string; noindex?: boolean }
 const { locale, page, path = page === 'home' ? '' : `/${page}`, noindex = false } = Astro.props
 const t = translate(locale, 'metadata')
 const title = Astro.props.title ?? t(`${page}.title`)
 const description = Astro.props.description ?? t(`${page}.description`)
 const canonical = new URL(localePath(locale, path), siteConfig.url).href
-const image = new URL('/opengraph-image.png', siteConfig.url).href
+const image = new URL(Astro.props.imagePath ?? '/opengraph-image.png', siteConfig.url).href
 ---
 <!doctype html>
 <html lang={locale} class="dark">
@@ -41,12 +41,12 @@ const image = new URL('/opengraph-image.png', siteConfig.url).href
     <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Wesley Leandro — Senior Software Engineer · Frontend Engineering · React · Next.js · TypeScript" />
+    <meta property="og:image:alt" content={title} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
-    <meta name="twitter:image:alt" content="Wesley Leandro — Senior Software Engineer · Frontend Engineering · React · Next.js · TypeScript" />
+    <meta name="twitter:image:alt" content={title} />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
   </head>

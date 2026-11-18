@@ -1,6 +1,7 @@
 ---
 import { ArrowLeft, ArrowRight } from '@lucide/astro'
 import Header from '@/components/header.astro'
+import ArchitectureDiagram from '@/components/architecture-diagram.astro'
 import Footer from '@/components/footer.astro'
 import FadeIn from '@/components/fade-in.astro'
 import {
@@ -32,10 +33,11 @@ const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
     { key: 'challenge', content: study.challenge },
     { key: 'responsibility', content: study.responsibility },
     { key: 'solution', content: study.solution },
+    { key: 'decisions', content: study.decisions },
   ] as const
 
 ---
-<Layout locale={locale} page='work' path={`/work/${slug}`} title={`${study.company} — ${t('title')} | Wesley Leandro`} description={study.thesis}>
+<Layout locale={locale} page='work' path={`/work/${slug}`} title={`${study.company} — ${study.domain} | Wesley Leandro`} description={study.thesis} imagePath={`/social/${slug}.png`}>
 <Header locale={locale} />
       <main id="main-content" class='grid-bg min-h-screen bg-background text-foreground'>
         <div class='mx-auto max-w-6xl px-6 pt-24 pb-12'>
@@ -50,7 +52,7 @@ const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
 
             <div class='mb-4 flex flex-wrap items-center gap-3'>
               <span class='rounded-full border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground'>
-                {study.domain}
+                {study.domain} · {study.statusLabel}
               </span>
               <span class='font-mono text-xs text-muted-foreground'>
                 {study.period}
@@ -67,6 +69,7 @@ const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
           </FadeIn>
 
           <div class='max-w-3xl space-y-10'>
+            <ArchitectureDiagram nodes={study.diagram} locale={locale} />
             {sections.map((section, i) => (
               <FadeIn delay={0.05 + i * 0.03}>
                 <section>
@@ -98,6 +101,8 @@ const { locale, slug } = Astro.params as { locale: Locale; slug: CaseStudySlug }
               <section>
                 <h2 class='mb-3 text-base font-medium text-foreground'>{t('sections.impact')}</h2>
                 <p class='text-sm leading-relaxed text-muted-foreground'>{study.impact}</p>
+                <h2 class='mt-8 mb-3 text-base font-medium'>{t('sections.lesson')}</h2>
+                <p class='text-sm leading-relaxed text-muted-foreground'>{study.lesson}</p>
               </section>
             </FadeIn>
           </div>

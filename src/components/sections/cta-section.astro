@@ -4,10 +4,8 @@ import Linkedin from '@/components/icons/Linkedin.astro'
 
 import { Check, Copy, Mail } from '@lucide/astro'
 import FadeIn from '@/components/fade-in.astro'
+import ResumeMenu from '@/components/resume-menu.astro'
 import ContactLink from '@/components/contact-link.astro'
-import DiscordIcon from '@/components/icons/DiscordIcon.astro'
-import TelegramIcon from '@/components/icons/TelegramIcon.astro'
-import WhatsAppIcon from '@/components/icons/WhatsAppIcon.astro'
 
 import {
   COPYABLE_CONTACTS,
@@ -44,23 +42,12 @@ const t = translate(locale, 'home.cta')
               href={siteConfig.links.github}
               label='GitHub'
             ><Github size={16} slot="icon" /></ContactLink>
-            <ContactLink
-              href={siteConfig.links.discord}
-              label='Discord'
-            ><DiscordIcon class='h-4 w-4' slot="icon" /></ContactLink>
-            <ContactLink
-              href={siteConfig.links.telegram}
-              label='Telegram'
-            ><TelegramIcon class='h-4 w-4' slot="icon" /></ContactLink>
-            <ContactLink
-              href={siteConfig.links.whatsapp}
-              label='WhatsApp'
-            ><WhatsAppIcon class='h-4 w-4' slot="icon" /></ContactLink>
+            <ResumeMenu locale={locale} />
           </div>
           <div class='mt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground'>
             <span>{t('copyText')}</span>
             <select data-contact-select aria-label={t('copyContact')} class='h-7 min-w-0 max-w-full rounded-md border border-border bg-surface/50 px-2 font-mono text-xs text-foreground'>
-              {COPYABLE_CONTACTS.map(contact => <option value={contact.value}>{t(`contactOptions.${contact.id}`)} — {contact.value}</option>)}
+              {COPYABLE_CONTACTS.filter(contact => contact.id === 'email').map(contact => <option value={contact.value}>{t(`contactOptions.${contact.id}`)} — {contact.value}</option>)}
             </select>
             <button
               type='button'

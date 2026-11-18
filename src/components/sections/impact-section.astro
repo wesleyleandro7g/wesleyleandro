@@ -16,7 +16,7 @@ const { locale } = Astro.props
         <h2 class='mb-10 text-xl font-medium tracking-tight text-foreground'>
           {t('title')}
         </h2>
-        <div class='grid grid-cols-1 gap-4 sm:grid-cols-2'>
+        <div class='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4'>
           {impact.map((item, i) => (
             <FadeIn delay={0.1 + i * 0.05}>
               <Card class='flex flex-col gap-1'>

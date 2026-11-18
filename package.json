@@ -9,7 +9,7 @@
     "start": "astro preview",
     "check": "astro check",
     "lint": "eslint .",
-    "test": "node --test scripts/portfolio.test.mjs"
+    "test": "astro build && node --test scripts/portfolio.test.mjs"
   },
   "dependencies": {
     "astro": "^7.4.7",

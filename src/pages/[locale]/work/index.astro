@@ -38,7 +38,7 @@ const { locale } = Astro.params as { locale: Locale }
                           {study.company}
                         </h2>
                         <span class='rounded-full border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground'>
-                          {study.domain}
+                          {study.domain} · {study.statusLabel}
                         </span>
                         <span class='font-mono text-xs text-muted-foreground'>
                           {study.period}
@@ -51,6 +51,7 @@ const { locale } = Astro.params as { locale: Locale }
                         {study.thesis}
                       </p>
                     </div>
+                    <div class='flex max-w-xs flex-wrap gap-2 text-xs font-mono text-muted-foreground'>{study.stack.slice(0, 5).map(tech => <span>{tech}</span>)}</div>
                     <span class='inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors group-hover:text-foreground'>
                       <ArrowRight
                         size={16}

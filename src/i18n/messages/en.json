@@ -1,16 +1,20 @@
 {
   "metadata": {
     "home": {
-      "title": "Wesley Leandro — Senior Software Engineer | React & Next.js",
-      "description": "Senior Software Engineer specializing in Frontend Engineering with React, Next.js and TypeScript. 8+ years of experience. Open to international roles."
+      "title": "Wesley Leandro | Senior Software Engineer — Full Stack & AI Engineering",
+      "description": "I design, build, and scale software products — from web applications to enterprise systems and AI-powered solutions. 8+ years delivering fintech platforms, modernizing legacy systems, and connecting AI to business workflows."
     },
     "work": {
-      "title": "Work — Wesley Leandro | Frontend Engineering Case Studies",
-      "description": "Frontend Architecture and Full Stack Development: Penzack at AZX, a financial platform with 1M+ users, James Moto Shop and enterprise React to Next.js migration."
+      "title": "Engineering work | Wesley Leandro",
+      "description": "The systems I’ve built, modernized, and helped scale."
     },
     "writing": {
       "title": "Writing — Wesley Leandro | Frontend Architecture & AI",
       "description": "Upcoming writing on Frontend Architecture, Web Performance, Software Engineering and AI workflows. Connect with Wesley Leandro on LinkedIn."
+    },
+    "resume": {
+      "title": "Choose a resume | Wesley Leandro",
+      "description": "Two perspectives on my engineering experience. Updated PDF exports are being prepared; contact me for the latest version."
     }
   },
   "nav": {
@@ -23,17 +27,20 @@
       "discord": "Discord",
       "telegram": "Telegram",
       "whatsapp": "WhatsApp"
-    }
+    },
+    "experience": "Experience",
+    "resume": "Resume",
+    "menu": "Menu"
   },
   "home": {
     "language": "Language",
     "hero": {
-      "status": "Open to international senior engineering roles",
-      "title": "Wesley Leandro.",
-      "titleHighlight": "Senior Software Engineer.",
-      "intro": "I specialize in <important>Frontend Engineering</important> with React, Next.js and TypeScript. Over 8+ years, I have built complex financial and business workflows, including features for Penzack at AZX, a platform with 1M+ users. I connect frontend architecture, API integration and product requirements to deliver reliable web applications.",
-      "tags": "React · Next.js · TypeScript · Full Stack Development",
-      "ctaWork": "View Work",
+      "status": "Senior Software Engineer · Full Stack & AI Engineering",
+      "title": "Building software that",
+      "titleHighlight": "solves real-world problems.",
+      "intro": "I design, build, and scale software products — from web applications to enterprise systems and AI-powered solutions. 8+ years delivering fintech platforms, modernizing legacy systems, and connecting AI to business workflows.",
+      "tags": "React · Node.js · TypeScript · Python · Go · AI Engineering",
+      "ctaWork": "Explore my work",
       "ctaContact": "Contact",
       "links": {
         "github": "GitHub",
@@ -43,48 +50,45 @@
         "whatsapp": "WhatsApp",
         "resume": "Resume"
       },
-      "ctaExperience": "View Experience"
+      "ctaExperience": "View resume"
     },
     "impact": {
       "label": "Engineering Impact",
-      "title": "Impact at scale",
+      "title": "Engineering impact, backed by real work.",
       "items": {
         "item-01": {
-          "value": "1M+",
-          "label": "Platform users",
-          "context": "Penzack, the investment and trading product at AZX"
+          "label": "Years in engineering",
+          "context": "Building production software across fintech and enterprise products"
         },
         "item-02": {
-          "value": "8+ yrs",
-          "label": "Professional experience",
-          "context": "Frontend Engineering with full-stack delivery"
+          "label": "Platform users",
+          "context": "Penzack at AZX — product scale, shared team contribution"
         },
         "item-03": {
-          "value": "1,000+",
           "label": "Leads per month",
-          "context": "James Moto Shop consortium sales platform"
+          "context": "James Moto Shop sales platform integrated with an ERP"
         },
         "item-04": {
-          "value": "40%",
-          "label": "Higher contract closing rate",
-          "context": "Freelance sales management system"
+          "label": "Team members led",
+          "context": "Two developers and one designer at James Moto Shop"
         }
       }
     },
     "work": {
       "label": "Selected Work",
-      "title": "Engineering case studies",
+      "title": "Selected engineering work",
       "viewAll": "View all work",
-      "readCaseStudy": "Read case study"
+      "readCaseStudy": "Read case study",
+      "intro": "The systems I’ve built, modernized, and helped scale."
     },
     "focus": {
-      "label": "Current Focus",
-      "title": "What I'm exploring",
-      "intro": "Areas I am studying to deepen my frontend practice and broaden my engineering skills.",
+      "label": "Engineering in practice",
+      "title": "Engineering in practice",
+      "intro": "Real products and technical decisions behind the areas I work across.",
       "items": {
         "item-01": {
-          "title": "AI Engineering",
-          "description": "Exploring LLM integrations and AI workflows, with attention to reliability, evaluation and cost."
+          "title": "AI Engineering & Automation",
+          "description": "Agent orchestration, Go APIs for legacy integrations and asynchronous Python workflows."
         },
         "item-02": {
           "title": "Distributed Systems",
@@ -99,23 +103,23 @@
           "description": "Multi-tenant patterns, performance at scale, and infrastructure that grows with the business."
         },
         "item-05": {
-          "title": "Frontend Architecture",
-          "description": "Studying rendering strategies, component boundaries and state management trade-offs for maintainable React applications."
+          "title": "Full Stack & System Architecture",
+          "description": "Web platforms, backend services and integrations built around maintainable architectures."
         },
         "item-06": {
-          "title": "Developer Experience",
-          "description": "Tooling, CI/CD, and patterns that multiply team velocity."
+          "title": "Performance & Product Engineering",
+          "description": "Reliable React experiences, Core Web Vitals improvements and modernization of production applications."
         }
       }
     },
     "about": {
       "label": "About",
-      "title": "Frontend depth. Full-stack perspective.",
+      "title": "Software engineering with ownership.",
       "paragraphs": {
-        "p1": "I am a Senior Software Engineer based in Brazil, specializing in Frontend Engineering with React, Next.js and TypeScript. I work with international teams in English on investment, trading and business applications.",
-        "p2": "My 8+ years of experience span frontend modernization, authentication, onboarding, KYC, financial transactions and analytics dashboards. At AZX, I develop Penzack, an investment and trading platform with more than one million users.",
-        "p3": "I also bring full-stack experience with Node.js, API integration, data modeling and AWS. At James Moto Shop, I led end-to-end development of a commercial platform, connecting the public portal to an administrative ERP and coordinating a multidisciplinary team.",
-        "p4": "My engineering practice includes automated testing with Jest, React Testing Library, Vitest and Cypress, production monitoring and attention to accessibility and performance. I am also exploring AI Engineering, LLM integrations and automation for products and development workflows."
+        "p1": "I’m Wesley Leandro, a Senior Software Engineer based in Brazil with 8+ years building web applications and enterprise software, including 6+ years building React applications. My strongest foundation is React, TypeScript, Next.js and Node.js.",
+        "p2": "I contributed to Penzack at AZX, an international financial platform serving 1M+ users, and led two developers and one designer delivering a full-stack sales product at James Moto Shop.",
+        "p3": "My recent work includes AI-enabled CRM workflows, Go APIs connecting legacy systems, and a Python/Hatchet orchestration proof of concept with Docker workers and PostgreSQL.",
+        "p4": "I value clear architecture, automated testing, reliable delivery and collaboration with distributed teams. Practical experience with Python and Go complements my React and Node.js foundation."
       },
       "closing": "Open to international Senior Software Engineer and Senior Frontend Engineer opportunities.",
       "educationLabel": "Education",
@@ -126,7 +130,7 @@
     },
     "capabilities": {
       "label": "Engineering Capabilities",
-      "title": "Technical breadth",
+      "title": "Technical stack, with context",
       "groups": {
         "frontend": {
           "title": "Frontend Engineering",
@@ -142,60 +146,45 @@
         },
         "ai": {
           "title": "AI & Automation",
-          "description": "Exploring LLM integrations and workflow automation"
+          "description": "Multi-agent integrations and Python orchestration proofs of concept"
         },
         "tooling": {
-          "title": "Developer Tooling",
+          "title": "Architecture & Quality",
           "description": "Testing, collaboration, design-dev alignment"
         }
       }
     },
     "insights": {
       "label": "Engineering Insights",
-      "title": "Writing & ideas",
-      "intro": "Topics I plan to write about: frontend architecture, web performance and AI in engineering.",
+      "title": "Engineering notes & open source",
+      "intro": "Practical lessons from building and modernizing software.",
       "viewAll": "View all writing",
-      "comingSoon": "Coming soon"
+      "comingSoon": "Selected technical notes coming soon."
     },
     "experience": {
       "label": "Experience",
-      "title": "Work history",
+      "title": "Experience & technical ownership",
       "items": {
         "item-01": {
-          "company": "AZX",
-          "role": "Senior Frontend Developer",
-          "period": "Mar 2024–Present",
           "description": "Develop React, Next.js and TypeScript features for Penzack, an international investment and trading platform with 1M+ users. Work on authentication, onboarding, KYC, deposits and withdrawals, and real-time trading interfaces. Use Zustand and TanStack Query, contribute to App Router modernization, internationalization, performance and reliability, and integrate Sentry monitoring. Collaborate daily with international teams in English."
         },
         "item-02": {
-          "company": "James Moto Shop",
-          "role": "Full Stack Developer",
-          "period": "Sep 2023–Mar 2024",
-          "description": "Led end-to-end development of a consortium sales platform handling 1,000+ leads per month. Integrated the public portal with an administrative ERP using Next.js App Router, React, TypeScript, Node.js, Prisma and AWS (EC2, S3, RDS). Refined the lead-to-contract and checkout flows, coordinated a multidisciplinary team and established code quality practices."
+          "description": "Led two developers and one designer delivering a React/Node.js sales platform with ERP integration and 1,000+ leads per month. Owned architecture, coordinated delivery and refined lead-to-contract workflows."
         },
         "item-03": {
-          "company": "Elint Tech",
-          "role": "Frontend Developer",
-          "period": "Aug 2022–Mar 2024",
           "description": "Developed enterprise frontend features for clients including Lacta and Universal Music. Migrated a large React application from Create React App to Next.js and built interactive analytics dashboards with Recharts and report exports."
         },
         "item-04": {
-          "company": "Desencoder",
-          "role": "Full Stack Developer",
-          "period": "Mar 2019–Aug 2022",
           "description": "Designed and delivered custom web applications for business clients, including a fintech solution supporting secure financial transactions for thousands of daily users. Integrated frontend workflows with backend services and collaborated with cross-functional teams."
         },
         "item-05": {
-          "company": "Independent",
-          "role": "Freelance Full Stack Developer",
-          "period": "May 2017–Apr 2020",
-          "description": "Built web and mobile products from UX design to implementation. A sales management system improved contract closing rates by 40%; a call monitoring dashboard reduced administrative task time by 60%; promotion features in a local business aggregator app contributed to a 6% sales increase for participating companies."
+          "description": "Built custom web and mobile products, sales systems and reporting dashboards from UX design through implementation. This period overlaps with Desencoder; the recorded dates are preserved."
         }
       }
     },
     "cta": {
-      "title": "Let’s talk about your engineering team.",
-      "description": "I am open to international Senior Software Engineer and Senior Frontend Engineer roles, bringing frontend specialization, full-stack experience and daily collaboration in English.",
+      "title": "Let’s build something meaningful.",
+      "description": "Open to senior software engineering opportunities, full-stack product teams and AI-enabled systems where technical ownership and real-world impact matter.",
       "emailBtn": "Send me an email",
       "copyText": "Prefer to copy?",
       "copyEmail": "Copy email address",
@@ -211,19 +200,32 @@
     },
     "footer": {
       "rights": "All rights reserved."
+    },
+    "leadership": {
+      "title": "Beyond writing code",
+      "intro": "I take ownership from business requirements and architecture to team coordination and delivery.",
+      "team": "Team leadership",
+      "teamDetail": "2 developers + 1 designer · James Moto Shop",
+      "architecture": "Architecture & delivery",
+      "architectureDetail": "Full-stack sales platform + ERP integration",
+      "international": "International collaboration",
+      "internationalDetail": "Distributed teams, daily English communication · Penzack"
     }
   },
   "workPage": {
     "label": "Work",
     "title": "Engineering case studies",
-    "description": "Frontend Engineering and full-stack delivery across financial platforms, commercial systems and enterprise applications.",
+    "description": "The systems I’ve built, modernized, and helped scale.",
     "sections": {
       "context": "Context",
       "challenge": "Problem",
       "responsibility": "My responsibility",
       "solution": "Technical solution",
       "stack": "Technologies",
-      "impact": "Result"
+      "impact": "Result",
+      "diagram": "Conceptual architecture",
+      "decisions": "Engineering decisions & boundaries",
+      "lesson": "Engineering takeaway"
     },
     "prev": "Previous",
     "next": "Next",
@@ -231,40 +233,38 @@
     "studies": {
       "penzack": {
         "company": "Penzack",
-        "role": "Senior Frontend Developer · AZX",
-        "period": "Mar 2024–Present",
         "domain": "Fintech",
         "thesis": "Frontend Engineering for Penzack at AZX, an investment and trading platform with 1M+ users.",
         "context": "Penzack is the international investment and trading product developed at AZX, my employer. The platform serves more than one million users.",
         "challenge": "Support onboarding, identity verification and financial transactions across regional markets and languages, alongside real-time trading experiences.",
-        "responsibility": "Build and maintain frontend features with React, Next.js and TypeScript. Collaborate with international teams in English on authentication, onboarding, KYC, trading interfaces and transaction flows.",
+        "responsibility": "Build and maintain frontend features with React, Next.js and TypeScript. Collaborate with international teams in English on authentication, onboarding, KYC, trading interfaces and transaction flows. Contributed to Core Web Vitals improvements without a quantified performance claim.",
         "solution": "Implemented automatic sign-in, email verification and KYC status handling, plus deposit and withdrawal interfaces including Pix and OXXO. Use Zustand and TanStack Query for application state and API data. Contributed to Next.js App Router and Server Actions modernization, browser compatibility fixes, multilingual responsive interfaces and Sentry production error monitoring.",
         "impact": "Delivered financial and onboarding features within a platform serving 1M+ users, with support for regional payment journeys and multilingual experiences.",
         "bullets": {
           "b1": "1M+ users on the Penzack platform",
           "b2": "Authentication, KYC and financial workflows"
-        }
+        },
+        "decisions": "Frontend modernization alongside financial features requires care around API data, application state and existing user journeys. Core Web Vitals improvements are described qualitatively; no before/after benchmark is available.",
+        "lesson": "Scale belongs to the platform. My contribution is the frontend workflows and modernization described above, delivered with the wider team."
       },
       "james-moto-shop": {
         "company": "James Moto Shop",
-        "role": "Full Stack Developer",
-        "period": "Sep 2023–Mar 2024",
         "domain": "Sales platform",
         "thesis": "End-to-end development of a commercial platform connecting a public portal and ERP, handling 1,000+ leads per month.",
         "context": "A consortium sales business needing a public-facing website connected to its administrative ERP.",
         "challenge": "Connect lead acquisition and the lead-to-contract journey with administrative operations, while keeping the product maintainable and visible in search.",
-        "responsibility": "Led end-to-end development, architected the solution and coordinated a multidisciplinary team. Established code quality practices to support predictable delivery.",
+        "responsibility": "Led two developers and one designer delivering a React/Node.js sales platform with ERP integration and 1,000+ leads per month. Owned architecture, coordinated delivery and refined lead-to-contract workflows.",
         "solution": "Built the portal and ERP integration with Next.js App Router, React, TypeScript, Node.js and Prisma. Used AWS EC2, S3 and RDS for cloud deployment and refined checkout and conversion flows through UX improvements.",
         "impact": "Delivered a commercial platform processing more than 1,000 leads per month, connecting the public website to administrative operations.",
         "bullets": {
           "b1": "1,000+ leads processed monthly",
           "b2": "Technical leadership across portal and ERP"
-        }
+        },
+        "decisions": "The portal, backend and ERP serve different parts of the same sales journey. The approach connects them with a React/Node.js stack; no unverified conversion uplift is attributed to that choice.",
+        "lesson": "Ownership spans architecture, team coordination and the lead-to-contract workflow. The 1,000+ monthly leads describe platform usage, while the leadership scope is two developers and one designer."
       },
       "elint": {
         "company": "Elint Tech",
-        "role": "Frontend Developer",
-        "period": "Aug 2022–Mar 2024",
         "domain": "Enterprise",
         "thesis": "React to Next.js modernization and analytics dashboards for enterprise clients.",
         "context": "Enterprise applications serving clients including Lacta and Universal Music, with reporting and data visualization needs.",
@@ -275,24 +275,86 @@
         "bullets": {
           "b1": "Create React App to Next.js migration",
           "b2": "Recharts dashboards and report exports"
-        }
+        },
+        "decisions": "Migrating from Create React App to Next.js changes the application foundation. The documented scope is the migration and analytics interfaces; specific rollout or rollback strategies are not claimed.",
+        "lesson": "Modernization includes making operational data useful: interactive dashboards and report exports accompany the framework migration."
       },
       "desencoder": {
         "company": "Desencoder",
-        "role": "Full Stack Developer",
-        "period": "Mar 2019–Aug 2022",
         "domain": "Fintech",
         "thesis": "Full-stack delivery of custom web applications and financial transaction workflows.",
-        "context": "Custom software development for business clients, including a fintech solution used by thousands of people daily.",
+        "context": "Custom React applications and integrations for business and fintech workflows.",
         "challenge": "Translate operational requirements into web applications and connect financial user journeys with backend services.",
         "responsibility": "Designed and delivered custom web applications, developed a fintech solution and collaborated with cross-functional teams under demanding timelines.",
-        "solution": "Integrated frontend workflows with backend services to support secure financial transactions and business operations.",
-        "impact": "Delivered business applications and a fintech solution supporting secure financial transactions for thousands of daily users.",
+        "solution": "Connected React application workflows with backend services and business integrations. Specific security mechanisms are not documented in this case.",
+        "impact": "Delivered business applications connecting frontend experiences with backend services for production users.",
         "bullets": {
           "b1": "Financial transaction workflows",
           "b2": "Frontend and backend integration"
-        }
+        },
+        "decisions": "Frontend workflows depend on the business capabilities exposed by backend services. This case stays at that integration boundary rather than describing undocumented infrastructure or security mechanisms.",
+        "lesson": "End-to-end delivery means connecting interface behavior with business operations and collaborating across disciplines. Product scale is not an individual performance metric."
+      },
+      "facil-crm": {
+        "company": "Fácil CRM",
+        "role": "AI workflows & Go API integrations",
+        "domain": "AI-powered CRM",
+        "thesis": "Built AI-powered CRM workflows with collaborating agents and Go APIs connecting intelligent services to legacy business systems.",
+        "context": "Customer operations depend on business information held in existing enterprise systems.",
+        "challenge": "Connect AI-assisted operations to legacy business capabilities through an integration layer.",
+        "responsibility": "Built collaborating-agent workflows and Go APIs for accessing legacy client systems.",
+        "solution": "Go APIs provide a boundary between the agent workflows and existing business systems. The diagram describes this integration at a conceptual level; agent frameworks and deployment details are not disclosed.",
+        "impact": "Connected AI capabilities to legacy business workflows. Production scope and quantitative outcomes are not documented here.",
+        "period": "Period not disclosed",
+        "bullets": {
+          "b1": "Collaborating-agent workflows",
+          "b2": "Go APIs for legacy systems"
+        },
+        "decisions": "The Go API boundary connects agent workflows to existing systems without presenting those systems as native AI services. Authentication, evaluation and deployment details are outside the documented scope.",
+        "lesson": "An agent workflow needs access to business capabilities through explicit integrations. This case documents those connections, without promising autonomous resolution or a measured service level."
+      },
+      "tactia-build": {
+        "company": "Tactia Build",
+        "role": "Business systems & integration design",
+        "domain": "Enterprise modernization",
+        "thesis": "Solution design for consolidating fragmented business workflows and connecting enterprise systems.",
+        "context": "Business teams often depend on separate tools and disconnected operational information.",
+        "challenge": "Map operational needs and identify where custom software and integrations can simplify the workflow.",
+        "responsibility": "Worked on business system and integration design. This overview is limited to solution design; individual client deliveries are not documented.",
+        "solution": "A conceptual view of connecting existing tools through integrations and a coherent operational interface. The diagram illustrates the approach, not a deployed client architecture.",
+        "impact": "A modernization approach focused on coherent operations. No production rollout, client count or measured efficiency gain is claimed.",
+        "period": "Period not disclosed",
+        "bullets": {
+          "b1": "Business workflow integration",
+          "b2": "Conceptual solution design"
+        },
+        "decisions": "Integration can connect existing tools, while custom software can consolidate a workflow. The appropriate boundary depends on discovery; no particular client architecture is claimed here.",
+        "lesson": "Solution design is distinct from delivery evidence. Client-specific implementation, screenshots and measured outcomes remain outside this overview."
+      },
+      "tactia-ai": {
+        "company": "Tactia",
+        "role": "Python workflow orchestration POC",
+        "domain": "AI workflow orchestration",
+        "thesis": "Implemented a Python workflow orchestration proof of concept using Hatchet, PostgreSQL and Docker workers, with automated tests for asynchronous tasks.",
+        "context": "AI-related tasks need coordination beyond a synchronous request. This project explores that infrastructure as a proof of concept.",
+        "challenge": "Separate asynchronous execution from workflow coordination and verify the behavior with automated tests.",
+        "responsibility": "Implemented the Python/Hatchet orchestration POC, Docker workers, PostgreSQL integration and unit/integration tests.",
+        "solution": "Hatchet coordinates asynchronous work executed by Python workers in Docker, with PostgreSQL persistence. Unit and integration tests exercise task execution. Production hardening remains future work.",
+        "impact": "An initial, tested orchestration foundation. This is a proof of concept, with no claim of production scale or customer adoption.",
+        "period": "Period not disclosed",
+        "bullets": {
+          "b1": "Python · Hatchet · Docker workers",
+          "b2": "Unit and integration tests · POC"
+        },
+        "decisions": "Separating workers from workflow coordination makes asynchronous execution explicit, while adding infrastructure to operate. Docker, PostgreSQL and Hatchet are part of this POC; production reliability has not been established here.",
+        "lesson": "Unit and integration tests support confidence in task execution within the POC. Load testing and production hardening are future validation steps, not delivered outcomes."
       }
+    },
+    "status": {
+      "production": "Production",
+      "proof-of-concept": "Proof of concept",
+      "design": "Solution design",
+      "not-disclosed": "Deployment scope not disclosed"
     }
   },
   "writingPage": {
@@ -319,5 +381,13 @@
     "articles": {},
     "connectLinkedin": "Connect on LinkedIn",
     "readArticle": "Read article"
+  },
+  "resumePage": {
+    "title": "Choose a resume",
+    "description": "Two perspectives on my engineering experience. Updated PDF exports are being prepared; contact me for the latest version.",
+    "software": "Senior Software Engineer — Full Stack & AI",
+    "frontend": "Senior Frontend Engineer — React/Next.js",
+    "pending": "Updated PDF coming soon",
+    "request": "Request current resume by email"
   }
 }

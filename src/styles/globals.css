@@ -154,3 +154,27 @@ h1, h2, h3 { text-wrap: balance; }
   [id] { scroll-margin-top: 8rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.desktop-navigation { display: none; }
+.mobile-navigation-panel { position: absolute; top: 64px; right: 1rem; left: 1rem; padding: .75rem; border: 1px solid var(--border); border-radius: .75rem; background: var(--background); box-shadow: 0 20px 40px #0008; }
+.mobile-navigation-panel a { display: block; padding: .8rem; border-radius: .4rem; }
+.mobile-navigation-panel a:hover { background: var(--surface); }
+.architecture { margin: 0 0 2rem; padding: 1.5rem; border: 1px solid var(--border); border-radius: .75rem; background: var(--surface); }
+.architecture ol { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.architecture li { display: flex; align-items: center; gap: .6rem; flex: 1 1 7rem; font-size: .8rem; }
+.architecture li > span:first-child { padding: .8rem; border: 1px solid var(--border); border-radius: .4rem; flex: 1; text-align: center; }
+.architecture-arrow { color: var(--accent); }
+.architecture figcaption { margin-top: 1rem; color: var(--muted-foreground); font-size: .65rem; }
+.architecture.compact { padding: .75rem; }
+.architecture.compact li { flex-basis: 100%; font-size: .7rem; }
+.architecture.compact .architecture-arrow { transform: rotate(90deg); }
+@media (min-width: 1024px) { .desktop-navigation { display: flex; } .mobile-navigation { display: none; } }
+@media (max-width: 639px) {
+  .hero-section { padding-top: 1.5rem; padding-bottom: 3rem; }
+  .hero-section h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+  .hero-section > div > div:first-child { font-size: .6rem; }
+  .hero-section p { font-size: .875rem; }
+  main > div > section { padding-top: 3rem; padding-bottom: 3rem; }
+  .architecture:not(.compact) li { flex-basis: 100%; }
+  .architecture:not(.compact) .architecture-arrow { transform: rotate(90deg); }
+}

@@ -1,20 +1,44 @@
 ---
 import { translate, localePath, type Locale } from '@/i18n'
-import ContactMenu from './contact-menu.astro'
 import LanguageSelector from './language-selector.astro'
-import { cn } from '@/lib/utils'
+import { siteConfig } from '@/utils/data'
 interface Props { locale: Locale }
 const { locale } = Astro.props
 const t = translate(locale, 'nav')
 const pathname = Astro.url.pathname.replace(/\/$/, '')
-const links = [ { href: '/work', label: t('work') }, { href: '/writing', label: t('writing') }, { href: '/#about', label: t('about') } ]
+const links = [
+  { href: localePath(locale, '/work'), label: t('work') },
+  { href: localePath(locale, '/#experience'), label: t('experience') },
+  { href: localePath(locale, '/#about'), label: t('about') },
+  { href: localePath(locale, '/writing'), label: t('writing') },
+  { href: localePath(locale, '/resume'), label: t('resume') },
+  { href: `mailto:${siteConfig.contact}`, label: t('contact') },
+]
+const navLabel = { pt: 'Navegação principal', es: 'Navegación principal', en: 'Main navigation' }[locale]
 ---
-<header class="fixed top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
-  <div class="header-inner mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-    <a href={localePath(locale)} aria-label="Wesley Leandro" class="text-lg font-semibold tracking-tight text-foreground">WL.</a>
-    <nav aria-label={locale === 'pt' ? 'Navegação principal' : locale === 'es' ? 'Navegación principal' : 'Main navigation'} class="header-nav items-center gap-6 sm:flex">
-      {links.map(link => <a href={localePath(locale, link.href)} aria-current={pathname === localePath(locale, link.href) ? 'page' : undefined} class={cn('text-sm text-muted-foreground transition-colors hover:text-foreground link-underline', pathname === localePath(locale, link.href) && 'text-foreground')}>{link.label}</a>)}
+<header class="site-header fixed top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur-md">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-6">
+    <a href={localePath(locale)} aria-label="WL. — Wesley Leandro" class="text-lg font-semibold tracking-tight">WL.</a>
+    <nav aria-label={navLabel} class="desktop-navigation items-center gap-5">
+      {links.map(link => <a href={link.href} aria-current={pathname === link.href ? 'page' : undefined} class="text-sm text-muted-foreground hover:text-foreground">{link.label}</a>)}
     </nav>
-    <div class="flex items-center gap-3"><LanguageSelector locale={locale} /><ContactMenu locale={locale} /></div>
+    <div class="flex items-center gap-3">
+      <LanguageSelector locale={locale} />
+      <details class="mobile-navigation">
+        <summary class="cursor-pointer rounded-full border border-border px-3 py-2 text-sm">{t('menu')}</summary>
+        <nav aria-label={navLabel} class="mobile-navigation-panel">
+          {links.map(link => <a href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</a>)}
+        </nav>
+      </details>
+    </div>
   </div>
 </header>
+<script>
+  document.querySelectorAll<HTMLDetailsElement>('.mobile-navigation').forEach(menu => {
+    menu.addEventListener('keydown', event => {
+      if (event.key === 'Escape') { menu.open = false; menu.querySelector('summary')?.focus() }
+    })
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false }))
+    document.addEventListener('click', event => { if (!menu.contains(event.target as Node)) menu.open = false })
+  })
+</script>

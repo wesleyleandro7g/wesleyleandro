@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/site-layout.astro'
+import Header from '@/components/header.astro'
+import Footer from '@/components/footer.astro'
+import { locales, translate, type Locale } from '@/i18n'
+import { resumes } from '@/utils/portfolio'
+import { siteConfig } from '@/utils/data'
+export function getStaticPaths() { return locales.map(locale => ({ params: { locale } })) }
+const { locale } = Astro.params as { locale: Locale }
+const t = translate(locale, 'resumePage')
+---
+<Layout locale={locale} page="resume">
+  <Header locale={locale} />
+  <main id="main-content" class="mx-auto min-h-screen max-w-6xl px-6 pt-40">
+    <h1 class="mb-4 text-3xl font-semibold">{t('title')}</h1>
+    <p class="mb-10 max-w-2xl leading-relaxed text-muted-foreground">{t('description')}</p>
+    <div class="grid gap-5 md:grid-cols-2">{resumes.map(resume => <section class="rounded-xl border border-border bg-surface/50 p-6">
+      <h2 class="mb-4 text-xl font-medium">{t(resume.id)}</h2>
+      {resume.href ? <a href={resume.href} class="underline">{t(resume.id)} · PDF</a> : <>
+        <p class="mb-4 text-sm text-muted-foreground">{t('pending')}</p>
+        <a class="underline" href={`mailto:${siteConfig.contact}?subject=${encodeURIComponent(t(resume.id))}`}>{t('request')}</a>
+      </>}
+    </section>)}</div>
+    <Footer locale={locale} />
+  </main>
+</Layout>

@@ -1,0 +1,32 @@
+---
+import type { Locale } from '@/i18n'
+interface Props { nodes: readonly string[]; locale: Locale; compact?: boolean }
+const { nodes, locale, compact = false } = Astro.props
+const labels: Record<string, Record<Locale, string>> = {
+ web: { en: 'React experience', pt: 'Interface React', es: 'Interfaz React' },
+ api: { en: 'APIs & services', pt: 'APIs e serviços', es: 'APIs y servicios' },
+ finance: { en: 'Financial workflows', pt: 'Fluxos financeiros', es: 'Flujos financieros' },
+ crm: { en: 'Customer operations', pt: 'Atendimento', es: 'Atención al cliente' },
+ agents: { en: 'AI agents', pt: 'Agentes IA', es: 'Agentes IA' },
+ go: { en: 'Go APIs', pt: 'APIs Go', es: 'APIs Go' },
+ legacy: { en: 'Legacy systems', pt: 'Sistemas legados', es: 'Sistemas heredados' },
+ portal: { en: 'Sales portal', pt: 'Portal comercial', es: 'Portal comercial' },
+ erp: { en: 'Administrative ERP', pt: 'ERP administrativo', es: 'ERP administrativo' },
+ tools: { en: 'Existing tools', pt: 'Ferramentas existentes', es: 'Herramientas existentes' },
+ integration: { en: 'Integrations', pt: 'Integrações', es: 'Integraciones' },
+ operations: { en: 'Operational interface', pt: 'Interface operacional', es: 'Interfaz operativa' },
+ tasks: { en: 'Async tasks', pt: 'Tarefas assíncronas', es: 'Tareas asíncronas' },
+ hatchet: { en: 'Hatchet', pt: 'Hatchet', es: 'Hatchet' },
+ workers: { en: 'Python / Docker workers', pt: 'Workers Python / Docker', es: 'Workers Python / Docker' },
+ postgres: { en: 'PostgreSQL', pt: 'PostgreSQL', es: 'PostgreSQL' },
+ cra: { en: 'React / CRA', pt: 'React / CRA', es: 'React / CRA' },
+ next: { en: 'Next.js migration', pt: 'Migração Next.js', es: 'Migración Next.js' },
+ dashboards: { en: 'Analytics dashboards', pt: 'Dashboards analíticos', es: 'Dashboards analíticos' },
+ business: { en: 'Business workflows', pt: 'Fluxos de negócio', es: 'Flujos de negocio' },
+}
+const caption = { en: 'Conceptual architecture · simplified overview', pt: 'Arquitetura conceitual · visão simplificada', es: 'Arquitectura conceptual · vista simplificada' }[locale]
+---
+<figure class:list={['architecture', { compact }]} aria-label={caption}>
+  <ol>{nodes.map((node, i) => <li><span>{labels[node][locale]}</span>{i < nodes.length - 1 && <span class="architecture-arrow" aria-hidden="true">→</span>}</li>)}</ol>
+  <figcaption>{caption}</figcaption>
+</figure>

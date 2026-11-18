@@ -2,7 +2,7 @@
 import FadeIn from '@/components/fade-in.astro'
 import Card from '@/components/card.astro'
 import { data as getData } from '@/utils/data'
-import { translate, type Locale } from '@/i18n'
+import { translate, localePath, type Locale } from '@/i18n'
 interface Props { locale: Locale }
 const { locale } = Astro.props
 
@@ -33,6 +33,7 @@ const { locale } = Astro.props
                 <p class='text-xs leading-relaxed text-muted-foreground'>
                   {area.description}
                 </p>
+                <div class='mt-5 flex flex-wrap gap-3'>{area.projects.map(slug => <a class='text-xs underline text-muted-foreground hover:text-foreground' href={localePath(locale, `/work/${slug}`)}>{tRoot(`workPage.studies.${slug}.company`)}</a>)}</div>
               </Card>
             </FadeIn>
           ))}

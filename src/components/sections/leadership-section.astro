@@ -1,0 +1,16 @@
+---
+import { translate, localePath, type Locale } from '@/i18n'
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const t = translate(locale, 'home.leadership')
+---
+<section class="py-24 border-y border-border">
+  <h2 class="mb-4 text-xl font-medium">{t('title')}</h2>
+  <p class="max-w-2xl text-base leading-relaxed text-muted-foreground">{t('intro')}</p>
+  <div class="mt-8 grid gap-8 md:grid-cols-3">
+    {['team', 'architecture', 'international'].map((key) => <div>
+      <h3 class="mb-2 text-sm font-medium">{t(key)}</h3>
+      <a class="text-sm text-muted-foreground underline hover:text-foreground" href={localePath(locale, `/work/${key === 'international' ? 'penzack' : 'james-moto-shop'}`)}>{t(`${key}Detail`)}</a>
+    </div>)}
+  </div>
+</section>

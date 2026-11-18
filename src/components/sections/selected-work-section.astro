@@ -29,8 +29,9 @@ const { locale } = Astro.props
           </a>
         </div>
 
+        <p class='mb-8 text-sm text-muted-foreground'>{t('intro')}</p>
         <div class='grid grid-cols-1 gap-4 md:grid-cols-3'>
-          {caseStudies.slice(0, 3).map((study, i) => (
+          {caseStudies.filter(study => study.featured).map((study, i) => (
             <FadeIn delay={0.1 + i * 0.05}>
               <a href={localePath(locale, `/work/${study.slug}`)} class='group block h-full'>
                 <Card class='flex h-full flex-col'>
@@ -42,6 +43,7 @@ const { locale } = Astro.props
                       {study.domain}
                     </span>
                   </div>
+                  <p class='mb-3 text-xs text-accent'>{study.statusLabel}</p>
                   <p class='mb-1 text-xs text-muted-foreground'>{study.role}</p>
                   <p class='mb-4 font-mono text-xs text-muted-foreground'>{study.period}</p>
                   <p class='mb-4 flex-1 text-sm leading-relaxed text-muted-foreground'>

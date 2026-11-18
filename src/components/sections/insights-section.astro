@@ -34,6 +34,7 @@ const { locale } = Astro.props
           </a>
         </div>
 
+        {articles.length === 0 && <p class='text-sm text-muted-foreground'>{t('comingSoon')}</p>}
         <div class='grid grid-cols-1 gap-4 md:grid-cols-3'>
           {articles.map((article, i) => (
             <FadeIn delay={0.05 + i * 0.05}>
