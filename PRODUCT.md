@@ -25,3 +25,7 @@ Wesley Leandro. Tema dark profundo. Referência visual explicitamente solicitada
 ## Users
 
 Recrutadores e líderes técnicos avaliando a experiência profissional e os projetos de Wesley Leandro. Público confirmado pelo usuário.
+
+## Individual Mentorship
+
+The mentorship pages serve business owners and entrepreneurs overloaded with operational work. Primary action: arrange a free fit conversation through the existing WhatsApp. Offer: 30 days, four individual online sessions, four live hours, BRL 697 total for the first participants. Guided building happens in sessions, with documentation and next steps. Several priority challenges may be addressed; completion depends on implementation progress in the client's business. Paid tools are assessed together and purchased separately by the client. The goal is increased autonomy after the mentorship. Pages are available in Portuguese, English and Spanish.

@@ -1,0 +1,116 @@
+/* Mentorship inherits the portfolio's black, glass and white-light identity. */
+.mentorship-page { position: relative; isolation: isolate; overflow: clip; padding-top: 76px; --mentorship-space: 7rem; }
+.mentorship-page::before { content: ''; position: absolute; inset: 0 0 auto; height: 900px; z-index: -1; pointer-events: none; background: radial-gradient(ellipse at 80% 5%, #ffffff0b, transparent 58%); }
+.mentorship-container { max-width: 1248px; margin-inline: auto; padding-inline: 24px; }
+.mentorship-page section { padding-block: var(--mentorship-space); }
+.mentorship-page h1, .mentorship-page h2 { font-family: var(--font-display); font-weight: 400; letter-spacing: -.025em; }
+.mentorship-page h1 { font-size: clamp(2.75rem, 4.4vw, 4rem); line-height: 1.07; }
+.mentorship-page h1 span { color: #b7b7b7; }
+.mentorship-page h2 { font-size: clamp(2.25rem, 3.5vw, 3.25rem); line-height: 1.12; max-width: 23ch; }
+.mentorship-page h3 { color: #eee; font-size: 1.0625rem; font-weight: 500; line-height: 1.5; letter-spacing: -.015em; }
+.mentorship-page p { color: #a1a1a1; line-height: 1.8; text-wrap: pretty; }
+.mentorship-page .mentorship-hero { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: center; gap: 5rem; padding-top: 6.5rem; }
+.mentorship-introduction { animation: hero-arrive .7s var(--ease-out) both; }
+.mentorship-lead { margin-top: 1.75rem; max-width: 65ch; font-size: .9375rem; }
+.mentorship-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 2rem; }
+.mentorship-button { display: inline-flex; align-items: center; justify-content: center; gap: .75rem; min-height: 48px; border: 1px solid #ffffff30; border-radius: 10px; padding: .75rem 1.125rem; background: linear-gradient(#ffffff19, #ffffff09); box-shadow: inset 0 1px 0 #ffffff26, 0 6px 18px #0005; color: #fff; font-size: .8125rem; font-weight: 500; text-align: center; transition: background 180ms ease, border-color 180ms ease; }
+.mentorship-button:hover { background: linear-gradient(#ffffff26, #ffffff12); border-color: #ffffff55; }
+.mentorship-button svg, .mentorship-text-link svg { flex-shrink: 0; }
+.mentorship-text-link { display: inline-flex; align-items: center; gap: .625rem; min-height: 44px; font-size: .8125rem; color: #c6c6c6; text-decoration: underline; text-decoration-color: #ffffff30; text-underline-offset: 5px; transition: color 180ms ease; }
+.mentorship-text-link:hover { color: #fff; }
+.mentorship-page .mentorship-caption { font-size: .75rem; line-height: 1.7; }
+.mentorship-introduction > .mentorship-caption { margin-top: .875rem; }
+.mentorship-offer { position: relative; border: 1px solid var(--glass-edge-lit); border-radius: 16px; padding: 2.25rem; background: var(--glass-fill); backdrop-filter: blur(16px); transition: border-color 250ms ease; }
+.mentorship-offer::before { content: ''; position: absolute; top: 0; left: 15%; right: 15%; height: 1px; background: linear-gradient(90deg, transparent, #ffffff85, transparent); }
+.mentorship-offer:hover { border-color: #ffffff55; }
+.mentorship-page .mentorship-offer h2 { font-size: 2.125rem; line-height: 1.15; }
+.mentorship-offer-subtitle { font-size: .875rem; margin-top: .75rem; }
+.mentorship-facts { margin-top: 2rem; }
+.mentorship-facts > div { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-top: 1px solid #ffffff12; padding-block: .875rem; font-size: .8125rem; }
+.mentorship-facts dt { color: #a1a1a1; }
+.mentorship-facts dd { text-align: right; color: #e8e8e8; }
+.mentorship-offer-price { border-top: 1px solid #ffffff12; padding-top: 1.5rem; }
+.mentorship-offer-price > p { font-size: .75rem; }
+.mentorship-page .mentorship-price { font-family: var(--font-display); font-size: 3.75rem; color: #f2f2f2; line-height: 1.2; letter-spacing: -.025em; margin-block: .25rem; font-variant-numeric: tabular-nums; }
+.mentorship-problems { border-top: 1px solid #ffffff17; }
+.mentorship-section-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: end; }
+.mentorship-section-intro > p { max-width: 55ch; font-size: .9375rem; }
+.mentorship-problem-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 3rem; gap: 2.75rem; }
+.mentorship-problem-list > div { padding-top: 1.5rem; border-top: 1px solid #ffffff26; }
+.mentorship-problem-list p { font-size: .875rem; margin-top: .875rem; }
+.mentorship-approach { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; border-top: 1px solid #ffffff17; }
+.mentorship-approach h2 { margin-bottom: 1.75rem; }
+.mentorship-approach p, .mentorship-mentor p { font-size: .9375rem; max-width: 65ch; }
+.mentorship-page .mentorship-emphasis { margin-top: 1.25rem; color: #d1d1d1; }
+.mentorship-paths li { display: flex; align-items: flex-start; gap: 1rem; padding-block: 1.5rem; border-top: 1px solid #ffffff17; }
+.mentorship-paths li:first-child { padding-top: 0; border: 0; }
+.mentorship-paths svg { flex-shrink: 0; margin-top: .3rem; color: #ccc; }
+.mentorship-paths p { margin-top: .5rem; font-size: .875rem; }
+.mentorship-journey { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.2fr); gap: 6rem; border-top: 1px solid #ffffff17; }
+.mentorship-journey-heading > p { margin-top: 1.5rem; max-width: 38ch; font-size: .9375rem; }
+.mentorship-free-meeting { border-bottom: 1px solid #ffffff26; padding-bottom: 2rem; }
+.mentorship-free-meeting p { margin-block: .75rem; font-size: .875rem; }
+.mentorship-timeline li { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 1.5rem; padding-block: 2rem; border-bottom: 1px solid #ffffff17; }
+.mentorship-page .mentorship-week { font-size: .75rem; color: #c7c7c7; padding-top: .2rem; }
+.mentorship-timeline li > div p { font-size: .875rem; margin-top: .5rem; }
+.mentorship-page .mentorship-pace { margin-top: 1.75rem; font-size: .8125rem; }
+.mentorship-mentor { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; border-top: 1px solid #ffffff17; }
+.mentorship-mentor .mentorship-text-link { margin-top: 1.5rem; }
+.mentorship-page .mentorship-signature { color: #eee; margin-top: 1.75rem; font-size: .875rem; }
+.mentorship-faq { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.2fr); gap: 6rem; border-top: 1px solid #ffffff17; }
+.mentorship-faq h2 { margin-bottom: 2rem; }
+.mentorship-page .mentorship-faq-price { font-size: 2rem; color: #eee; line-height: 1.5; font-family: var(--font-display); font-variant-numeric: tabular-nums; }
+.mentorship-questions details { border-bottom: 1px solid #ffffff17; }
+.mentorship-questions details:first-child { border-top: 1px solid #ffffff17; }
+.mentorship-questions summary { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 72px; padding-block: 1.25rem; cursor: pointer; font-size: .9375rem; list-style: none; }
+.mentorship-questions summary::-webkit-details-marker { display: none; }
+.mentorship-questions summary svg { flex-shrink: 0; transition: transform 180ms ease; color: #a1a1a1; }
+.mentorship-questions details[open] summary svg { transform: rotate(45deg); }
+.mentorship-questions summary:hover { color: #fff; }
+.mentorship-questions details > p { padding-bottom: 1.5rem; padding-right: 2rem; font-size: .875rem; }
+.mentorship-page .mentorship-closing { position: relative; isolation: isolate; text-align: center; padding: 4.5rem 2rem; border: 1px solid var(--glass-edge); border-radius: 16px; background: var(--glass-fill); margin-bottom: 6rem; overflow: hidden; }
+.mentorship-closing::before { content: ''; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% -50%, #ffffff26, transparent 65%); }
+.mentorship-closing h2 { margin-inline: auto; max-width: 25ch; font-size: clamp(2.5rem, 4vw, 3.75rem); }
+.mentorship-closing > p { max-width: 58ch; margin: 1.5rem auto 2rem; font-size: .9375rem; }
+.mentorship-closing > .mentorship-caption { margin-top: 1.25rem; margin-bottom: 0; }
+.mentorship-page footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; text-align: left; }
+.mentorship-page footer a { margin: 0; }
+@media (max-width: 1199px) {
+  .mentorship-page .mentorship-hero { gap: 3rem; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+  .mentorship-offer { padding: 1.75rem; }
+  .mentorship-journey, .mentorship-faq { gap: 3.5rem; }
+  .site-header .desktop-navigation { gap: 1rem; }
+}
+@media (max-width: 1023px) {
+  .mentorship-page { --mentorship-space: 5rem; }
+  .mentorship-page .mentorship-hero { gap: 2rem; }
+  .mentorship-page h1 { font-size: 2.75rem; }
+  .mentorship-actions { align-items: flex-start; flex-direction: column; gap: .5rem; }
+  .mentorship-section-intro, .mentorship-approach, .mentorship-mentor { gap: 3rem; }
+}
+@media (max-width: 767px) {
+  .mentorship-page { --mentorship-space: 4rem; }
+  .mentorship-page .mentorship-hero { grid-template-columns: 1fr; padding-top: 3.5rem; gap: 2.5rem; }
+  .mentorship-page h1 { font-size: clamp(2.375rem, 7.4vw, 3.25rem); max-width: 23ch; }
+  .mentorship-page h2 { font-size: 2.375rem; }
+  .mentorship-section-intro, .mentorship-approach, .mentorship-journey, .mentorship-mentor, .mentorship-faq { grid-template-columns: 1fr; gap: 2rem; }
+  .mentorship-problem-list { grid-template-columns: 1fr; gap: 1.75rem; margin-top: 2rem; }
+  .mentorship-problem-list p { margin-top: .5rem; }
+  .mentorship-journey-heading > p { max-width: 65ch; }
+  .mentorship-mentor .mentorship-text-link { margin-top: 1rem; }
+  .mentorship-faq h2 { margin-bottom: 1.5rem; }
+  .mentorship-page .mentorship-closing { padding: 3rem 1.5rem; margin-bottom: 4rem; }
+  .mentorship-page footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+@media (max-width: 479px) {
+  .mentorship-container { padding-inline: 20px; }
+  .mentorship-page h1 { font-size: 2.375rem; }
+  .mentorship-offer { padding: 1.5rem; }
+  .mentorship-timeline li { grid-template-columns: 1fr; gap: .5rem; }
+  .mentorship-page .mentorship-offer h2 { font-size: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mentorship-introduction { animation: none; }
+  .mentorship-questions summary svg, .mentorship-offer, .mentorship-button, .mentorship-text-link { transition: none; }
+}
+@supports not (backdrop-filter: blur(1px)) { .mentorship-offer { background-color: #111; } }

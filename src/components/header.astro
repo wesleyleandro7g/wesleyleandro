@@ -7,6 +7,7 @@ const { locale } = Astro.props
 const t = translate(locale, 'nav')
 const pathname = Astro.url.pathname.replace(/\/$/, '')
 const links = [
+  { href: localePath(locale, '/mentoria'), label: t('mentorship') },
   { href: localePath(locale, '/work'), label: t('work') },
   { href: localePath(locale, '/#experience'), label: t('experience') },
   { href: localePath(locale, '/#about'), label: t('about') },

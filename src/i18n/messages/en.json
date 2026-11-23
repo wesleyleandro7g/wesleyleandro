@@ -15,6 +15,10 @@
     "resume": {
       "title": "Choose a resume | Wesley Leandro",
       "description": "Two perspectives on my engineering experience. Updated PDF exports are being prepared; contact me for the latest version."
+    },
+    "mentoria": {
+      "title": "Mentorship for business owners | Wesley Leandro",
+      "description": "30 days of individual mentorship to apply AI, automation and technology to your business challenges. Four online sessions. Start with a free conversation."
     }
   },
   "nav": {
@@ -30,7 +34,8 @@
     },
     "experience": "Experience",
     "resume": "Resume",
-    "menu": "Menu"
+    "menu": "Menu",
+    "mentorship": "Mentorship"
   },
   "home": {
     "language": "Language",
@@ -391,5 +396,117 @@
     "frontend": "Senior Frontend Engineer — React/Next.js",
     "pending": "Updated PDF coming soon",
     "request": "Request current resume by email"
+  },
+  "mentorship": {
+    "headline": "You don’t need to understand technology.",
+    "headlineEnd": "You need to learn how to use it to solve your business problems.",
+    "intro": "For business owners who take on too much of the day-to-day work. Over 30 days, we’ll identify priorities, connect tools and build solutions together — giving you more room in your day and the skills to keep going.",
+    "cta": "Book a free conversation",
+    "ctaNote": "First, we’ll talk to see whether the mentorship is a good fit.",
+    "secondary": "Explore the journey",
+    "offerTitle": "Your business, your challenges.",
+    "offerSubtitle": "Technology applied to your reality.",
+    "duration": "Duration",
+    "days": "30 days",
+    "format": "Format",
+    "individual": "Individual",
+    "meetings": "Meetings",
+    "sessions": "4 online sessions",
+    "live": "Live time",
+    "hours": "4 hours",
+    "early": "For the first participants",
+    "total": "Total mentorship fee · BRL",
+    "problemTitle": "Your business needs you. But not for every task.",
+    "problemIntro": "When everything goes through you, there’s little room to think about what comes next. Technology can help change that routine.",
+    "problems": {
+      "p1": {
+        "title": "Work that keeps repeating",
+        "body": "Copying data, updating spreadsheets, organizing orders. Tasks that come back every day and demand your attention."
+      },
+      "p2": {
+        "title": "Tools that don’t talk",
+        "body": "Information scattered across systems and messages. You become the bridge that keeps everything working."
+      },
+      "p3": {
+        "title": "Ideas that never get started",
+        "body": "You can see what could improve, but you don’t know where to start or which tool to choose."
+      }
+    },
+    "approachTitle": "Your reality is our starting point.",
+    "approachBody": "We’ll look at what weighs most heavily on your operations and decide where to act first. AI, automation, integrations or development come into play when they help address your business challenges.",
+    "approachEnd": "You take part in the build, understand the decisions and learn how to take the next steps yourself.",
+    "paths": {
+      "p1": {
+        "title": "Understand what matters",
+        "body": "Identify bottlenecks and choose priorities based on their impact on your routine."
+      },
+      "p2": {
+        "title": "Connect and build",
+        "body": "Choose tools, connect what you already have and create what’s needed, with guidance."
+      },
+      "p3": {
+        "title": "Learn to keep going",
+        "body": "Test, document and understand how to maintain and improve your solutions after the mentorship."
+      }
+    },
+    "journeyTitle": "From an overloaded routine to a way forward.",
+    "journeyIntro": "An individual journey, with weekly meetings and practical work on your business.",
+    "freeTitle": "Before we begin, let’s talk.",
+    "freeBody": "An initial meeting to learn about your challenges and see whether the mentorship is a good fit. This conversation is free and takes place before the four sessions.",
+    "free": "Free conversation",
+    "weeks": {
+      "w1": {
+        "label": "Week 1",
+        "title": "Diagnosis and opportunities",
+        "body": "Understand your routine, identify bottlenecks and define the priority challenges that will guide our work."
+      },
+      "w2": {
+        "label": "Week 2",
+        "title": "Tools and solutions",
+        "body": "Choose the most suitable AI, automation or development tools and start building solutions with guidance."
+      },
+      "w3": {
+        "label": "Week 3",
+        "title": "Hands-on implementation",
+        "body": "Work through implementation, connect the pieces, resolve difficulties and test how things work in practice."
+      },
+      "w4": {
+        "label": "Week 4",
+        "title": "Consolidation and independence",
+        "body": "Review progress, document the solutions and their implementation status, and define the next steps you can take yourself."
+      }
+    },
+    "pace": "We can work on more than one priority. What gets completed over the 30 days depends on implementation progress in your business. At each meeting, we review progress and adjust the next steps.",
+    "mentorTitle": "Technology, with someone by your side.",
+    "mentorBody": "I’m Wesley Leandro, a senior software engineer. My experience includes building business systems, integrating tools and connecting software to business processes.",
+    "mentorEnd": "In this mentorship, that technical perspective meets your knowledge of your business. You bring the reality; we build the way forward together.",
+    "mentorLink": "Explore my work",
+    "faqTitle": "Before our conversation.",
+    "faqs": {
+      "q1": {
+        "question": "Do I need to know how to code?",
+        "answer": "No. We start with your context and your level of familiarity with technology. Choosing tools is part of the mentorship, as is learning how to use them."
+      },
+      "q2": {
+        "question": "Will we work on just one problem?",
+        "answer": "We can work on more than one priority challenge. The pace and completion of solutions depend on implementation progress in your business during the 30 days."
+      },
+      "q3": {
+        "question": "What does the R$ 697 fee include?",
+        "answer": "Four individual one-hour online sessions over 30 days. This includes diagnosis, tool selection, guided building during meetings, documentation and next steps. Guidance takes place during the sessions."
+      },
+      "q4": {
+        "question": "Are tools included in the fee?",
+        "answer": "The fee covers the mentorship. If paid tools are needed, we assess their necessity together. You purchase them separately and cover their costs."
+      },
+      "q5": {
+        "question": "How does booking work?",
+        "answer": "The button opens my WhatsApp with a message about the mentorship. We arrange a time for the free conversation and decide together whether the format is right for you."
+      }
+    },
+    "closingTitle": "More independence for you. More room for your business.",
+    "closingBody": "Start by sharing what’s taking up your time. Let’s talk about the possibilities technology can bring to your day-to-day work.",
+    "closingNote": "30 days. Individual guidance. Building together.",
+    "whatsappMessage": "Hi, Wesley! I’d like to book a free conversation to learn about the mentorship and discuss my business challenges."
   }
 }

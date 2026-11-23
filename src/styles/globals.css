@@ -156,7 +156,7 @@ h1, h2, h3 { text-wrap: balance; }
 .architecture.compact { padding: .75rem; }
 .architecture.compact li { flex-basis: 100%; font-size: .7rem; }
 .architecture.compact .architecture-arrow { transform: rotate(90deg); }
-@media (min-width: 1024px) { .desktop-navigation { display: flex; } .mobile-navigation { display: none; } }
+@media (min-width: 1200px) { .desktop-navigation { display: flex; } .mobile-navigation { display: none; } }
 @media (max-width: 639px) {
   .architecture:not(.compact) li { flex-basis: 100%; }
   .architecture:not(.compact) .architecture-arrow { transform: rotate(90deg); }

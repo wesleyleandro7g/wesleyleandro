@@ -1,0 +1,106 @@
+---
+import { ArrowRight, ArrowUpRight, Plus, Check } from '@lucide/astro'
+import Header from '@/components/header.astro'
+import Footer from '@/components/footer.astro'
+import Layout from '@/layouts/site-layout.astro'
+import { locales, localePath, translate, type Locale } from '@/i18n'
+import { mentorshipContact, mentorshipOffer } from '@/utils/mentorship'
+import '@/styles/mentorship.css'
+
+export function getStaticPaths() { return locales.map(locale => ({ params: { locale } })) }
+const { locale } = Astro.params as { locale: Locale }
+const t = translate(locale, 'mentorship')
+const contact = mentorshipContact(t('whatsappMessage'))
+const price = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: mentorshipOffer.currency, maximumFractionDigits: 0 }).format(mentorshipOffer.price)
+const problems = ['p1', 'p2', 'p3']
+const weeks = ['w1', 'w2', 'w3', 'w4']
+const faqs = ['q1', 'q2', 'q3', 'q4', 'q5']
+---
+<Layout locale={locale} page="mentoria">
+  <Header locale={locale} />
+  <main id="main-content" class="mentorship-page">
+    <div class="mentorship-container">
+      <section class="mentorship-hero" aria-labelledby="mentorship-title">
+        <div class="mentorship-introduction">
+          <h1 id="mentorship-title">{t('headline')} <span>{t('headlineEnd')}</span></h1>
+          <p class="mentorship-lead">{t('intro')}</p>
+          <div class="mentorship-actions">
+            <a href={contact} target="_blank" rel="noopener noreferrer" class="mentorship-button">{t('cta')}<ArrowUpRight size={17} aria-hidden="true" /></a>
+            <a href="#jornada" class="mentorship-text-link">{t('secondary')}<ArrowRight size={16} aria-hidden="true" /></a>
+          </div>
+          <p class="mentorship-caption">{t('ctaNote')}</p>
+        </div>
+        <aside class="mentorship-offer" aria-labelledby="offer-title">
+          <h2 id="offer-title">{t('offerTitle')}</h2>
+          <p class="mentorship-offer-subtitle">{t('offerSubtitle')}</p>
+          <dl class="mentorship-facts">
+            <div><dt>{t('duration')}</dt><dd>{t('days')}</dd></div>
+            <div><dt>{t('format')}</dt><dd>{t('individual')}</dd></div>
+            <div><dt>{t('meetings')}</dt><dd>{t('sessions')}</dd></div>
+            <div><dt>{t('live')}</dt><dd>{t('hours')}</dd></div>
+          </dl>
+          <div class="mentorship-offer-price">
+            <p>{t('early')}</p>
+            <p class="mentorship-price">{price}</p>
+            <p>{t('total')}</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="mentorship-problems" aria-labelledby="problems-title">
+        <div class="mentorship-section-intro">
+          <h2 id="problems-title">{t('problemTitle')}</h2>
+          <p>{t('problemIntro')}</p>
+        </div>
+        <div class="mentorship-problem-list">
+          {problems.map(key => <div><h3>{t(`problems.${key}.title`)}</h3><p>{t(`problems.${key}.body`)}</p></div>)}
+        </div>
+      </section>
+
+      <section class="mentorship-approach" aria-labelledby="approach-title">
+        <div>
+          <h2 id="approach-title">{t('approachTitle')}</h2>
+          <p>{t('approachBody')}</p>
+          <p class="mentorship-emphasis">{t('approachEnd')}</p>
+        </div>
+        <ul class="mentorship-paths">
+          {problems.map(key => <li><Check size={18} aria-hidden="true" /><div><h3>{t(`paths.${key}.title`)}</h3><p>{t(`paths.${key}.body`)}</p></div></li>)}
+        </ul>
+      </section>
+
+      <section id="jornada" class="mentorship-journey" aria-labelledby="journey-title">
+        <div class="mentorship-journey-heading"><h2 id="journey-title">{t('journeyTitle')}</h2><p>{t('journeyIntro')}</p></div>
+        <div class="mentorship-journey-content">
+          <div class="mentorship-free-meeting">
+            <h3>{t('freeTitle')}</h3><p>{t('freeBody')}</p>
+            <a class="mentorship-text-link" href={contact} target="_blank" rel="noopener noreferrer">{t('free')}<ArrowUpRight size={16} aria-hidden="true" /></a>
+          </div>
+          <ol class="mentorship-timeline">
+            {weeks.map(key => <li><p class="mentorship-week">{t(`weeks.${key}.label`)}</p><div><h3>{t(`weeks.${key}.title`)}</h3><p>{t(`weeks.${key}.body`)}</p></div></li>)}
+          </ol>
+          <p class="mentorship-pace">{t('pace')}</p>
+        </div>
+      </section>
+
+      <section class="mentorship-mentor" aria-labelledby="mentor-title">
+        <div><h2 id="mentor-title">{t('mentorTitle')}</h2><a href={localePath(locale, '/work')} class="mentorship-text-link">{t('mentorLink')}<ArrowUpRight size={16} aria-hidden="true" /></a></div>
+        <div><p>{t('mentorBody')}</p><p class="mentorship-emphasis">{t('mentorEnd')}</p><p class="mentorship-signature">Wesley Leandro</p></div>
+      </section>
+
+      <section class="mentorship-faq" aria-labelledby="faq-title">
+        <div><h2 id="faq-title">{t('faqTitle')}</h2><p class="mentorship-caption">{t('early')}</p><p class="mentorship-faq-price">{price}</p><p class="mentorship-caption">{t('total')}</p></div>
+        <div class="mentorship-questions">
+          {faqs.map(key => <details><summary>{t(`faqs.${key}.question`)}<Plus size={18} aria-hidden="true" /></summary><p>{t(`faqs.${key}.answer`)}</p></details>)}
+        </div>
+      </section>
+
+      <section class="mentorship-closing" aria-labelledby="closing-title">
+        <h2 id="closing-title">{t('closingTitle')}</h2>
+        <p>{t('closingBody')}</p>
+        <a href={contact} target="_blank" rel="noopener noreferrer" class="mentorship-button">{t('cta')}<ArrowUpRight size={17} aria-hidden="true" /></a>
+        <p class="mentorship-caption">{t('closingNote')}</p>
+      </section>
+      <Footer locale={locale} />
+    </div>
+  </main>
+</Layout>

@@ -10,7 +10,7 @@ import '@/styles/globals.css'
 import { locales, localePath, translate, type Locale } from '@/i18n'
 import { siteConfig } from '@/utils/data'
 import { personJsonLd } from '@/lib/metadata'
-interface Props { locale: Locale; page: 'home' | 'work' | 'writing' | 'resume'; path?: string; title?: string; description?: string; imagePath?: string; noindex?: boolean }
+interface Props { locale: Locale; page: 'home' | 'work' | 'writing' | 'resume' | 'mentoria'; path?: string; title?: string; description?: string; imagePath?: string; noindex?: boolean }
 const { locale, page, path = page === 'home' ? '' : `/${page}`, noindex = false } = Astro.props
 const t = translate(locale, 'metadata')
 const title = Astro.props.title ?? t(`${page}.title`)

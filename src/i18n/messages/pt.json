@@ -15,6 +15,10 @@
     "resume": {
       "title": "Escolha um currículo | Wesley Leandro",
       "description": "Duas perspectivas da minha experiência. Os PDFs atualizados estão em preparação; entre em contato para receber a versão mais recente."
+    },
+    "mentoria": {
+      "title": "Mentoria para empresários | Wesley Leandro",
+      "description": "30 dias de mentoria individual para aplicar IA, automação e tecnologia aos desafios do seu negócio. Quatro sessões online. Comece com uma conversa gratuita."
     }
   },
   "nav": {
@@ -30,7 +34,8 @@
     },
     "experience": "Experiência",
     "resume": "Currículo",
-    "menu": "Menu"
+    "menu": "Menu",
+    "mentorship": "Mentoria"
   },
   "home": {
     "language": "Idioma",
@@ -391,5 +396,117 @@
     "frontend": "Engenheiro Frontend Sênior — React/Next.js",
     "pending": "PDF atualizado em breve",
     "request": "Solicitar currículo por e-mail"
+  },
+  "mentorship": {
+    "headline": "Você não precisa entender de tecnologia.",
+    "headlineEnd": "Precisa aprender a usá-la para resolver os problemas do seu negócio.",
+    "intro": "Para quem empreende e acaba assumindo tarefas demais. Em 30 dias, vamos identificar prioridades, conectar ferramentas e construir soluções juntos — para você ganhar espaço na rotina e autonomia para continuar.",
+    "cta": "Agendar conversa gratuita",
+    "ctaNote": "Primeiro, conversamos para entender se faz sentido para você.",
+    "secondary": "Conhecer a jornada",
+    "offerTitle": "Sua empresa, seus desafios.",
+    "offerSubtitle": "Tecnologia aplicada à sua realidade.",
+    "duration": "Duração",
+    "days": "30 dias",
+    "format": "Formato",
+    "individual": "Individual",
+    "meetings": "Encontros",
+    "sessions": "4 sessões online",
+    "live": "Carga ao vivo",
+    "hours": "4 horas",
+    "early": "Para os primeiros mentorados",
+    "total": "Valor total da mentoria",
+    "problemTitle": "Seu negócio precisa de você. Mas não em cada tarefa.",
+    "problemIntro": "Quando tudo passa por suas mãos, sobra pouco espaço para pensar no próximo passo. A tecnologia pode ajudar a mudar essa rotina.",
+    "problems": {
+      "p1": {
+        "title": "O trabalho que sempre se repete",
+        "body": "Copiar dados, atualizar planilhas, organizar pedidos. Tarefas que voltam todos os dias e ocupam sua atenção."
+      },
+      "p2": {
+        "title": "Ferramentas que não conversam",
+        "body": "Informações espalhadas entre sistemas e mensagens. Você vira a ponte para fazer tudo funcionar."
+      },
+      "p3": {
+        "title": "Ideias que não saem do papel",
+        "body": "Você percebe o que poderia melhorar, mas não sabe por onde começar ou qual ferramenta escolher."
+      }
+    },
+    "approachTitle": "O ponto de partida é a sua realidade.",
+    "approachBody": "Vamos olhar para o que mais pesa na sua operação e decidir onde agir primeiro. IA, automação, integrações ou desenvolvimento entram quando ajudam a resolver os desafios do seu negócio.",
+    "approachEnd": "Você participa da construção, entende as escolhas e aprende a conduzir os próximos passos.",
+    "paths": {
+      "p1": {
+        "title": "Entender o que importa",
+        "body": "Identificar gargalos e escolher as prioridades pelo impacto na sua rotina."
+      },
+      "p2": {
+        "title": "Conectar e construir",
+        "body": "Escolher ferramentas, conectar o que já existe e criar o que for necessário, com orientação."
+      },
+      "p3": {
+        "title": "Aprender para continuar",
+        "body": "Testar, documentar e entender como manter e evoluir as soluções depois da mentoria."
+      }
+    },
+    "journeyTitle": "Da rotina sobrecarregada aos próximos passos.",
+    "journeyIntro": "Uma jornada individual, com encontros semanais e trabalho aplicado ao seu negócio.",
+    "freeTitle": "Antes de começar, vamos conversar.",
+    "freeBody": "Um primeiro encontro para conhecer seus desafios e entender se a mentoria faz sentido para você. Essa conversa é gratuita e acontece antes das quatro sessões.",
+    "free": "Conversa gratuita",
+    "weeks": {
+      "w1": {
+        "label": "Semana 1",
+        "title": "Diagnóstico e oportunidades",
+        "body": "Entender sua rotina, identificar gargalos e definir os desafios prioritários que vão orientar nosso trabalho."
+      },
+      "w2": {
+        "label": "Semana 2",
+        "title": "Ferramentas e solução",
+        "body": "Escolher as ferramentas de IA, automação ou desenvolvimento mais adequadas e iniciar a construção guiada das soluções."
+      },
+      "w3": {
+        "label": "Semana 3",
+        "title": "Mão na massa",
+        "body": "Acompanhar a implementação, conectar as peças, corrigir dificuldades e testar o funcionamento na prática."
+      },
+      "w4": {
+        "label": "Semana 4",
+        "title": "Consolidação e autonomia",
+        "body": "Revisar os avanços, documentar as soluções e seu estágio de implementação e definir os próximos passos que você poderá executar."
+      }
+    },
+    "pace": "Podemos trabalhar mais de uma prioridade. O que será concluído ao longo dos 30 dias depende do avanço da implementação no seu negócio. A cada encontro, revisamos o andamento e ajustamos os próximos passos.",
+    "mentorTitle": "Tecnologia com alguém ao seu lado.",
+    "mentorBody": "Sou Wesley Leandro, engenheiro de software sênior. Minha experiência inclui desenvolver sistemas empresariais, integrar ferramentas e conectar software a processos de negócio.",
+    "mentorEnd": "Na mentoria, esse olhar técnico se encontra com o seu conhecimento da empresa. Você traz a realidade; construímos os caminhos juntos.",
+    "mentorLink": "Conheça meu trabalho",
+    "faqTitle": "Antes da nossa conversa.",
+    "faqs": {
+      "q1": {
+        "question": "Preciso saber programar?",
+        "answer": "Não. Partimos do seu contexto e do seu nível de familiaridade com tecnologia. A escolha das ferramentas faz parte da mentoria, assim como a orientação para usá-las."
+      },
+      "q2": {
+        "question": "Vamos trabalhar apenas um problema?",
+        "answer": "Podemos trabalhar mais de um desafio prioritário. O ritmo e a conclusão das soluções dependem do avanço da implementação no seu negócio durante os 30 dias."
+      },
+      "q3": {
+        "question": "O que está incluído nos R$ 697?",
+        "answer": "Quatro sessões individuais online, de uma hora cada, ao longo de 30 dias. Inclui diagnóstico, escolha de ferramentas, construção guiada nos encontros, documentação e próximos passos. O acompanhamento acontece nas sessões."
+      },
+      "q4": {
+        "question": "As ferramentas estão incluídas no valor?",
+        "answer": "O valor cobre a mentoria. Caso precisemos de ferramentas pagas, avaliamos juntos sua necessidade. A contratação e os custos ficam por sua conta, separadamente."
+      },
+      "q5": {
+        "question": "Como funciona o agendamento?",
+        "answer": "O botão abre meu WhatsApp com uma mensagem sobre a mentoria. Combinamos um horário para a conversa gratuita e avaliamos juntos se o formato faz sentido para você."
+      }
+    },
+    "closingTitle": "Mais autonomia para você. Mais espaço para o seu negócio.",
+    "closingBody": "Comece contando o que está tomando seu tempo. Vamos conversar sobre os caminhos que a tecnologia pode abrir na sua rotina.",
+    "closingNote": "30 dias. Acompanhamento individual. Construção juntos.",
+    "whatsappMessage": "Olá, Wesley! Quero agendar uma conversa gratuita para conhecer a mentoria e falar sobre os desafios do meu negócio."
   }
 }

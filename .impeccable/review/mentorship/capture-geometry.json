@@ -1,0 +1,56 @@
+[
+  {
+    "locale": "pt",
+    "viewport": "desktop",
+    "height": 4726,
+    "body": 4726,
+    "footerTop": 4605,
+    "footerBottom": 4726,
+    "fonts": "loaded"
+  },
+  {
+    "locale": "pt",
+    "viewport": "mobile",
+    "height": 6538,
+    "body": 6538,
+    "footerTop": 6379.09375,
+    "footerBottom": 6537.6875,
+    "fonts": "loaded"
+  },
+  {
+    "locale": "en",
+    "viewport": "desktop",
+    "height": 4790,
+    "body": 4790,
+    "footerTop": 4669.28125,
+    "footerBottom": 4790.28125,
+    "fonts": "loaded"
+  },
+  {
+    "locale": "en",
+    "viewport": "mobile",
+    "height": 6483,
+    "body": 6483,
+    "footerTop": 6324.5625,
+    "footerBottom": 6483.15625,
+    "fonts": "loaded"
+  },
+  {
+    "locale": "es",
+    "viewport": "desktop",
+    "height": 4726,
+    "body": 4726,
+    "footerTop": 4605,
+    "footerBottom": 4726,
+    "fonts": "loaded"
+  },
+  {
+    "locale": "es",
+    "viewport": "mobile",
+    "height": 6560,
+    "body": 6560,
+    "footerTop": 6401.453125,
+    "footerBottom": 6560.046875,
+    "fonts": "loaded"
+  }
+]

@@ -60,7 +60,7 @@ function htmlFiles(dir) {
 }
 test('all localized routes have canonical, language alternatives, one H1 and case status', () => {
   for (const locale of Object.keys(messages)) {
-    for (const path of ['', '/work', '/writing', '/resume', ...Object.keys(projectFacts).map(slug => `/work/${slug}`)]) {
+    for (const path of ['', '/work', '/writing', '/resume', '/mentoria', ...Object.keys(projectFacts).map(slug => `/work/${slug}`)]) {
       const html = readFileSync(new URL(`.${`/${locale}${path}`}/index.html`, dist), 'utf8')
       assert.equal((html.match(/<h1\b/g) ?? []).length, 1, `${locale}${path}`)
       assert.ok(html.includes(`href="https://wesleyleandro.com/${locale}${path}"`))
@@ -87,4 +87,25 @@ test('generated internal links, assets and anchors resolve', () => {
       if (fragment) assert.ok(readFileSync(target, 'utf8').includes(`id="${fragment}"`), `${file.pathname}: ${href}`)
     }
   }
+})
+
+
+test('mentorship offers a localized free conversation and consistent BRL price', () => {
+  for (const [locale, content] of Object.entries(messages)) {
+    const html = readFileSync(new URL(`./${locale}/mentoria/index.html`, dist), 'utf8')
+    const contacts = [...html.matchAll(/href="(https:\/\/wa\.me\/[^"]+)"/g)]
+    assert.equal(contacts.length, 3, locale)
+    for (const [, href] of contacts) {
+      const url = new URL(href.replaceAll('&amp;', '&'))
+      assert.equal(url.pathname, '/5538999932655')
+      assert.equal(url.searchParams.get('text'), content.mentorship.whatsappMessage)
+    }
+    assert.ok(html.includes(content.mentorship.pace), locale)
+    assert.ok(html.includes('697'), locale)
+    assert.ok(html.includes('id="jornada"'), locale)
+    assert.equal((html.match(/<details>/g) ?? []).length, 5, locale)
+    assert.ok(html.includes(`href="/${locale}/mentoria"`), locale)
+  }
+  const redirect = readFileSync(new URL('./mentoria/index.html', dist), 'utf8')
+  assert.ok(redirect.includes('/pt/mentoria'))
 })

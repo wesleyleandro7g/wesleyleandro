@@ -1,0 +1,130 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "lang": "pt",
+      "overflow": [],
+      "h1": 1,
+      "locale": "pt"
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "lang": "pt",
+      "overflow": [],
+      "h1": 1,
+      "locale": "pt"
+    },
+    {
+      "width": 320,
+      "scroll": 320,
+      "lang": "pt",
+      "overflow": [],
+      "h1": 1,
+      "locale": "pt"
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "lang": "pt",
+      "overflow": [],
+      "h1": 1,
+      "locale": "pt"
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "lang": "pt",
+      "overflow": [],
+      "h1": 1,
+      "locale": "pt"
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "lang": "en",
+      "overflow": [],
+      "h1": 1,
+      "locale": "en"
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "lang": "en",
+      "overflow": [],
+      "h1": 1,
+      "locale": "en"
+    },
+    {
+      "width": 320,
+      "scroll": 320,
+      "lang": "en",
+      "overflow": [],
+      "h1": 1,
+      "locale": "en"
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "lang": "en",
+      "overflow": [],
+      "h1": 1,
+      "locale": "en"
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "lang": "en",
+      "overflow": [],
+      "h1": 1,
+      "locale": "en"
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "lang": "es",
+      "overflow": [],
+      "h1": 1,
+      "locale": "es"
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "lang": "es",
+      "overflow": [],
+      "h1": 1,
+      "locale": "es"
+    },
+    {
+      "width": 320,
+      "scroll": 320,
+      "lang": "es",
+      "overflow": [],
+      "h1": 1,
+      "locale": "es"
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "lang": "es",
+      "overflow": [],
+      "h1": 1,
+      "locale": "es"
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "lang": "es",
+      "overflow": [],
+      "h1": 1,
+      "locale": "es"
+    }
+  ],
+  "keyboardFAQ": true,
+  "mobileMenuEscape": true,
+  "languageSwitch": true,
+  "shortRedirect": true,
+  "homeNavigation": true,
+  "errors": []
+}

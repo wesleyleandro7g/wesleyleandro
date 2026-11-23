@@ -15,6 +15,10 @@
     "resume": {
       "title": "Elige un currículum | Wesley Leandro",
       "description": "Dos perspectivas de mi experiencia. Los PDF actualizados están en preparación; contáctame para recibir la versión más reciente."
+    },
+    "mentoria": {
+      "title": "Mentoría para empresarios | Wesley Leandro",
+      "description": "30 días de mentoría individual para aplicar IA, automatización y tecnología a los desafíos de tu negocio. Cuatro sesiones online. Empieza con una conversación gratuita."
     }
   },
   "nav": {
@@ -30,7 +34,8 @@
     },
     "experience": "Experiencia",
     "resume": "Currículum",
-    "menu": "Menú"
+    "menu": "Menú",
+    "mentorship": "Mentoría"
   },
   "home": {
     "language": "Idioma",
@@ -391,5 +396,117 @@
     "frontend": "Ingeniero Frontend Senior — React/Next.js",
     "pending": "PDF actualizado próximamente",
     "request": "Solicitar currículum por correo"
+  },
+  "mentorship": {
+    "headline": "No necesitas entender de tecnología.",
+    "headlineEnd": "Necesitas aprender a usarla para resolver los problemas de tu negocio.",
+    "intro": "Para quienes emprenden y terminan asumiendo demasiadas tareas. En 30 días, identificaremos prioridades, conectaremos herramientas y construiremos soluciones juntos — para que tengas más espacio en tu rutina y autonomía para continuar.",
+    "cta": "Agendar conversación gratuita",
+    "ctaNote": "Primero, conversamos para entender si la mentoría encaja contigo.",
+    "secondary": "Conocer el recorrido",
+    "offerTitle": "Tu empresa, tus desafíos.",
+    "offerSubtitle": "Tecnología aplicada a tu realidad.",
+    "duration": "Duración",
+    "days": "30 días",
+    "format": "Formato",
+    "individual": "Individual",
+    "meetings": "Encuentros",
+    "sessions": "4 sesiones online",
+    "live": "Tiempo en directo",
+    "hours": "4 horas",
+    "early": "Para los primeros participantes",
+    "total": "Precio total de la mentoría · BRL",
+    "problemTitle": "Tu negocio te necesita. Pero no en cada tarea.",
+    "problemIntro": "Cuando todo pasa por tus manos, queda poco espacio para pensar en el siguiente paso. La tecnología puede ayudarte a cambiar esa rutina.",
+    "problems": {
+      "p1": {
+        "title": "El trabajo que siempre se repite",
+        "body": "Copiar datos, actualizar hojas de cálculo, organizar pedidos. Tareas que vuelven cada día y ocupan tu atención."
+      },
+      "p2": {
+        "title": "Herramientas desconectadas",
+        "body": "Información repartida entre sistemas y mensajes. Te conviertes en el puente para que todo funcione."
+      },
+      "p3": {
+        "title": "Ideas que no se ponen en marcha",
+        "body": "Ves lo que podría mejorar, pero no sabes por dónde empezar o qué herramienta elegir."
+      }
+    },
+    "approachTitle": "El punto de partida es tu realidad.",
+    "approachBody": "Revisaremos qué pesa más en tu operación y decidiremos dónde actuar primero. La IA, la automatización, las integraciones o el desarrollo entran cuando ayudan a resolver los desafíos de tu negocio.",
+    "approachEnd": "Participas en la construcción, entiendes las decisiones y aprendes a dar los siguientes pasos.",
+    "paths": {
+      "p1": {
+        "title": "Entender lo que importa",
+        "body": "Identificar cuellos de botella y elegir prioridades según su impacto en tu rutina."
+      },
+      "p2": {
+        "title": "Conectar y construir",
+        "body": "Elegir herramientas, conectar lo que ya existe y crear lo necesario, con orientación."
+      },
+      "p3": {
+        "title": "Aprender para continuar",
+        "body": "Probar, documentar y entender cómo mantener y mejorar las soluciones después de la mentoría."
+      }
+    },
+    "journeyTitle": "De una rutina sobrecargada a los próximos pasos.",
+    "journeyIntro": "Un recorrido individual, con encuentros semanales y trabajo aplicado a tu negocio.",
+    "freeTitle": "Antes de empezar, conversemos.",
+    "freeBody": "Un primer encuentro para conocer tus desafíos y entender si la mentoría encaja contigo. Esta conversación es gratuita y se realiza antes de las cuatro sesiones.",
+    "free": "Conversación gratuita",
+    "weeks": {
+      "w1": {
+        "label": "Semana 1",
+        "title": "Diagnóstico y oportunidades",
+        "body": "Entender tu rutina, identificar cuellos de botella y definir los desafíos prioritarios que orientarán nuestro trabajo."
+      },
+      "w2": {
+        "label": "Semana 2",
+        "title": "Herramientas y soluciones",
+        "body": "Elegir las herramientas de IA, automatización o desarrollo más adecuadas e iniciar la construcción guiada de las soluciones."
+      },
+      "w3": {
+        "label": "Semana 3",
+        "title": "Manos a la obra",
+        "body": "Acompañar la implementación, conectar las piezas, resolver dificultades y probar el funcionamiento en la práctica."
+      },
+      "w4": {
+        "label": "Semana 4",
+        "title": "Consolidación y autonomía",
+        "body": "Revisar los avances, documentar las soluciones y su estado de implementación, y definir los próximos pasos que podrás ejecutar."
+      }
+    },
+    "pace": "Podemos trabajar más de una prioridad. Lo que se complete durante los 30 días depende del avance de la implementación en tu negocio. En cada encuentro, revisamos el progreso y ajustamos los siguientes pasos.",
+    "mentorTitle": "Tecnología con alguien a tu lado.",
+    "mentorBody": "Soy Wesley Leandro, ingeniero de software sénior. Mi experiencia incluye desarrollar sistemas empresariales, integrar herramientas y conectar software con procesos de negocio.",
+    "mentorEnd": "En la mentoría, esa perspectiva técnica se une a tu conocimiento de la empresa. Tú aportas la realidad; construimos los caminos juntos.",
+    "mentorLink": "Conoce mi trabajo",
+    "faqTitle": "Antes de nuestra conversación.",
+    "faqs": {
+      "q1": {
+        "question": "¿Necesito saber programar?",
+        "answer": "No. Partimos de tu contexto y de tu nivel de familiaridad con la tecnología. La elección de herramientas forma parte de la mentoría, así como la orientación para utilizarlas."
+      },
+      "q2": {
+        "question": "¿Trabajaremos solo un problema?",
+        "answer": "Podemos trabajar más de un desafío prioritario. El ritmo y la finalización de las soluciones dependen del avance de la implementación en tu negocio durante los 30 días."
+      },
+      "q3": {
+        "question": "¿Qué incluyen los R$ 697?",
+        "answer": "Cuatro sesiones individuales online de una hora, a lo largo de 30 días. Incluye diagnóstico, elección de herramientas, construcción guiada en los encuentros, documentación y próximos pasos. El acompañamiento se realiza en las sesiones."
+      },
+      "q4": {
+        "question": "¿Las herramientas están incluidas en el precio?",
+        "answer": "El precio cubre la mentoría. Si necesitamos herramientas de pago, evaluamos juntos su necesidad. Las contratas por separado y sus costes corren por tu cuenta."
+      },
+      "q5": {
+        "question": "¿Cómo funciona la reserva?",
+        "answer": "El botón abre mi WhatsApp con un mensaje sobre la mentoría. Acordamos un horario para la conversación gratuita y evaluamos juntos si el formato encaja contigo."
+      }
+    },
+    "closingTitle": "Más autonomía para ti. Más espacio para tu negocio.",
+    "closingBody": "Empieza contándome qué está ocupando tu tiempo. Conversemos sobre los caminos que la tecnología puede abrir en tu rutina.",
+    "closingNote": "30 días. Acompañamiento individual. Construcción juntos.",
+    "whatsappMessage": "¡Hola, Wesley! Quiero agendar una conversación gratuita para conocer la mentoría y hablar sobre los desafíos de mi negocio."
   }
 }
